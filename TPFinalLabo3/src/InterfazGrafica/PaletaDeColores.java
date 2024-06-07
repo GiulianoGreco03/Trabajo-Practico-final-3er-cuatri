@@ -1,3 +1,4 @@
+package InterfazGrafica;
 public enum PaletaDeColores {
 
     PanelPrincipal(106,25,148),

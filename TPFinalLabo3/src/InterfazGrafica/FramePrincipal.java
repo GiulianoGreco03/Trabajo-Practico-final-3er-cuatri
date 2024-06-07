@@ -280,19 +280,19 @@ public class FramePrincipal extends JPanel{
     }// </editor-fold>                        
 
     private void Button1MouseEntered(java.awt.event.MouseEvent evt) {                                     
-        Button1.setBackground(Color.red);
+        Button1.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }                                    
 
     private void Button1MouseExited(java.awt.event.MouseEvent evt) {                                    
-        Button1.setBackground(new java.awt.Color(133, 36, 103));
+        Button1.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
     }                                   
 
     private void Button1MouseClicked(java.awt.event.MouseEvent evt) {                                     
-        PanelPrincipal.setBackground(Color.red);
+        cambiarPanelPrincipal(panelJuegos);
     }                                    
 
     private void Button2MouseEntered(java.awt.event.MouseEvent evt) {                                     
-        Button2.setBackground(Color.red);
+        Button2.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }                                    
 
     private void Button2MouseExited(java.awt.event.MouseEvent evt) {                                    
@@ -300,11 +300,11 @@ public class FramePrincipal extends JPanel{
     }                                   
 
     private void Button2MouseClicked(java.awt.event.MouseEvent evt) {                                     
-        PanelPrincipal.setBackground(Color.blue);
+        cambiarPanelPrincipal(panelTienda);
     }                                    
 
     private void Button3MouseEntered(java.awt.event.MouseEvent evt) {                                     
-        Button3.setBackground(Color.red);
+        Button3.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }                                    
 
     private void Button3MouseExited(java.awt.event.MouseEvent evt) {                                    
@@ -316,7 +316,7 @@ public class FramePrincipal extends JPanel{
     }                                    
 
     private void Button4MouseEntered(java.awt.event.MouseEvent evt) {                                     
-        Button4.setBackground(Color.red);
+        Button4.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }                                    
 
     private void Button4MouseExited(java.awt.event.MouseEvent evt) {                                    
@@ -342,6 +342,16 @@ public class FramePrincipal extends JPanel{
     private javax.swing.JLabel button3Label;
     private javax.swing.JLabel button4Label;
     private javax.swing.JLabel tituloLabel;
+    private PanelJuegos panelJuegos = new PanelJuegos();
+    private PanelTienda panelTienda = new PanelTienda();
     // End of variables declaration     
 
+    //Metodos
+    private void cambiarPanelPrincipal(JPanel panelACambiar){
+        PanelPrincipal.removeAll();                                       
+        PanelPrincipal.add(panelACambiar);
+        panelACambiar.requestFocus();
+        PanelPrincipal.revalidate();
+        PanelPrincipal.repaint();
+    }
 }
