@@ -1,21 +1,56 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package InterfazGrafica;
 
-/**
- *
- * @author Usuario
- */
+
 public class PanelTienda extends Panel {
 
-    /**
-     * Creates new form PanelTienda
-     */
+
+    //Componentes Swing
+    private javax.swing.JPanel Cosmetico1;
+    private javax.swing.JPanel Cosmetico2;
+    private javax.swing.JPanel Cosmetico3;
+    private javax.swing.JPanel Cosmetico4;
+    private javax.swing.JPanel Cosmetico5;
+    private javax.swing.JPanel Cosmetico6;
+    private javax.swing.JPanel Cosmetico7;
+    private javax.swing.JPanel Cosmetico8;
+    private java.awt.Label Precio1;
+    private java.awt.Label Precio2;
+    private java.awt.Label Precio3;
+    private java.awt.Label Precio4;
+    private java.awt.Label Precio5;
+    private java.awt.Label Precio6;
+    private java.awt.Label Precio7;
+    private java.awt.Label Precio8;
+    private javax.swing.JPanel avatar;
+    private javax.swing.JPanel cambiarGorro;
+    private javax.swing.JPanel cambiarLentes;
+    private javax.swing.JPanel cambiarTraje;
+    private javax.swing.JPanel gorroButton;
+    private javax.swing.JPanel guardarButton;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private java.awt.Label label1;
+    private java.awt.Label label2;
+    private java.awt.Label label3;
+    private java.awt.Label label4;
+    private java.awt.Label label5;
+    private java.awt.Label label6;
+    private java.awt.Label label7;
+    private javax.swing.JPanel lentesButton9;
+    private javax.swing.JLabel puntos;
+    private java.awt.Label puntuacionLabel;
+    private javax.swing.JPanel trajeButton10;
+
+
+    //Constructores
+
     public PanelTienda() {
         initComponents();
-    }                       
+    }
+
+                          
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
@@ -42,6 +77,8 @@ public class PanelTienda extends Panel {
         Precio6 = new java.awt.Label();
         Precio7 = new java.awt.Label();
         Precio8 = new java.awt.Label();
+        puntuacionLabel = new java.awt.Label();
+        puntos = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         cambiarGorro = new javax.swing.JPanel();
         label4 = new java.awt.Label();
@@ -327,6 +364,19 @@ public class PanelTienda extends Panel {
         Precio8.setForeground(new java.awt.Color(255, 255, 255));
         Precio8.setText("label1");
 
+        puntuacionLabel.setAlignment(java.awt.Label.CENTER);
+        puntuacionLabel.setBackground(new java.awt.Color(133, 36, 103));
+        puntuacionLabel.setForeground(new java.awt.Color(255, 255, 255));
+        puntuacionLabel.setPreferredSize(new java.awt.Dimension(100, 40));
+        puntuacionLabel.setText("Puntuación");
+
+        puntos.setBackground(new java.awt.Color(73, 128, 153));
+        puntos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        puntos.setForeground(new java.awt.Color(255, 255, 255));
+        puntos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        puntos.setOpaque(true);
+        puntos.setPreferredSize(new java.awt.Dimension(100, 40));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -367,7 +417,7 @@ public class PanelTienda extends Panel {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(10, 10, 10)
                                         .addComponent(Precio4, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(Cosmetico5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -390,13 +440,18 @@ public class PanelTienda extends Panel {
                                     .addComponent(Cosmetico8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(10, 10, 10)
-                                        .addComponent(Precio8, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                        .addComponent(Precio8, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(233, 233, 233)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(puntuacionLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                            .addComponent(puntos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(46, 46, 46)
+                .addGap(14, 14, 14)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(gorroButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lentesButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -413,7 +468,7 @@ public class PanelTienda extends Panel {
                     .addComponent(Precio2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Precio3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Precio4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addGap(36, 36, 36)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(Cosmetico5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Cosmetico6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -425,7 +480,11 @@ public class PanelTienda extends Panel {
                     .addComponent(Precio6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Precio8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Precio7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(48, 48, 48))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(puntuacionLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(puntos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Tienda", jPanel1);
@@ -599,7 +658,7 @@ public class PanelTienda extends Panel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(guardarButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(guardarButton, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(avatar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
@@ -607,7 +666,7 @@ public class PanelTienda extends Panel {
                     .addComponent(cambiarGorro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cambiarLentes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cambiarTraje, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Personalizar", jPanel2);
@@ -709,40 +768,7 @@ public class PanelTienda extends Panel {
     }                                         
 
 
-    // Variables declaration - do not modify                     
-    private javax.swing.JPanel Cosmetico1;
-    private javax.swing.JPanel Cosmetico2;
-    private javax.swing.JPanel Cosmetico3;
-    private javax.swing.JPanel Cosmetico4;
-    private javax.swing.JPanel Cosmetico5;
-    private javax.swing.JPanel Cosmetico6;
-    private javax.swing.JPanel Cosmetico7;
-    private javax.swing.JPanel Cosmetico8;
-    private java.awt.Label Precio1;
-    private java.awt.Label Precio2;
-    private java.awt.Label Precio3;
-    private java.awt.Label Precio4;
-    private java.awt.Label Precio5;
-    private java.awt.Label Precio6;
-    private java.awt.Label Precio7;
-    private java.awt.Label Precio8;
-    private javax.swing.JPanel avatar;
-    private javax.swing.JPanel cambiarGorro;
-    private javax.swing.JPanel cambiarLentes;
-    private javax.swing.JPanel cambiarTraje;
-    private javax.swing.JPanel gorroButton;
-    private javax.swing.JPanel guardarButton;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private java.awt.Label label1;
-    private java.awt.Label label2;
-    private java.awt.Label label3;
-    private java.awt.Label label4;
-    private java.awt.Label label5;
-    private java.awt.Label label6;
-    private java.awt.Label label7;
-    private javax.swing.JPanel lentesButton9;
-    private javax.swing.JPanel trajeButton10;
-    // End of variables declaration                   
+                   
+    
+                
 }
