@@ -1,0 +1,9 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "TPFinalLabo3/Librerias/jackson-annotations-2.15.2.jar",
+        "TPFinalLabo3/Librerias/jackson-core-2.15.2.jar",
+        "TPFinalLabo3/Librerias/jackson-databind-2.15.2.jar",
+        "TPFinalLabo3/Librerias/json-20220320.jar"
+    ]
+}
