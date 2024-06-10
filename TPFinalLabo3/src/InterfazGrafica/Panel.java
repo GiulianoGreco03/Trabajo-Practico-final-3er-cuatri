@@ -8,6 +8,9 @@ public class Panel extends JPanel{
     //Constantes
     private final int dimension = 600;
 
+    //Atributos
+    private JPanel botonSeleccionado;
+
     //Constructor
     public Panel(){
         setSize(dimension, dimension);
@@ -20,6 +23,14 @@ public class Panel extends JPanel{
        panelNuevo.requestFocus();
        thisPanel.revalidate();
        thisPanel.repaint();
+    }
+
+    public void setBotonSeleccionado(JPanel botonSeleccionado) {
+        
+        this.botonSeleccionado.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        this.botonSeleccionado = botonSeleccionado;
+        this.botonSeleccionado.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
+
     }
 
 }

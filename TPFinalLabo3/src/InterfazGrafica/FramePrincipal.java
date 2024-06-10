@@ -6,9 +6,10 @@ import java.awt.*;
 public class FramePrincipal extends JPanel{
 
     //Atributos
-    private int botonSeleccionado;
+    private JPanel botonSeleccionado;
     private PanelJuegos panelJuegos = new PanelJuegos();
     private PanelTienda panelTienda = new PanelTienda();
+    private PanelRankings panelRankings = new PanelRankings();
 
     //Componentes swing
     private javax.swing.JPanel Avatar;
@@ -28,10 +29,10 @@ public class FramePrincipal extends JPanel{
 
        
     public FramePrincipal() {
-        botonSeleccionado = 1;
         initComponents();
+        this.botonSeleccionado = Button1;
+        setBotonSeleccionado(Button1);
         cambiarPanelPrincipal(panelJuegos);
-        setBotonSeleccionado(1);
     }                  
     
     
@@ -50,6 +51,9 @@ public class FramePrincipal extends JPanel{
         button4Label = new javax.swing.JLabel();
         Banner = new javax.swing.JPanel();
         tituloLabel = new javax.swing.JLabel();
+
+        //Se elije el panel por defecto
+        
 
         setPreferredSize(new java.awt.Dimension(810, 700));
 
@@ -83,7 +87,7 @@ public class FramePrincipal extends JPanel{
             .addGap(0, 180, Short.MAX_VALUE)
         );
 
-        Button1.setBackground(new java.awt.Color(133, 36, 103));
+        Button1.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Button1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Button1.setPreferredSize(new java.awt.Dimension(150, 100));
         Button1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -120,7 +124,7 @@ public class FramePrincipal extends JPanel{
                 .addGap(35, 35, 35))
         );
 
-        Button2.setBackground(new java.awt.Color(133, 36, 103));
+        Button2.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Button2.setPreferredSize(new java.awt.Dimension(150, 100));
         Button2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -156,7 +160,7 @@ public class FramePrincipal extends JPanel{
                 .addGap(35, 35, 35))
         );
 
-        Button3.setBackground(new java.awt.Color(133, 36, 103));
+        Button3.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Button3.setPreferredSize(new java.awt.Dimension(150, 100));
         Button3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -191,7 +195,7 @@ public class FramePrincipal extends JPanel{
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
-        Button4.setBackground(new java.awt.Color(133, 36, 103));
+        Button4.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Button4.setPreferredSize(new java.awt.Dimension(150, 100));
         Button4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -303,14 +307,14 @@ public class FramePrincipal extends JPanel{
     }                                    
 
     private void Button1MouseExited(java.awt.event.MouseEvent evt) {   
-        if(botonSeleccionado != 1)                                  
+        if(botonSeleccionado != Button1)                                  
             Button1.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
     }                                   
 
     private void Button1MouseClicked(java.awt.event.MouseEvent evt) { 
-        if(botonSeleccionado != 1) {                                      
+        if(botonSeleccionado != Button1) {                                      
             cambiarPanelPrincipal(panelJuegos);
-            setBotonSeleccionado(1);
+            setBotonSeleccionado(Button1);
         }
     }                                    
 
@@ -319,14 +323,14 @@ public class FramePrincipal extends JPanel{
     }                                    
 
     private void Button2MouseExited(java.awt.event.MouseEvent evt) { 
-        if(botonSeleccionado != 2)                                    
+        if(botonSeleccionado != Button2)                                    
             Button2.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
     }                                   
 
     private void Button2MouseClicked(java.awt.event.MouseEvent evt) { 
-        if(botonSeleccionado != 2) {                                      
+        if(botonSeleccionado != Button2) {                                      
             cambiarPanelPrincipal(panelTienda);
-            setBotonSeleccionado(2);
+            setBotonSeleccionado(Button2);
         }
     }                                    
 
@@ -335,14 +339,13 @@ public class FramePrincipal extends JPanel{
     }                                    
 
     private void Button3MouseExited(java.awt.event.MouseEvent evt) {  
-        if(botonSeleccionado != 3)                                   
+        if(botonSeleccionado != Button3)                                   
             Button3.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
     }                                   
 
     private void Button3MouseClicked(java.awt.event.MouseEvent evt) {   
-        if(botonSeleccionado != 3) {                                    
-            PanelPrincipal.setBackground(Color.green);
-            setBotonSeleccionado(3);
+        if(botonSeleccionado != Button3) {                                    
+            setBotonSeleccionado(Button3);
         }
     }                                    
 
@@ -351,19 +354,19 @@ public class FramePrincipal extends JPanel{
     }                                    
 
     private void Button4MouseExited(java.awt.event.MouseEvent evt) { 
-        if(botonSeleccionado != 4)                                   
+        if(botonSeleccionado != Button4)                                   
             Button4.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
     }                                   
 
     private void Button4MouseClicked(java.awt.event.MouseEvent evt) { 
-        if(botonSeleccionado != 4) {                                     
-            PanelPrincipal.setBackground(Color.cyan);
-            setBotonSeleccionado(4);
+        if(botonSeleccionado != Button4) {                                     
+            cambiarPanelPrincipal(panelRankings);
+            setBotonSeleccionado(Button4);
         }
     }                                    
 
     //Metodos
-    private void cambiarPanelPrincipal(JPanel panelACambiar){
+    private <T extends JPanel> void cambiarPanelPrincipal(T panelACambiar){
         PanelPrincipal.removeAll();                                       
         PanelPrincipal.add(panelACambiar);
         panelACambiar.requestFocus();
@@ -372,42 +375,17 @@ public class FramePrincipal extends JPanel{
     }
 
     //Getters y Setters
-    public int getBotonSeleccionado() {
+    /*public int getBotonSeleccionado() {
         return botonSeleccionado;
-    }
+    }*/
 
 
-    public void setBotonSeleccionado(int botonSeleccionado) {
-        this.botonSeleccionado = botonSeleccionado;
-        reiniciarBotones();
-
-        switch (botonSeleccionado) {
-            case 1:
-                Button1.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
-                break;
-            case 2:
-                Button2.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
-                break;
-            case 3:
-                Button3.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
-                break;
-            case 4:
-                Button4.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
-                break;
+    public void setBotonSeleccionado(JPanel botonSeleccionado) {
         
-            default:
-                break;
-        }
-    }
-
-    public void reiniciarBotones(){
-        Button1.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
-        Button2.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
-        Button3.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
-        Button4.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        this.botonSeleccionado.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        this.botonSeleccionado = botonSeleccionado;
+        this.botonSeleccionado.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
 
     }
-
-    
 
 }

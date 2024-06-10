@@ -4,7 +4,8 @@ public enum PaletaDeColores {
     PanelPrincipal(106,25,148),
     Botones(133,36,103),
     BotonPresionado(115,115,115),
-    CuadradoTexto(66, 140, 140);
+    CuadradoTexto(66, 140, 140),
+    ColorLetras(255, 255, 255);
 
     
     int R;

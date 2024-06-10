@@ -1,6 +1,8 @@
 
 package InterfazGrafica;
 
+import java.awt.*;
+
 
 public class PanelTienda extends Panel {
 
@@ -101,7 +103,7 @@ public class PanelTienda extends Panel {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        trajeButton10.setBackground(new java.awt.Color(133, 36, 103));
+        trajeButton10.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         trajeButton10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 trajeButton10MouseClicked(evt);
@@ -135,7 +137,7 @@ public class PanelTienda extends Panel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        gorroButton.setBackground(new java.awt.Color(133, 36, 103));
+        gorroButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         gorroButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 gorroButtonMouseClicked(evt);
@@ -169,7 +171,7 @@ public class PanelTienda extends Panel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        lentesButton9.setBackground(new java.awt.Color(133, 36, 103));
+        lentesButton9.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         lentesButton9.setPreferredSize(new java.awt.Dimension(150, 40));
         lentesButton9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -325,47 +327,47 @@ public class PanelTienda extends Panel {
         );
 
         Precio1.setAlignment(java.awt.Label.CENTER);
-        Precio1.setBackground(new java.awt.Color(133, 36, 103));
+        Precio1.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Precio1.setForeground(new java.awt.Color(255, 255, 255));
         Precio1.setText("label1");
 
         Precio2.setAlignment(java.awt.Label.CENTER);
-        Precio2.setBackground(new java.awt.Color(133, 36, 103));
+        Precio2.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Precio2.setForeground(new java.awt.Color(255, 255, 255));
         Precio2.setText("label1");
 
         Precio3.setAlignment(java.awt.Label.CENTER);
-        Precio3.setBackground(new java.awt.Color(133, 36, 103));
+        Precio3.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Precio3.setForeground(new java.awt.Color(255, 255, 255));
         Precio3.setText("label1");
 
         Precio4.setAlignment(java.awt.Label.CENTER);
-        Precio4.setBackground(new java.awt.Color(133, 36, 103));
+        Precio4.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Precio4.setForeground(new java.awt.Color(255, 255, 255));
         Precio4.setText("label1");
 
         Precio5.setAlignment(java.awt.Label.CENTER);
-        Precio5.setBackground(new java.awt.Color(133, 36, 103));
+        Precio5.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Precio5.setForeground(new java.awt.Color(255, 255, 255));
         Precio5.setText("label1");
 
         Precio6.setAlignment(java.awt.Label.CENTER);
-        Precio6.setBackground(new java.awt.Color(133, 36, 103));
+        Precio6.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Precio6.setForeground(new java.awt.Color(255, 255, 255));
         Precio6.setText("label1");
 
         Precio7.setAlignment(java.awt.Label.CENTER);
-        Precio7.setBackground(new java.awt.Color(133, 36, 103));
+        Precio7.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Precio7.setForeground(new java.awt.Color(255, 255, 255));
         Precio7.setText("label1");
 
         Precio8.setAlignment(java.awt.Label.CENTER);
-        Precio8.setBackground(new java.awt.Color(133, 36, 103));
+        Precio8.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Precio8.setForeground(new java.awt.Color(255, 255, 255));
         Precio8.setText("label1");
 
         puntuacionLabel.setAlignment(java.awt.Label.CENTER);
-        puntuacionLabel.setBackground(new java.awt.Color(133, 36, 103));
+        puntuacionLabel.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         puntuacionLabel.setForeground(new java.awt.Color(255, 255, 255));
         puntuacionLabel.setPreferredSize(new java.awt.Dimension(100, 40));
         puntuacionLabel.setText("Puntuación");
@@ -492,7 +494,7 @@ public class PanelTienda extends Panel {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setPreferredSize(new java.awt.Dimension(600, 600));
 
-        cambiarGorro.setBackground(new java.awt.Color(133, 36, 103));
+        cambiarGorro.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         cambiarGorro.setPreferredSize(new java.awt.Dimension(150, 40));
         cambiarGorro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -524,7 +526,7 @@ public class PanelTienda extends Panel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        cambiarLentes.setBackground(new java.awt.Color(133, 36, 103));
+        cambiarLentes.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         cambiarLentes.setPreferredSize(new java.awt.Dimension(150, 40));
         cambiarLentes.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -556,7 +558,7 @@ public class PanelTienda extends Panel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        cambiarTraje.setBackground(new java.awt.Color(133, 36, 103));
+        cambiarTraje.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         cambiarTraje.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cambiarTrajeMouseClicked(evt);
@@ -600,7 +602,7 @@ public class PanelTienda extends Panel {
             .addGap(0, 400, Short.MAX_VALUE)
         );
 
-        guardarButton.setBackground(new java.awt.Color(133, 36, 103));
+        guardarButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         guardarButton.setPreferredSize(new java.awt.Dimension(150, 40));
         guardarButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
