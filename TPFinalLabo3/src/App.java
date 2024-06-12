@@ -28,8 +28,8 @@ public class App {
         pruebas.add(new ClasePruebaJson("RAul", 10));
         pruebas.add(new ClasePruebaJson("JAcinto", 20));
 
-        ClaseJsonGenerica jason = new ClaseJsonGenerica<>();
-        jason.crearJson("archivo.json");
-        //jason.CargarValores(pruebas, "src\\archivo.json");
+        ClaseJsonGenerica<ClasePruebaJson> jason = new ClaseJsonGenerica<>();
+        //jason.crearJson("archivo.json");
+        jason.CargarValores(pruebas, "archivo.json");
     }
 }

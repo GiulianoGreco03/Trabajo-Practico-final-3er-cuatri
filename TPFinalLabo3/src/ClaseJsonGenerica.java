@@ -6,15 +6,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class ClaseJsonGenerica<T> {
 
-    private T datosACargar;
     private ObjectMapper mapper;
 
     public ClaseJsonGenerica(){
         mapper = new ObjectMapper();
-    }
-
-    public void crearJson(String nombre){
-        File file = new File("TPFinalLabo3\src", nombre);
     }
 
     public void CargarValores(List<T> aCargar, String path){
@@ -26,9 +21,18 @@ public class ClaseJsonGenerica<T> {
         
     }
 
+    public void LeerValores(List<T> aCargar, String path){
+        try {
+           mapper.readValue(new File(path), new TypeReference<List<T>>(){}); 
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        
+    }
+
     public void CargarValores(HashMap<String, T> aCargar, String path){
         try {
-            mapper.writeValue(new File(path), new TypeReference<HashMap<String, T>>() {}); 
+            mapper.writeValue(new File(path), aCargar); 
          } catch (IOException e) {
              System.out.println(e.getMessage());
          }
@@ -36,11 +40,13 @@ public class ClaseJsonGenerica<T> {
 
     public void CargarValores(TreeSet<T> aCargar, String path){
         try {
-            mapper.writeValue(new File(path), new TypeReference<TreeSet<T>>() {}); 
+            mapper.writeValue(new File(path), aCargar); 
          } catch (IOException e) {
              System.out.println(e.getMessage());
          }
     }
+
+
 
 
 
