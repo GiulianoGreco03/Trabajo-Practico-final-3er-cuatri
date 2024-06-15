@@ -4,12 +4,13 @@ import Juegos.*;
 import java.util.HashMap;
 
 public class Usuario {
-      private String nombre;
+    private String nombre;
     private String contraseña;
     private boolean admin;
     private HashMap<EnumJuegos,Long> puntuacion;
   //  private Avatar avatar
     private boolean cuentaActiva;
+    
     public String getNombre() {
         return nombre;
     }
