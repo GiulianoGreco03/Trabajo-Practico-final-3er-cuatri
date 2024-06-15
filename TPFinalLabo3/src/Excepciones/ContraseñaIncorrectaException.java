@@ -1,5 +1,7 @@
 package Excepciones;
-
-public class ContraseniaIncorrecta extends Exception {
-    System.out.println("Contraseña Incorrecta") ;
+//
+public class ContraseñaIncorrectaException extends RuntimeException {
+    public ContraseñaIncorrectaException(){
+    super("Contraseña Incorrecta");
+    }
 }
