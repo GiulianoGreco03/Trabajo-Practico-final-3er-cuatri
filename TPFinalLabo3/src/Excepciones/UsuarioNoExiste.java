@@ -1,5 +1,5 @@
 package Excepciones;
 
-public class UsuarioNoExiste {
-
+public class UsuarioNoExiste extends Exception {
+    System.out.println("Usuario no existe") ;
 }
