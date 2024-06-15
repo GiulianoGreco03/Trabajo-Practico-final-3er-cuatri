@@ -8,7 +8,7 @@ package InterfazGrafica;
  *
  * @author Usuario
  */
-public class PanelJuegosAdmin extends javax.swing.JPanel {
+public class PanelJuegosAdmin extends Panel {
 
     /**
      * Creates new form PanelJuegosAdmin
