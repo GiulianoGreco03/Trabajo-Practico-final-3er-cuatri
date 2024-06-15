@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.TreeSet;
 
 public class GestorRankings{
-    // Atributos
+
     private TreeSet<Ranking> rankingSnake;
     private TreeSet<Ranking> rankingBuscaminas;
     private TreeSet<Ranking> rankingDinosaurio;
