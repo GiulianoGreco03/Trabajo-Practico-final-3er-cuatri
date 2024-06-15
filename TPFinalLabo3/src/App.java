@@ -5,23 +5,14 @@ import javax.swing.JFrame;
 
 
 import InterfazGrafica.*;
-import Usuario.ClasePruebaJson;
+import Plataformas.*;
+import Usuarios.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        JFrame frame = new JFrame("Utene Games");
-        FramePrincipal panelPrincipal = new FramePrincipal();
-        PanelLogin login = new PanelLogin();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setResizable(false);
-        
-     
-        //frame.setSize(600, 600);
-        frame.add(login);    
-        frame.pack();
-        frame.setVisible(true);
 
-        //pruebaJson();
+        Plataforma plataforma = new Plataforma();
+        
     }
 
     public static void pruebaJson(){

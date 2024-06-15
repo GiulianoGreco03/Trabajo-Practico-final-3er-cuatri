@@ -1,4 +1,4 @@
-package Usuario;
+package Usuarios;
 
 import java.util.HashMap;
 
@@ -27,6 +27,7 @@ public class GestorUsuarios {
     public Usuario buscarUsuario(String nombreUsuario) {
 
         try {
+            
 
             if (listadoUsuarios.containsKey(nombreUsuario)) {
                 if (listadoUsuarios.get(nombreUsuario).isCuentaActiva()) {

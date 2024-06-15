@@ -1,4 +1,4 @@
-package Ranking;
+package Rankings;
 
 import Juegos.*;
 

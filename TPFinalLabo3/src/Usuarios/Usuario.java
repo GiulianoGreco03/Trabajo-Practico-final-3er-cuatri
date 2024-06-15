@@ -1,4 +1,4 @@
-package Usuario;
+package Usuarios;
 
 import Juegos.*;
 import java.util.HashMap;
@@ -33,6 +33,10 @@ public class Usuario {
     }
     public void setCuentaActiva(boolean cuentaActiva) {
         this.cuentaActiva = cuentaActiva;
+    }
+
+    public Usuario(){
+
     }
 
     public Usuario(String nombre, String contraseña, boolean admin,  boolean cuentaActiva) {

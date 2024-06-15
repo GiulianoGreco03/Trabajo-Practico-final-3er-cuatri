@@ -7,19 +7,18 @@ import java.awt.*;
 import java.util.HashMap;
 import javax.swing.*;
 import Excepciones.*;
-import Plataforma.Plataforma;
-import Usuario.Usuario;
+import Plataformas.Plataforma;
+import Usuarios.GestorUsuarios;
+import Usuarios.Usuario;
 
-/**
- *
- * @author Usuario
- */
+
 public class PanelLogin extends Panel {
 
-    /**
-     * Creates new form PanelLogin
-     */
-    public PanelLogin() {
+    private GestorUsuarios listadoUsuarios = new GestorUsuarios();
+    private MainFrame mainFrame;
+
+    public PanelLogin(MainFrame mainFrame) {
+        this.mainFrame = mainFrame;
         initComponents();
     }
 
@@ -134,10 +133,10 @@ public class PanelLogin extends Panel {
         );
 
         errorUsuarioInicio.setForeground(new java.awt.Color(255, 0, 0));
-        errorUsuarioInicio.setText("El usuario no existe");
+        errorUsuarioInicio.setText(" ");
 
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel2.setText("Contraseña incorrecta");
+        jLabel2.setText(" ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -384,7 +383,27 @@ public class PanelLogin extends Panel {
     }                                               
 
     private void iniciarSesionButtonMouseClicked(java.awt.event.MouseEvent evt) {                                                 
-        // TODO add your handling code here:
+        String nombre = textFieldUsuarioInicio.getText();
+        String contraseña = String.copyValueOf(textFieldContraseñaInicio.getPassword());
+
+
+        Usuario aux = listadoUsuarios.buscarUsuario(nombre);
+
+        if(aux != null){
+            if(aux.getContraseña().compareTo(contraseña) == 0){
+                mainFrame.showSystemPanel();
+            }
+            else{
+                jLabel2.setText("Contraseña incorrecta");
+            }
+        }else{
+            errorUsuarioInicio.setText("Usuario no encontrado");
+        }
+
+
+        
+
+        
     }                                                
 
     private void textFieldContraseñaRegistroActionPerformed(java.awt.event.ActionEvent evt) {                                                            

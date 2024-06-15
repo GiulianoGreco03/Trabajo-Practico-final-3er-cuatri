@@ -1,4 +1,4 @@
-package Usuario;
+package Usuarios;
 
 public class ClasePruebaJson {
     private String nombre;
