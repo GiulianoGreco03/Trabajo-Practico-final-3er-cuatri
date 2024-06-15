@@ -3,14 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package InterfazGrafica;
-
+import java.awt.*;
+import java.util.HashMap;
 import javax.swing.*;
+import Excepciones.*;
+import Plataforma.Plataforma;
+import Usuario.Usuario;
 
 /**
  *
  * @author Usuario
  */
-public class PanelLogin extends JPanel {
+public class PanelLogin extends Panel {
 
     /**
      * Creates new form PanelLogin
@@ -68,7 +72,7 @@ public class PanelLogin extends JPanel {
         banner.setOpaque(true);
 
         textFieldUsuarioInicio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        textFieldUsuarioInicio.setText("Ingrese su nombre de usuario");
+        textFieldUsuarioInicio.setText("");
         textFieldUsuarioInicio.setBorder(null);
         textFieldUsuarioInicio.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         textFieldUsuarioInicio.addActionListener(new java.awt.event.ActionListener() {
@@ -87,7 +91,7 @@ public class PanelLogin extends JPanel {
         textoUsuario.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         textoUsuario.setText("Usuario");
 
-        textFieldContraseñaInicio.setText("jPasswordField1");
+        textFieldContraseñaInicio.setText("");
         textFieldContraseñaInicio.setBorder(null);
         textFieldContraseñaInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,7 +196,7 @@ public class PanelLogin extends JPanel {
         jSeparator4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         textFieldUsuarioRegistro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        textFieldUsuarioRegistro.setText("Ingrese su nombre de usuario");
+        textFieldUsuarioRegistro.setText("");
         textFieldUsuarioRegistro.setBorder(null);
         textFieldUsuarioRegistro.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         textFieldUsuarioRegistro.addActionListener(new java.awt.event.ActionListener() {
@@ -207,7 +211,7 @@ public class PanelLogin extends JPanel {
         textoConfirmarContraseña.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         textoConfirmarContraseña.setText("Confirme su contraseña");
 
-        textFieldConfirmarContraseñaRegistro.setText("jPasswordField1");
+        textFieldConfirmarContraseñaRegistro.setText("");
         textFieldConfirmarContraseñaRegistro.setBorder(null);
         textFieldConfirmarContraseñaRegistro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -265,7 +269,7 @@ public class PanelLogin extends JPanel {
         jSeparator5.setForeground(new java.awt.Color(73, 128, 153));
         jSeparator5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        textFieldContraseñaRegistro.setText("jPasswordField1");
+        textFieldContraseñaRegistro.setText("");
         textFieldContraseñaRegistro.setBorder(null);
         textFieldContraseñaRegistro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -356,11 +360,13 @@ public class PanelLogin extends JPanel {
     }// </editor-fold>                        
 
     private void crearCuentaButtonMouseEntered(java.awt.event.MouseEvent evt) {                                               
-        // TODO add your handling code here:
+        crearCuentaButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }                                              
 
     private void crearCuentaButtonMouseExited(java.awt.event.MouseEvent evt) {                                              
-        // TODO add your handling code here:
+        if(botonSeleccionado != crearCuentaButton){
+            crearCuentaButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }                                             
 
     private void crearCuentaButtonMouseClicked(java.awt.event.MouseEvent evt) {                                               
@@ -368,11 +374,13 @@ public class PanelLogin extends JPanel {
     }                                              
 
     private void iniciarSesionButtonMouseEntered(java.awt.event.MouseEvent evt) {                                                 
-        // TODO add your handling code here:
+        iniciarSesionButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }                                                
 
     private void iniciarSesionButtonMouseExited(java.awt.event.MouseEvent evt) {                                                
-        // TODO add your handling code here:
+        if(botonSeleccionado != iniciarSesionButton){
+            iniciarSesionButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }                                               
 
     private void iniciarSesionButtonMouseClicked(java.awt.event.MouseEvent evt) {                                                 
@@ -392,11 +400,11 @@ public class PanelLogin extends JPanel {
     }                                                                    
 
     private void textFieldUsuarioInicioActionPerformed(java.awt.event.ActionEvent evt) {                                                       
-        // TODO add your handling code here:
+           
     }                                                      
 
     private void textFieldContraseñaInicioActionPerformed(java.awt.event.ActionEvent evt) {                                                          
-        // TODO add your handling code here:
+        
     }                                                         
 
 

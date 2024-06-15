@@ -3,6 +3,7 @@ package InterfazGrafica;
 import javax.swing.*;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 public class FramePrincipal extends JPanel{
 
@@ -10,7 +11,14 @@ public class FramePrincipal extends JPanel{
     private JPanel botonSeleccionado;
     private PanelJuegos panelJuegos = new PanelJuegos();
     private PanelTienda panelTienda = new PanelTienda();
+    private PanelPerfil panelPerfil = new PanelPerfil();
     private PanelRankings panelRankings = new PanelRankings();
+
+    private PanelJuegosAdmin panelJuegosAdmin = new PanelJuegosAdmin();
+    private PanelTiendaAdmin panelTiendaAdmin = new PanelTiendaAdmin();
+    private PanelPerfilAdmin panelPerfilAdmin = new PanelPerfilAdmin();
+
+    private ArrayList<Panel> paneles;
 
     //Componentes swing
     private javax.swing.JPanel Avatar;
@@ -30,12 +38,58 @@ public class FramePrincipal extends JPanel{
 
        
     public FramePrincipal() {
+
+        paneles = new ArrayList<>();
+
+        cargarPanelesUsuario();
+        //cargarPanelesAdmin();
+
         initComponents();
         this.botonSeleccionado = Button1;
         setBotonSeleccionado(Button1);
-        cambiarPanelPrincipal(panelJuegos);
+        cambiarPanelPrincipal(paneles.get(0));
     }                  
     
+
+    //Metodos
+    private <T extends JPanel> void cambiarPanelPrincipal(T panelACambiar){
+        PanelPrincipal.removeAll();                                       
+        PanelPrincipal.add(panelACambiar);
+        panelACambiar.requestFocus();
+        PanelPrincipal.revalidate();
+        PanelPrincipal.repaint();
+    }
+
+    //Getters y Setters
+    /*public int getBotonSeleccionado() {
+        return botonSeleccionado;
+    }*/
+
+    public void cargarPanelesUsuario(){
+        paneles.add(panelJuegos);
+        paneles.add(panelTienda);
+        paneles.add(panelPerfil);
+        paneles.add(panelRankings);
+        
+    }
+
+    public void cargarPanelesAdmin(){
+
+        paneles.add(panelJuegosAdmin);
+        paneles.add(panelTiendaAdmin);
+        paneles.add(panelPerfilAdmin);
+        paneles.add(panelRankings);
+
+    }
+
+
+    public void setBotonSeleccionado(JPanel botonSeleccionado) {
+        
+        this.botonSeleccionado.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        this.botonSeleccionado = botonSeleccionado;
+        this.botonSeleccionado.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
+
+    }
     
     private void initComponents() {
 
@@ -314,7 +368,7 @@ public class FramePrincipal extends JPanel{
 
     private void Button1MouseClicked(java.awt.event.MouseEvent evt) { 
         if(botonSeleccionado != Button1) {                                      
-            cambiarPanelPrincipal(panelJuegos);
+            cambiarPanelPrincipal(paneles.get(0));
             setBotonSeleccionado(Button1);
         }
     }                                    
@@ -330,7 +384,7 @@ public class FramePrincipal extends JPanel{
 
     private void Button2MouseClicked(java.awt.event.MouseEvent evt) { 
         if(botonSeleccionado != Button2) {                                      
-            cambiarPanelPrincipal(panelTienda);
+            cambiarPanelPrincipal(paneles.get(1));
             setBotonSeleccionado(Button2);
         }
     }                                    
@@ -345,7 +399,8 @@ public class FramePrincipal extends JPanel{
     }                                   
 
     private void Button3MouseClicked(java.awt.event.MouseEvent evt) {   
-        if(botonSeleccionado != Button3) {                                    
+        if(botonSeleccionado != Button3) {                                      
+            cambiarPanelPrincipal(paneles.get(2));
             setBotonSeleccionado(Button3);
         }
     }                                    
@@ -361,32 +416,11 @@ public class FramePrincipal extends JPanel{
 
     private void Button4MouseClicked(java.awt.event.MouseEvent evt) { 
         if(botonSeleccionado != Button4) {                                     
-            cambiarPanelPrincipal(panelRankings);
+            cambiarPanelPrincipal(paneles.get(3));
             setBotonSeleccionado(Button4);
         }
     }                                    
 
-    //Metodos
-    private <T extends JPanel> void cambiarPanelPrincipal(T panelACambiar){
-        PanelPrincipal.removeAll();                                       
-        PanelPrincipal.add(panelACambiar);
-        panelACambiar.requestFocus();
-        PanelPrincipal.revalidate();
-        PanelPrincipal.repaint();
-    }
-
-    //Getters y Setters
-    /*public int getBotonSeleccionado() {
-        return botonSeleccionado;
-    }*/
-
-
-    public void setBotonSeleccionado(JPanel botonSeleccionado) {
-        
-        this.botonSeleccionado.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
-        this.botonSeleccionado = botonSeleccionado;
-        this.botonSeleccionado.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
-
-    }
+    
 
 }

@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package InterfazGrafica;
-
+import java.awt.*;
 /**
  *
  * @author Usuario
@@ -445,11 +445,13 @@ public class PanelJuegosAdmin extends Panel {
     }//GEN-LAST:event_icon6MouseClicked
 
     private void habilitarDeshabilitarButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitarButtonMouseEntered
-        // TODO add your handling code here:
+        habilitarDeshabilitarButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_habilitarDeshabilitarButtonMouseEntered
 
     private void habilitarDeshabilitarButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitarButtonMouseExited
-        // TODO add your handling code here:
+        if(botonSeleccionado != habilitarDeshabilitarButton){
+            habilitarDeshabilitarButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }//GEN-LAST:event_habilitarDeshabilitarButtonMouseExited
 
     private void habilitarDeshabilitarButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitarButtonMouseClicked
@@ -457,11 +459,13 @@ public class PanelJuegosAdmin extends Panel {
     }//GEN-LAST:event_habilitarDeshabilitarButtonMouseClicked
 
     private void limpiarHistorialButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_limpiarHistorialButtonMouseEntered
-        // TODO add your handling code here:
+        limpiarHistorialButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_limpiarHistorialButtonMouseEntered
 
     private void limpiarHistorialButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_limpiarHistorialButtonMouseExited
-        // TODO add your handling code here:
+        if(botonSeleccionado != limpiarHistorialButton){
+            limpiarHistorialButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }//GEN-LAST:event_limpiarHistorialButtonMouseExited
 
     private void limpiarHistorialButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_limpiarHistorialButtonMouseClicked

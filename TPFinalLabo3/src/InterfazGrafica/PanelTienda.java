@@ -689,7 +689,7 @@ public class PanelTienda extends Panel {
     }// </editor-fold>                        
 
     private void gorroButtonMouseEntered(java.awt.event.MouseEvent evt) {                                         
-        gorroButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        gorroButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }                                        
 
     private void gorroButtonMouseExited(java.awt.event.MouseEvent evt) {                                        
@@ -703,11 +703,13 @@ public class PanelTienda extends Panel {
     }                                        
 
     private void lentesButton9MouseEntered(java.awt.event.MouseEvent evt) {                                           
-        // TODO add your handling code here:
+            lentesButton9.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }                                          
 
     private void lentesButton9MouseExited(java.awt.event.MouseEvent evt) {                                          
-        // TODO add your handling code here:
+        if(botonSeleccionado != lentesButton9){
+            lentesButton9.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }                                         
 
     private void lentesButton9MouseClicked(java.awt.event.MouseEvent evt) {                                           
@@ -715,11 +717,13 @@ public class PanelTienda extends Panel {
     }                                          
 
     private void trajeButton10MouseEntered(java.awt.event.MouseEvent evt) {                                           
-        // TODO add your handling code here:
+        trajeButton10.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }                                          
 
     private void trajeButton10MouseExited(java.awt.event.MouseEvent evt) {                                          
-        // TODO add your handling code here:
+        if(botonSeleccionado != trajeButton10){
+            trajeButton10.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }                                         
 
     private void trajeButton10MouseClicked(java.awt.event.MouseEvent evt) {                                           
@@ -727,11 +731,13 @@ public class PanelTienda extends Panel {
     }                                          
 
     private void guardarButtonMouseEntered(java.awt.event.MouseEvent evt) {                                           
-        // TODO add your handling code here:
+        guardarButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }                                          
 
     private void guardarButtonMouseExited(java.awt.event.MouseEvent evt) {                                          
-        // TODO add your handling code here:
+        if(botonSeleccionado != guardarButton){
+            guardarButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }                                         
 
     private void guardarButtonMouseClicked(java.awt.event.MouseEvent evt) {                                           
@@ -739,11 +745,13 @@ public class PanelTienda extends Panel {
     }                                          
 
     private void cambiarGorroMouseEntered(java.awt.event.MouseEvent evt) {                                          
-        // TODO add your handling code here:
+        cambiarGorro.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }                                         
 
     private void cambiarGorroMouseExited(java.awt.event.MouseEvent evt) {                                         
-        // TODO add your handling code here:
+        if(botonSeleccionado != cambiarGorro){
+            cambiarGorro.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }                                        
 
     private void cambiarGorroMouseClicked(java.awt.event.MouseEvent evt) {                                          
@@ -751,11 +759,13 @@ public class PanelTienda extends Panel {
     }                                         
 
     private void cambiarLentesMouseEntered(java.awt.event.MouseEvent evt) {                                           
-        // TODO add your handling code here:
+        cambiarLentes.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }                                          
 
     private void cambiarLentesMouseExited(java.awt.event.MouseEvent evt) {                                          
-        // TODO add your handling code here:
+        if(botonSeleccionado != cambiarLentes){
+            cambiarLentes.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }                                         
 
     private void cambiarLentesMouseClicked(java.awt.event.MouseEvent evt) {                                           
@@ -763,11 +773,13 @@ public class PanelTienda extends Panel {
     }                                          
 
     private void cambiarTrajeMouseEntered(java.awt.event.MouseEvent evt) {                                          
-        // TODO add your handling code here:
+        cambiarTraje.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }                                         
 
     private void cambiarTrajeMouseExited(java.awt.event.MouseEvent evt) {                                         
-        // TODO add your handling code here:
+        if(botonSeleccionado != cambiarTraje){
+            cambiarTraje.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }                                        
 
     private void cambiarTrajeMouseClicked(java.awt.event.MouseEvent evt) {                                          

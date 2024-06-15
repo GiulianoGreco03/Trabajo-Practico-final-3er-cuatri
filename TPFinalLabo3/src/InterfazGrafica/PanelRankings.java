@@ -401,11 +401,13 @@ public class PanelRankings extends Panel {
         }                                        
     
         private void snakeButtonMouseEntered(java.awt.event.MouseEvent evt) {                                         
-            // TODO add your handling code here:
+            snakeButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
         }                                        
     
         private void snakeButtonMouseExited(java.awt.event.MouseEvent evt) {                                        
-            // TODO add your handling code here:
+            if(botonSeleccionado != snakeButton){
+                snakeButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+            }
         }                                       
     
         private void blackjackButtonMouseClicked(java.awt.event.MouseEvent evt) {                                             
@@ -413,11 +415,13 @@ public class PanelRankings extends Panel {
         }                                            
     
         private void blackjackButtonMouseEntered(java.awt.event.MouseEvent evt) {                                             
-            // TODO add your handling code here:
+            blackjackButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
         }                                            
     
         private void blackjackButtonMouseExited(java.awt.event.MouseEvent evt) {                                            
-            // TODO add your handling code here:
+            if(botonSeleccionado != blackjackButton){
+                blackjackButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+            }
         }                                           
     
         private void buscaminasButtonMouseClicked(java.awt.event.MouseEvent evt) {                                              
@@ -425,11 +429,13 @@ public class PanelRankings extends Panel {
         }                                             
     
         private void buscaminasButtonMouseEntered(java.awt.event.MouseEvent evt) {                                              
-            // TODO add your handling code here:
+            buscaminasButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
         }                                             
     
         private void buscaminasButtonMouseExited(java.awt.event.MouseEvent evt) {                                             
-            // TODO add your handling code here:
+            if(botonSeleccionado != buscaminasButton){
+                buscaminasButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+            }
         }                                            
     
         private void dinosaurioButtonMouseClicked(java.awt.event.MouseEvent evt) {                                              
@@ -437,11 +443,13 @@ public class PanelRankings extends Panel {
         }                                             
     
         private void dinosaurioButtonMouseEntered(java.awt.event.MouseEvent evt) {                                              
-            // TODO add your handling code here:
+            dinosaurioButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
         }                                             
     
         private void dinosaurioButtonMouseExited(java.awt.event.MouseEvent evt) {                                             
-            // TODO add your handling code here:
+            if(botonSeleccionado != dinosaurioButton){
+                dinosaurioButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+            }
         }                                            
     
         private void pacmanButtonMouseClicked(java.awt.event.MouseEvent evt) {                                          
@@ -449,11 +457,13 @@ public class PanelRankings extends Panel {
         }                                         
     
         private void pacmanButtonMouseEntered(java.awt.event.MouseEvent evt) {                                          
-            // TODO add your handling code here:
+            pacmanButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
         }                                         
     
         private void pacmanButtonMouseExited(java.awt.event.MouseEvent evt) {                                         
-            // TODO add your handling code here:
+            if(botonSeleccionado != pacmanButton){
+                pacmanButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+            }
         }                                        
     
         private void spaceButtonMouseClicked(java.awt.event.MouseEvent evt) {                                         
@@ -461,11 +471,13 @@ public class PanelRankings extends Panel {
         }                                        
     
         private void spaceButtonMouseEntered(java.awt.event.MouseEvent evt) {                                         
-            // TODO add your handling code here:
+            spaceButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
         }                                        
     
         private void spaceButtonMouseExited(java.awt.event.MouseEvent evt) {                                        
-            // TODO add your handling code here:
+            if(botonSeleccionado != spaceButton){
+                spaceButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+            }
         }                                       
     
     
