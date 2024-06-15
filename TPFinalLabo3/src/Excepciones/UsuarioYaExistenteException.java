@@ -1,8 +1,8 @@
 package Excepciones;
 //
 public class UsuarioYaExistenteException extends RuntimeException {
-    public UsuarioYaExistenteException(String nombre){
-        System.out.println("El usuario " + nombre + " ya existe") ;
+    public UsuarioYaExistenteException(){
+        System.out.println("El usuario ya existe") ;
     }
     
 }

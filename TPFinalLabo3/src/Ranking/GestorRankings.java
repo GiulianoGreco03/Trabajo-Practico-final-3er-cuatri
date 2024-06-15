@@ -137,7 +137,7 @@ public class GestorRankings{
                     return objeto;
                 }
             }
-            throw new UsuarioNoExisteException(nombre);  
+            throw new UsuarioNoExisteException();  
         } catch (UsuarioNoExisteException e) {
             System.out.println(e.getMessage());
         }
@@ -153,7 +153,7 @@ public class GestorRankings{
                     return objeto;
                 }
             }
-            throw new UsuarioNoExisteException(nombre);  
+            throw new UsuarioNoExisteException();  
         } catch (UsuarioNoExisteException e) {
             System.out.println(e.getMessage());
         }
@@ -169,7 +169,7 @@ public class GestorRankings{
                     return objeto;
                 }
             }
-            throw new UsuarioNoExisteException(nombre);  
+            throw new UsuarioNoExisteException();  
         } catch (UsuarioNoExisteException e) {
             System.out.println(e.getMessage());
         }
@@ -185,7 +185,7 @@ public class GestorRankings{
                     return objeto;
                 }
             }
-            throw new UsuarioNoExisteException(nombre);  
+            throw new UsuarioNoExisteException();  
         } catch (UsuarioNoExisteException e) {
             System.out.println(e.getMessage());
         }
@@ -201,7 +201,7 @@ public class GestorRankings{
                     return objeto;
                 }
             }
-            throw new UsuarioNoExisteException(nombre);  
+            throw new UsuarioNoExisteException();  
         } catch (UsuarioNoExisteException e) {
             System.out.println(e.getMessage());
         }
@@ -217,7 +217,7 @@ public class GestorRankings{
                     return objeto;
                 }
             }
-            throw new UsuarioNoExisteException(nombre);  
+            throw new UsuarioNoExisteException();  
         } catch (UsuarioNoExisteException e) {
             System.out.println(e.getMessage());
         }
