@@ -4,7 +4,7 @@
  */
 package InterfazGrafica;
 
-import java.awt.Cursor;
+import java.awt.*;
 
 /**
  *
@@ -316,11 +316,13 @@ public class PanelPerfilAdmin extends Panel {
     }//GEN-LAST:event_seleccionarUsuarioActionPerformed
 
     private void darDeBajaButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_darDeBajaButtonMouseEntered
-        // TODO add your handling code here:
+        darDeBajaButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_darDeBajaButtonMouseEntered
 
     private void darDeBajaButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_darDeBajaButtonMouseExited
-        // TODO add your handling code here:
+        if(botonSeleccionado != darDeBajaButton){
+            darDeBajaButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }//GEN-LAST:event_darDeBajaButtonMouseExited
 
     private void darDeBajaButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_darDeBajaButtonMouseClicked
@@ -332,11 +334,13 @@ public class PanelPerfilAdmin extends Panel {
     }//GEN-LAST:event_seleccionarUsuarioMouseClicked
 
     private void cerrarSesionButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarSesionButtonMouseEntered
-        // TODO add your handling code here:
+        cerrarSesionButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_cerrarSesionButtonMouseEntered
 
     private void cerrarSesionButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarSesionButtonMouseExited
-        // TODO add your handling code here:
+        if(botonSeleccionado != cerrarSesionButton){
+            cerrarSesionButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }//GEN-LAST:event_cerrarSesionButtonMouseExited
 
     private void cerrarSesionButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarSesionButtonMouseClicked

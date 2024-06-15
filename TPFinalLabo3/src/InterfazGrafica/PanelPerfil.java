@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package InterfazGrafica;
-
+import java.awt.*;
 /**
  *
  * @author Usuario
@@ -219,11 +219,13 @@ public class PanelPerfil extends Panel {
     }//GEN-LAST:event_textFieldCambiarContraseñaActionPerformed
 
     private void confirmarButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_confirmarButtonMouseEntered
-        // TODO add your handling code here:
+        confirmarButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_confirmarButtonMouseEntered
 
     private void confirmarButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_confirmarButtonMouseExited
-        // TODO add your handling code here:
+        if(botonSeleccionado != confirmarButton){
+            confirmarButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }//GEN-LAST:event_confirmarButtonMouseExited
 
     private void confirmarButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_confirmarButtonMouseClicked
@@ -231,11 +233,13 @@ public class PanelPerfil extends Panel {
     }//GEN-LAST:event_confirmarButtonMouseClicked
 
     private void cerrarSesionButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarSesionButtonMouseEntered
-        // TODO add your handling code here:
+        cerrarSesionButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_cerrarSesionButtonMouseEntered
 
     private void cerrarSesionButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarSesionButtonMouseExited
-        // TODO add your handling code here:
+        if(botonSeleccionado != cerrarSesionButton){
+            cerrarSesionButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }//GEN-LAST:event_cerrarSesionButtonMouseExited
 
     private void cerrarSesionButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarSesionButtonMouseClicked
@@ -243,11 +247,13 @@ public class PanelPerfil extends Panel {
     }//GEN-LAST:event_cerrarSesionButtonMouseClicked
 
     private void darDeBajaButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_darDeBajaButtonMouseEntered
-        // TODO add your handling code here:
+        darDeBajaButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_darDeBajaButtonMouseEntered
 
     private void darDeBajaButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_darDeBajaButtonMouseExited
-        // TODO add your handling code here:
+        if(botonSeleccionado != darDeBajaButton){
+            darDeBajaButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }//GEN-LAST:event_darDeBajaButtonMouseExited
 
     private void darDeBajaButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_darDeBajaButtonMouseClicked

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class FramePrincipal extends JPanel{
 
-    //Atributos
+    //Atributos.
     private JPanel botonSeleccionado;
     private PanelJuegos panelJuegos = new PanelJuegos();
     private PanelTienda panelTienda = new PanelTienda();
