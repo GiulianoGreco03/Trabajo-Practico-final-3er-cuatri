@@ -1,6 +1,7 @@
 package InterfazGrafica;
 
 import javax.swing.*;
+
 import java.awt.*;
 
 public class FramePrincipal extends JPanel{

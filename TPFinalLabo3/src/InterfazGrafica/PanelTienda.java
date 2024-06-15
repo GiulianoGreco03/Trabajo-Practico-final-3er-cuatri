@@ -4,6 +4,8 @@ package InterfazGrafica;
 import java.awt.*;
 
 
+
+
 public class PanelTienda extends Panel {
 
 
@@ -687,11 +689,13 @@ public class PanelTienda extends Panel {
     }// </editor-fold>                        
 
     private void gorroButtonMouseEntered(java.awt.event.MouseEvent evt) {                                         
-        // TODO add your handling code here:
+        gorroButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
     }                                        
 
     private void gorroButtonMouseExited(java.awt.event.MouseEvent evt) {                                        
-        // TODO add your handling code here:
+        if(botonSeleccionado != gorroButton){
+            gorroButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }                                       
 
     private void gorroButtonMouseClicked(java.awt.event.MouseEvent evt) {                                         

@@ -2,6 +2,7 @@
 package InterfazGrafica;
 
 import java.awt.*;
+
 import Juegos.*;
 
 public class PanelJuegos extends Panel {

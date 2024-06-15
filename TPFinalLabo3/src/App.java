@@ -17,7 +17,7 @@ public class App {
         
      
         //frame.setSize(600, 600);
-        frame.add(login);    
+        frame.add(panelPrincipal);    
         frame.pack();
         frame.setVisible(true);
 

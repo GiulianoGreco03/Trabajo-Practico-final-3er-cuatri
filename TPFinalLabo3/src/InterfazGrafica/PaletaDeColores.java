@@ -8,7 +8,7 @@ public enum PaletaDeColores {
     ColorLetras(255, 255, 255);
 
     
-    int R;
+    public int R;
     int G;
     int B;
 

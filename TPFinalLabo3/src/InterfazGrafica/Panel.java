@@ -9,7 +9,7 @@ public class Panel extends JPanel{
     private final int dimension = 600;
 
     //Atributos
-    private JPanel botonSeleccionado;
+    protected JPanel botonSeleccionado;
 
     //Constructor
     public Panel(){
