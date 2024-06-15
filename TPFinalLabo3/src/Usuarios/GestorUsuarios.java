@@ -17,7 +17,6 @@ public class GestorUsuarios {
     public HashMap<String, Usuario> getHashMap() {
         return listadoUsuarios;
     }
-
     public void setHashMap(HashMap<String, Usuario> listadoUsuarios) {
         this.listadoUsuarios = listadoUsuarios;
     }
@@ -25,7 +24,6 @@ public class GestorUsuarios {
     // metodos
 
     public Usuario buscarUsuario(String nombreUsuario) {
-
         try {
             
 

@@ -369,7 +369,7 @@ public class PanelLogin extends Panel {
     }                                             
 
     private void crearCuentaButtonMouseClicked(java.awt.event.MouseEvent evt) {                                               
-        // TODO add your handling code here:
+        
     }                                              
 
     private void iniciarSesionButtonMouseEntered(java.awt.event.MouseEvent evt) {                                                 
@@ -418,12 +418,12 @@ public class PanelLogin extends Panel {
         // TODO add your handling code here:
     }                                                                    
 
-    private void textFieldUsuarioInicioActionPerformed(java.awt.event.ActionEvent evt) {                                                       
-           
+    private void textFieldUsuarioInicioActionPerformed(java.awt.event.ActionEvent evt) {                                                        
+        
     }                                                      
 
-    private void textFieldContraseñaInicioActionPerformed(java.awt.event.ActionEvent evt) {                                                          
-        
+    private void textFieldContraseñaInicioActionPerformed(java.awt.event.ActionEvent evt) {       
+
     }                                                         
 
 
@@ -437,7 +437,7 @@ public class PanelLogin extends Panel {
     private javax.swing.JLabel errorUsuarioRegistro;
     private javax.swing.JPanel iniciarSesionButton;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel2; //errorContraseñaInicio
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
