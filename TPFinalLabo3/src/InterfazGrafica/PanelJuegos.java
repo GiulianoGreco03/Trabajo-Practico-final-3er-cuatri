@@ -353,7 +353,7 @@ public class PanelJuegos extends Panel {
         }// </editor-fold>                        
     
         private void icon1MouseClicked(java.awt.event.MouseEvent evt) {                                   
-            refrescarPanel(this, snake);
+            refrescarPanel(this, new Snake(600, 600));
         }                                  
     
         private void icon2MouseClicked(java.awt.event.MouseEvent evt) {                                   
@@ -404,6 +404,5 @@ public class PanelJuegos extends Panel {
         private javax.swing.JPanel nombre4;
         private javax.swing.JPanel nombre5;
         private javax.swing.JPanel nombre6;
-        private Snake snake = new Snake(600, 600);
         // End of variables declaration                   
     }

@@ -5,6 +5,8 @@ public class ClasePruebaJson {
     private int edad;
 
     
+
+    
     public ClasePruebaJson(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;

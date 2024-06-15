@@ -138,6 +138,7 @@ public class PanelTienda extends Panel {
         );
 
         gorroButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        gorroButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         gorroButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 gorroButtonMouseClicked(evt);
