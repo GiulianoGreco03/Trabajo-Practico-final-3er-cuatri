@@ -3,21 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package InterfazGrafica;
-<<<<<<< HEAD
 import java.awt.*;
-=======
-
 import java.util.HashMap;
-
->>>>>>> 255e513634c8d1fe6f416f75654e67d81afa6f83
 import javax.swing.*;
-
-import Excepciones.ContraseniaIncorrecta;
-import Excepciones.UsuarioNoExiste;
-import Excepciones.UsuarioYaExistente;
+import Excepciones.*;
 import Plataforma.Plataforma;
 import Usuario.Usuario;
-import javafx.event.ActionEvent;
 
 /**
  *
