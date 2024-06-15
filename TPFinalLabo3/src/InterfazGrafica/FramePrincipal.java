@@ -35,7 +35,7 @@ public class FramePrincipal extends JPanel{
     private javax.swing.JLabel button4Label;
     private javax.swing.JLabel tituloLabel;
     
-
+//
        
     public FramePrincipal() {
 
