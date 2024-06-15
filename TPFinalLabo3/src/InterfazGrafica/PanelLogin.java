@@ -3,14 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package InterfazGrafica;
-
+import java.awt.*;
 import javax.swing.*;
 
 /**
  *
  * @author Usuario
  */
-public class PanelLogin extends JPanel {
+public class PanelLogin extends Panel {
 
     /**
      * Creates new form PanelLogin
@@ -356,11 +356,13 @@ public class PanelLogin extends JPanel {
     }// </editor-fold>                        
 
     private void crearCuentaButtonMouseEntered(java.awt.event.MouseEvent evt) {                                               
-        // TODO add your handling code here:
+        crearCuentaButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }                                              
 
     private void crearCuentaButtonMouseExited(java.awt.event.MouseEvent evt) {                                              
-        // TODO add your handling code here:
+        if(botonSeleccionado != crearCuentaButton){
+            crearCuentaButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }                                             
 
     private void crearCuentaButtonMouseClicked(java.awt.event.MouseEvent evt) {                                               
@@ -368,11 +370,13 @@ public class PanelLogin extends JPanel {
     }                                              
 
     private void iniciarSesionButtonMouseEntered(java.awt.event.MouseEvent evt) {                                                 
-        // TODO add your handling code here:
+        iniciarSesionButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }                                                
 
     private void iniciarSesionButtonMouseExited(java.awt.event.MouseEvent evt) {                                                
-        // TODO add your handling code here:
+        if(botonSeleccionado != iniciarSesionButton){
+            iniciarSesionButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }                                               
 
     private void iniciarSesionButtonMouseClicked(java.awt.event.MouseEvent evt) {                                                 

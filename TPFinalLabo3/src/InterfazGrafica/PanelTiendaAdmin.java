@@ -3,12 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package InterfazGrafica;
-
+import java.awt.*;
 /**
  *
  * @author Usuario
  */
-public class PanelTiendaAdmin extends javax.swing.JPanel {
+public class PanelTiendaAdmin extends Panel {
 
     /**
      * Creates new form PanelTiendaAdmin
@@ -118,6 +118,7 @@ public class PanelTiendaAdmin extends javax.swing.JPanel {
         });
 
         label1.setAlignment(java.awt.Label.CENTER);
+
         label1.setForeground(new java.awt.Color(255, 255, 255));
         label1.setText("Gorros");
 
@@ -778,11 +779,13 @@ public class PanelTiendaAdmin extends javax.swing.JPanel {
     }//GEN-LAST:event_trajeButton10MouseClicked
 
     private void trajeButton10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_trajeButton10MouseEntered
-        // TODO add your handling code here:
+        trajeButton10.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_trajeButton10MouseEntered
 
     private void trajeButton10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_trajeButton10MouseExited
-        // TODO add your handling code here:
+        if(botonSeleccionado != trajeButton10){
+            trajeButton10.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }//GEN-LAST:event_trajeButton10MouseExited
 
     private void gorroButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorroButtonMouseClicked
@@ -790,11 +793,13 @@ public class PanelTiendaAdmin extends javax.swing.JPanel {
     }//GEN-LAST:event_gorroButtonMouseClicked
 
     private void gorroButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorroButtonMouseEntered
-        // TODO add your handling code here:
+        gorroButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_gorroButtonMouseEntered
 
     private void gorroButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorroButtonMouseExited
-        // TODO add your handling code here:
+        if(botonSeleccionado != gorroButton){
+            gorroButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }//GEN-LAST:event_gorroButtonMouseExited
 
     private void lentesButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lentesButton9MouseClicked
@@ -802,11 +807,13 @@ public class PanelTiendaAdmin extends javax.swing.JPanel {
     }//GEN-LAST:event_lentesButton9MouseClicked
 
     private void lentesButton9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lentesButton9MouseEntered
-        // TODO add your handling code here:
+        lentesButton9.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_lentesButton9MouseEntered
 
     private void lentesButton9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lentesButton9MouseExited
-        // TODO add your handling code here:
+        if(botonSeleccionado != lentesButton9){
+            lentesButton9.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
     }//GEN-LAST:event_lentesButton9MouseExited
 
     private void cambiarPrecio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambiarPrecio1ActionPerformed
@@ -846,19 +853,20 @@ public class PanelTiendaAdmin extends javax.swing.JPanel {
     }//GEN-LAST:event_habilitarDeshabilitar1MouseClicked
 
     private void habilitarDeshabilitar1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar1MouseEntered
-        // TODO add your handling code here:
+        habilitarDeshabilitar1.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_habilitarDeshabilitar1MouseEntered
 
     private void habilitarDeshabilitar1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_habilitarDeshabilitar1MouseExited
+            habilitarDeshabilitar1.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
+    //GEN-LAST:event_habilitarDeshabilitar1MouseExited
 
     private void habilitarDeshabilitar2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar2MouseEntered
-        // TODO add your handling code here:
+        habilitarDeshabilitar2.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_habilitarDeshabilitar2MouseEntered
 
     private void habilitarDeshabilitar2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar2MouseExited
-        // TODO add your handling code here:
+        habilitarDeshabilitar2.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
     }//GEN-LAST:event_habilitarDeshabilitar2MouseExited
 
     private void habilitarDeshabilitar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar2MouseClicked
@@ -866,11 +874,11 @@ public class PanelTiendaAdmin extends javax.swing.JPanel {
     }//GEN-LAST:event_habilitarDeshabilitar2MouseClicked
 
     private void habilitarDeshabilitar3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar3MouseEntered
-        // TODO add your handling code here:
+        habilitarDeshabilitar3.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_habilitarDeshabilitar3MouseEntered
 
     private void habilitarDeshabilitar3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar3MouseExited
-        // TODO add your handling code here:
+        habilitarDeshabilitar3.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
     }//GEN-LAST:event_habilitarDeshabilitar3MouseExited
 
     private void habilitarDeshabilitar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar3MouseClicked
@@ -878,11 +886,11 @@ public class PanelTiendaAdmin extends javax.swing.JPanel {
     }//GEN-LAST:event_habilitarDeshabilitar3MouseClicked
 
     private void habilitarDeshabilitar4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar4MouseEntered
-        // TODO add your handling code here:
+        habilitarDeshabilitar4.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_habilitarDeshabilitar4MouseEntered
 
     private void habilitarDeshabilitar4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar4MouseExited
-        // TODO add your handling code here:
+        habilitarDeshabilitar4.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
     }//GEN-LAST:event_habilitarDeshabilitar4MouseExited
 
     private void habilitarDeshabilitar4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar4MouseClicked
@@ -890,11 +898,11 @@ public class PanelTiendaAdmin extends javax.swing.JPanel {
     }//GEN-LAST:event_habilitarDeshabilitar4MouseClicked
 
     private void habilitarDeshabilitar5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar5MouseEntered
-        // TODO add your handling code here:
+        habilitarDeshabilitar5.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_habilitarDeshabilitar5MouseEntered
 
     private void habilitarDeshabilitar5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar5MouseExited
-        // TODO add your handling code here:
+        habilitarDeshabilitar5.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
     }//GEN-LAST:event_habilitarDeshabilitar5MouseExited
 
     private void habilitarDeshabilitar5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar5MouseClicked
@@ -902,11 +910,11 @@ public class PanelTiendaAdmin extends javax.swing.JPanel {
     }//GEN-LAST:event_habilitarDeshabilitar5MouseClicked
 
     private void habilitarDeshabilitar6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar6MouseEntered
-        // TODO add your handling code here:
+        habilitarDeshabilitar6.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_habilitarDeshabilitar6MouseEntered
 
     private void habilitarDeshabilitar6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar6MouseExited
-        // TODO add your handling code here:
+        habilitarDeshabilitar6.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
     }//GEN-LAST:event_habilitarDeshabilitar6MouseExited
 
     private void habilitarDeshabilitar6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar6MouseClicked
@@ -914,11 +922,11 @@ public class PanelTiendaAdmin extends javax.swing.JPanel {
     }//GEN-LAST:event_habilitarDeshabilitar6MouseClicked
 
     private void habilitarDeshabilitar7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar7MouseEntered
-        // TODO add your handling code here:
+        habilitarDeshabilitar7.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_habilitarDeshabilitar7MouseEntered
 
     private void habilitarDeshabilitar7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar7MouseExited
-        // TODO add your handling code here:
+        habilitarDeshabilitar7.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
     }//GEN-LAST:event_habilitarDeshabilitar7MouseExited
 
     private void habilitarDeshabilitar7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar7MouseClicked
@@ -926,11 +934,11 @@ public class PanelTiendaAdmin extends javax.swing.JPanel {
     }//GEN-LAST:event_habilitarDeshabilitar7MouseClicked
 
     private void habilitarDeshabilitar8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar8MouseEntered
-        // TODO add your handling code here:
+        habilitarDeshabilitar8.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
     }//GEN-LAST:event_habilitarDeshabilitar8MouseEntered
 
     private void habilitarDeshabilitar8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar8MouseExited
-        // TODO add your handling code here:
+        habilitarDeshabilitar8.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
     }//GEN-LAST:event_habilitarDeshabilitar8MouseExited
 
     private void habilitarDeshabilitar8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_habilitarDeshabilitar8MouseClicked
