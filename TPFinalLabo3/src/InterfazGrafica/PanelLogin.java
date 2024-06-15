@@ -3,8 +3,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package InterfazGrafica;
+<<<<<<< HEAD
 import java.awt.*;
+=======
+
+import java.util.HashMap;
+
+>>>>>>> 255e513634c8d1fe6f416f75654e67d81afa6f83
 import javax.swing.*;
+
+import Excepciones.ContraseniaIncorrecta;
+import Excepciones.UsuarioNoExiste;
+import Excepciones.UsuarioYaExistente;
+import Plataforma.Plataforma;
+import Usuario.Usuario;
+import javafx.event.ActionEvent;
 
 /**
  *
@@ -68,7 +81,7 @@ public class PanelLogin extends Panel {
         banner.setOpaque(true);
 
         textFieldUsuarioInicio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        textFieldUsuarioInicio.setText("Ingrese su nombre de usuario");
+        textFieldUsuarioInicio.setText("");
         textFieldUsuarioInicio.setBorder(null);
         textFieldUsuarioInicio.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         textFieldUsuarioInicio.addActionListener(new java.awt.event.ActionListener() {
@@ -87,7 +100,7 @@ public class PanelLogin extends Panel {
         textoUsuario.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         textoUsuario.setText("Usuario");
 
-        textFieldContraseñaInicio.setText("jPasswordField1");
+        textFieldContraseñaInicio.setText("");
         textFieldContraseñaInicio.setBorder(null);
         textFieldContraseñaInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,7 +205,7 @@ public class PanelLogin extends Panel {
         jSeparator4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         textFieldUsuarioRegistro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        textFieldUsuarioRegistro.setText("Ingrese su nombre de usuario");
+        textFieldUsuarioRegistro.setText("");
         textFieldUsuarioRegistro.setBorder(null);
         textFieldUsuarioRegistro.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         textFieldUsuarioRegistro.addActionListener(new java.awt.event.ActionListener() {
@@ -207,7 +220,7 @@ public class PanelLogin extends Panel {
         textoConfirmarContraseña.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         textoConfirmarContraseña.setText("Confirme su contraseña");
 
-        textFieldConfirmarContraseñaRegistro.setText("jPasswordField1");
+        textFieldConfirmarContraseñaRegistro.setText("");
         textFieldConfirmarContraseñaRegistro.setBorder(null);
         textFieldConfirmarContraseñaRegistro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -265,7 +278,7 @@ public class PanelLogin extends Panel {
         jSeparator5.setForeground(new java.awt.Color(73, 128, 153));
         jSeparator5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        textFieldContraseñaRegistro.setText("jPasswordField1");
+        textFieldContraseñaRegistro.setText("");
         textFieldContraseñaRegistro.setBorder(null);
         textFieldContraseñaRegistro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -396,11 +409,11 @@ public class PanelLogin extends Panel {
     }                                                                    
 
     private void textFieldUsuarioInicioActionPerformed(java.awt.event.ActionEvent evt) {                                                       
-        // TODO add your handling code here:
+           
     }                                                      
 
     private void textFieldContraseñaInicioActionPerformed(java.awt.event.ActionEvent evt) {                                                          
-        // TODO add your handling code here:
+        
     }                                                         
 
 
