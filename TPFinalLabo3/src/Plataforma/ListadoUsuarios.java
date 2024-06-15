@@ -15,6 +15,9 @@ public class ListadoUsuarios {
     public HashMap getHashMap() {
         return listadoUsuarios;
     }
+    public void setHashMap ( HashMap listadoUsuarios ) {
+        this.listadoUsuarios = listadoUsuarios ;
+    }
 
     public void ingresoUsuario ( Usuario usuario ) {
         try {
@@ -28,5 +31,5 @@ public class ListadoUsuarios {
         }
     }
 
-    
+
 }
