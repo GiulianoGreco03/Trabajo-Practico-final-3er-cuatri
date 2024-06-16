@@ -97,6 +97,9 @@ public class PanelTienda extends Panel {
         setBackground(new java.awt.Color(106, 25, 148));
         setForeground(new java.awt.Color(106, 25, 148));
 
+        this.botonSeleccionado = gorroButton;
+        setBotonSeleccionado(gorroButton);
+
         jTabbedPane1.setBackground(new java.awt.Color(106, 25, 148));
         jTabbedPane1.setForeground(new java.awt.Color(255, 255, 255));
         jTabbedPane1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -699,7 +702,9 @@ public class PanelTienda extends Panel {
     }                                       
 
     private void gorroButtonMouseClicked(java.awt.event.MouseEvent evt) {                                         
-        // TODO add your handling code here:
+        if(botonSeleccionado != gorroButton){
+            setBotonSeleccionado(gorroButton);
+        }
     }                                        
 
     private void lentesButton9MouseEntered(java.awt.event.MouseEvent evt) {                                           
@@ -713,7 +718,9 @@ public class PanelTienda extends Panel {
     }                                         
 
     private void lentesButton9MouseClicked(java.awt.event.MouseEvent evt) {                                           
-        // TODO add your handling code here:
+        if(botonSeleccionado != lentesButton9){
+            setBotonSeleccionado(lentesButton9);
+        }
     }                                          
 
     private void trajeButton10MouseEntered(java.awt.event.MouseEvent evt) {                                           
@@ -727,7 +734,9 @@ public class PanelTienda extends Panel {
     }                                         
 
     private void trajeButton10MouseClicked(java.awt.event.MouseEvent evt) {                                           
-        // TODO add your handling code here:
+        if(botonSeleccionado != trajeButton10){
+            setBotonSeleccionado(trajeButton10);
+        }
     }                                          
 
     private void guardarButtonMouseEntered(java.awt.event.MouseEvent evt) {                                           

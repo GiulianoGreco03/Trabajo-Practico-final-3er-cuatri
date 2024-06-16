@@ -54,6 +54,9 @@ public class PanelRankings extends Panel {
     
             panelPuntuaciones.setBackground(new java.awt.Color(255, 255, 255));
             panelPuntuaciones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+            this.botonSeleccionado = snakeButton;
+            setBotonSeleccionado(snakeButton);
     
             puntuacion1.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
             puntuacion1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -397,7 +400,9 @@ public class PanelRankings extends Panel {
         }// </editor-fold>                        
     
         private void snakeButtonMouseClicked(java.awt.event.MouseEvent evt) {                                         
-            // TODO add your handling code here:
+            if(botonSeleccionado != snakeButton){
+                setBotonSeleccionado(snakeButton);
+            }
         }                                        
     
         private void snakeButtonMouseEntered(java.awt.event.MouseEvent evt) {                                         
@@ -411,7 +416,9 @@ public class PanelRankings extends Panel {
         }                                       
     
         private void blackjackButtonMouseClicked(java.awt.event.MouseEvent evt) {                                             
-            // TODO add your handling code here:
+            if(botonSeleccionado != blackjackButton){
+                setBotonSeleccionado(blackjackButton);
+            }
         }                                            
     
         private void blackjackButtonMouseEntered(java.awt.event.MouseEvent evt) {                                             
@@ -425,7 +432,9 @@ public class PanelRankings extends Panel {
         }                                           
     
         private void buscaminasButtonMouseClicked(java.awt.event.MouseEvent evt) {                                              
-            // TODO add your handling code here:
+            if(botonSeleccionado != buscaminasButton){
+                setBotonSeleccionado(buscaminasButton);
+            }
         }                                             
     
         private void buscaminasButtonMouseEntered(java.awt.event.MouseEvent evt) {                                              
@@ -439,7 +448,9 @@ public class PanelRankings extends Panel {
         }                                            
     
         private void dinosaurioButtonMouseClicked(java.awt.event.MouseEvent evt) {                                              
-            // TODO add your handling code here:
+            if(botonSeleccionado != dinosaurioButton){
+                setBotonSeleccionado(dinosaurioButton);
+            }
         }                                             
     
         private void dinosaurioButtonMouseEntered(java.awt.event.MouseEvent evt) {                                              
@@ -453,7 +464,9 @@ public class PanelRankings extends Panel {
         }                                            
     
         private void pacmanButtonMouseClicked(java.awt.event.MouseEvent evt) {                                          
-            // TODO add your handling code here:
+            if(botonSeleccionado != pacmanButton){
+                setBotonSeleccionado(pacmanButton);
+            }
         }                                         
     
         private void pacmanButtonMouseEntered(java.awt.event.MouseEvent evt) {                                          
@@ -467,7 +480,9 @@ public class PanelRankings extends Panel {
         }                                        
     
         private void spaceButtonMouseClicked(java.awt.event.MouseEvent evt) {                                         
-            // TODO add your handling code here:
+            if(botonSeleccionado != spaceButton){
+                setBotonSeleccionado(spaceButton);
+            }
         }                                        
     
         private void spaceButtonMouseEntered(java.awt.event.MouseEvent evt) {                                         

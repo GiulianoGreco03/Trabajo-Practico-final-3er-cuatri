@@ -41,8 +41,8 @@ public class FramePrincipal extends JPanel{
 
         paneles = new ArrayList<>();
 
-        cargarPanelesUsuario();
-        //cargarPanelesAdmin();
+        //cargarPanelesUsuario();
+        cargarPanelesAdmin();
 
         initComponents();
         this.botonSeleccionado = Button1;

@@ -57,6 +57,9 @@ public class PanelTiendaAdmin extends Panel {
 
         backgorund1.setBackground(new java.awt.Color(255, 255, 255));
 
+        this.botonSeleccionado = gorroButton;
+        setBotonSeleccionado(gorroButton);
+
         trajeButton10.setBackground(new java.awt.Color(133, 36, 103));
         trajeButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         trajeButton10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -764,7 +767,9 @@ public class PanelTiendaAdmin extends Panel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void trajeButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_trajeButton10MouseClicked
-        // TODO add your handling code here:
+        if(botonSeleccionado != trajeButton10){
+            setBotonSeleccionado(trajeButton10);
+        }
     }//GEN-LAST:event_trajeButton10MouseClicked
 
     private void trajeButton10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_trajeButton10MouseEntered
@@ -778,7 +783,9 @@ public class PanelTiendaAdmin extends Panel {
     }//GEN-LAST:event_trajeButton10MouseExited
 
     private void gorroButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorroButtonMouseClicked
-        // TODO add your handling code here:
+        if(botonSeleccionado != gorroButton){
+            setBotonSeleccionado(gorroButton);
+        }
     }//GEN-LAST:event_gorroButtonMouseClicked
 
     private void gorroButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorroButtonMouseEntered
@@ -792,7 +799,9 @@ public class PanelTiendaAdmin extends Panel {
     }//GEN-LAST:event_gorroButtonMouseExited
 
     private void lentesButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lentesButton9MouseClicked
-        // TODO add your handling code here:
+        if(botonSeleccionado != lentesButton9){
+            setBotonSeleccionado(lentesButton9);
+        }
     }//GEN-LAST:event_lentesButton9MouseClicked
 
     private void lentesButton9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lentesButton9MouseEntered
