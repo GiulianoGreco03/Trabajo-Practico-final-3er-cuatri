@@ -15,15 +15,5 @@ public class App {
         
     }
 
-    public static void pruebaJson(){
-        ArrayList<ClasePruebaJson> pruebas = new ArrayList<>();
-
-        pruebas.add(new ClasePruebaJson("Pepe", 40));
-        pruebas.add(new ClasePruebaJson("RAul", 10));
-        pruebas.add(new ClasePruebaJson("JAcinto", 20));
-
-        ClaseJsonGenerica<ClasePruebaJson> jason = new ClaseJsonGenerica<>();
-        //jason.crearJson("archivo.json");
-        jason.CargarValores(pruebas, "archivo.json");
-    }
+    
 }

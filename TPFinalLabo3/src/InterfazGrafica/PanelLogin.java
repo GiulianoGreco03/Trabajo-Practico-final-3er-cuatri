@@ -277,13 +277,13 @@ public class PanelLogin extends Panel {
         });
 
         errorUsuarioRegistro.setForeground(new java.awt.Color(255, 0, 0));
-        errorUsuarioRegistro.setText("jLabel3");
+        errorUsuarioRegistro.setText(" ");
 
         errorContraseñaRegistro.setForeground(new java.awt.Color(255, 0, 0));
-        errorContraseñaRegistro.setText("jLabel3");
+        errorContraseñaRegistro.setText(" ");
 
         errorConfirmarContraseña.setForeground(new java.awt.Color(255, 0, 0));
-        errorConfirmarContraseña.setText("jLabel3");
+        errorConfirmarContraseña.setText(" ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -368,7 +368,13 @@ public class PanelLogin extends Panel {
         }
     }                                             
 
-    private void crearCuentaButtonMouseClicked(java.awt.event.MouseEvent evt) {                                               
+    private void crearCuentaButtonMouseClicked(java.awt.event.MouseEvent evt) {      
+        
+        try {
+            
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
         
     }                                              
 
@@ -382,7 +388,8 @@ public class PanelLogin extends Panel {
         }
     }                                               
 
-    private void iniciarSesionButtonMouseClicked(java.awt.event.MouseEvent evt) {                                                 
+    private void iniciarSesionButtonMouseClicked(java.awt.event.MouseEvent evt) {   
+        
         String nombre = textFieldUsuarioInicio.getText();
         String contraseña = String.copyValueOf(textFieldContraseñaInicio.getPassword());
 
@@ -391,6 +398,7 @@ public class PanelLogin extends Panel {
 
         if(aux != null){
             if(aux.getContraseña().compareTo(contraseña) == 0){
+                mainFrame.setUsuarioActivo(aux);
                 mainFrame.showSystemPanel();
             }
             else{
@@ -399,10 +407,6 @@ public class PanelLogin extends Panel {
         }else{
             errorUsuarioInicio.setText("Usuario no encontrado");
         }
-
-
-        
-
         
     }                                                
 

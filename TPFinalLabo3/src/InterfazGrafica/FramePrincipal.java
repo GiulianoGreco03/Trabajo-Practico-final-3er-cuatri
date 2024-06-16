@@ -2,6 +2,8 @@ package InterfazGrafica;
 
 import javax.swing.*;
 
+import Usuarios.Usuario;
+
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -9,6 +11,7 @@ public class FramePrincipal extends JPanel{
 
     //Atributos.
     private JPanel botonSeleccionado;
+    private Usuario usuarioActivo;
     private PanelJuegos panelJuegos = new PanelJuegos();
     private PanelTienda panelTienda = new PanelTienda();
     private PanelPerfil panelPerfil = new PanelPerfil();
@@ -37,8 +40,9 @@ public class FramePrincipal extends JPanel{
     
 //
        
-    public FramePrincipal() {
+    public FramePrincipal(Usuario usuarioActivo) {
 
+        this.usuarioActivo = usuarioActivo;
         paneles = new ArrayList<>();
 
         cargarPanelesUsuario();

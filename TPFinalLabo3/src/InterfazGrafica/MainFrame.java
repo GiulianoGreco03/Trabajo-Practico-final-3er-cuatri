@@ -1,11 +1,16 @@
 package InterfazGrafica;
 
 import javax.swing.*;
+
+import Usuarios.Usuario;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame {
+
+    private Usuario usuarioActivo;
     private CardLayout cardLayout;
     private JPanel mainPanel;
     private PanelLogin loginPanel;
@@ -16,7 +21,7 @@ public class MainFrame extends JFrame {
         mainPanel = new JPanel(cardLayout);
 
         loginPanel = new PanelLogin(this);
-        systemPanel = new FramePrincipal();
+        systemPanel = new FramePrincipal(usuarioActivo);
 
         mainPanel.add(loginPanel, "login");
         mainPanel.add(systemPanel, "system");
@@ -32,4 +37,11 @@ public class MainFrame extends JFrame {
     public void showSystemPanel() {
         cardLayout.show(mainPanel, "system");
     }
+
+
+    public void setUsuarioActivo(Usuario usuarioActivo) {
+        this.usuarioActivo = usuarioActivo;
+    }
+
+    
 }
