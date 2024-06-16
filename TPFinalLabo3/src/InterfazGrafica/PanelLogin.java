@@ -7,19 +7,18 @@ import java.awt.*;
 import java.util.HashMap;
 import javax.swing.*;
 import Excepciones.*;
-import Plataforma.Plataforma;
-import Usuario.Usuario;
+import Plataformas.Plataforma;
+import Usuarios.GestorUsuarios;
+import Usuarios.Usuario;
 
-/**
- *
- * @author Usuario
- */
+
 public class PanelLogin extends Panel {
 
-    /**
-     * Creates new form PanelLogin
-     */
-    public PanelLogin() {
+    private GestorUsuarios listadoUsuarios = new GestorUsuarios();
+    private MainFrame mainFrame;
+
+    public PanelLogin(MainFrame mainFrame) {
+        this.mainFrame = mainFrame;
         initComponents();
     }
 
@@ -134,10 +133,10 @@ public class PanelLogin extends Panel {
         );
 
         errorUsuarioInicio.setForeground(new java.awt.Color(255, 0, 0));
-        errorUsuarioInicio.setText("El usuario no existe");
+        errorUsuarioInicio.setText(" ");
 
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel2.setText("Contraseña incorrecta");
+        jLabel2.setText(" ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -278,13 +277,13 @@ public class PanelLogin extends Panel {
         });
 
         errorUsuarioRegistro.setForeground(new java.awt.Color(255, 0, 0));
-        errorUsuarioRegistro.setText("jLabel3");
+        errorUsuarioRegistro.setText(" ");
 
         errorContraseñaRegistro.setForeground(new java.awt.Color(255, 0, 0));
-        errorContraseñaRegistro.setText("jLabel3");
+        errorContraseñaRegistro.setText(" ");
 
         errorConfirmarContraseña.setForeground(new java.awt.Color(255, 0, 0));
-        errorConfirmarContraseña.setText("jLabel3");
+        errorConfirmarContraseña.setText(" ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -369,8 +368,14 @@ public class PanelLogin extends Panel {
         }
     }                                             
 
-    private void crearCuentaButtonMouseClicked(java.awt.event.MouseEvent evt) {                                               
-        // TODO add your handling code here:
+    private void crearCuentaButtonMouseClicked(java.awt.event.MouseEvent evt) {      
+        
+        try {
+            
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        
     }                                              
 
     private void iniciarSesionButtonMouseEntered(java.awt.event.MouseEvent evt) {                                                 
@@ -383,8 +388,26 @@ public class PanelLogin extends Panel {
         }
     }                                               
 
-    private void iniciarSesionButtonMouseClicked(java.awt.event.MouseEvent evt) {                                                 
-        // TODO add your handling code here:
+    private void iniciarSesionButtonMouseClicked(java.awt.event.MouseEvent evt) {   
+        
+        String nombre = textFieldUsuarioInicio.getText();
+        String contraseña = String.copyValueOf(textFieldContraseñaInicio.getPassword());
+
+
+        Usuario aux = listadoUsuarios.buscarUsuario(nombre);
+
+        if(aux != null){
+            if(aux.getContraseña().compareTo(contraseña) == 0){
+                mainFrame.setUsuarioActivo(aux);
+                mainFrame.showSystemPanel();
+            }
+            else{
+                jLabel2.setText("Contraseña incorrecta");
+            }
+        }else{
+            errorUsuarioInicio.setText("Usuario no encontrado");
+        }
+        
     }                                                
 
     private void textFieldContraseñaRegistroActionPerformed(java.awt.event.ActionEvent evt) {                                                            
@@ -399,12 +422,12 @@ public class PanelLogin extends Panel {
         // TODO add your handling code here:
     }                                                                    
 
-    private void textFieldUsuarioInicioActionPerformed(java.awt.event.ActionEvent evt) {                                                       
-           
+    private void textFieldUsuarioInicioActionPerformed(java.awt.event.ActionEvent evt) {                                                        
+        
     }                                                      
 
-    private void textFieldContraseñaInicioActionPerformed(java.awt.event.ActionEvent evt) {                                                          
-        
+    private void textFieldContraseñaInicioActionPerformed(java.awt.event.ActionEvent evt) {       
+
     }                                                         
 
 
@@ -418,7 +441,7 @@ public class PanelLogin extends Panel {
     private javax.swing.JLabel errorUsuarioRegistro;
     private javax.swing.JPanel iniciarSesionButton;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel2; //errorContraseñaInicio
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

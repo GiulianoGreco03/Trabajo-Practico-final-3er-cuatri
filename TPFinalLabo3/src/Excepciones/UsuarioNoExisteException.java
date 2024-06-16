@@ -1,8 +1,8 @@
 package Excepciones;
 
 public class UsuarioNoExisteException extends Exception {
-    public UsuarioNoExisteException(String nombre){
-    super("Usuario no existe") ;
+    public UsuarioNoExisteException(){
+    super("El usuario no existe") ;
     }
 }
 
