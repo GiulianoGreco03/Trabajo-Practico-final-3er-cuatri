@@ -6,7 +6,7 @@ import java.util.LinkedList;
 
 import javax.swing.*;
 
-public class Avatar extends JPanel implements KeyListener{
+public class Avatar extends JPanel{
     private final String spriteAvatar = "src\\Avatares\\Sprites\\Avatar.png";
     private int tamaño;
     private Image avatar;
@@ -45,17 +45,17 @@ public class Avatar extends JPanel implements KeyListener{
 
     public void cargarGorros(){
         sombreros.add("");
-        sombreros.add("src\\Avatares\\Sprites\\SombreroRojo.png");
+        sombreros.add("src\\Avatares\\Sprites\\SombreroVerde.png");
         sombreros.add("src\\Avatares\\Sprites\\SombreroRojo.png");
     }
 
     public void cambiarGorro(){
         
-        if(sombreroActivo >= sombreros.size()){
+        sombreroActivo++;
+        if(sombreroActivo == sombreros.size()){
             sombreroActivo = 0;
-        }else{
-            sombreroActivo++;
         }
+        repaint();
 
     }
 
@@ -66,7 +66,7 @@ public class Avatar extends JPanel implements KeyListener{
 
     }
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         Avatar avatar = new Avatar(300);
         JFrame frame = new JFrame();
 
@@ -75,26 +75,7 @@ public class Avatar extends JPanel implements KeyListener{
         frame.pack();
         frame.setLocationRelativeTo(null); // Centrar la ventana
         frame.setVisible(true);
-    }
-
-    @Override
-    public void keyTyped(KeyEvent e) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'keyTyped'");
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
-        if(e.getKeyCode() == KeyEvent.VK_SPACE){
-            System.out.println("Hola");
-        }
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'keyReleased'");
-    }
+    }*/
 }
 
     

@@ -2,6 +2,7 @@ package InterfazGrafica;
 
 import javax.swing.*;
 
+import Avatares.Avatar;
 import Usuarios.Usuario;
 
 import java.awt.*;
@@ -12,10 +13,8 @@ public class FramePrincipal extends JPanel{
     //Atributos.
     private JPanel botonSeleccionado;
     private Usuario usuarioActivo;
-    private PanelJuegos panelJuegos = new PanelJuegos();
-    private PanelTienda panelTienda = new PanelTienda();
-    private PanelPerfil panelPerfil = new PanelPerfil();
-    private PanelRankings panelRankings = new PanelRankings();
+    private MainFrame mainFrame;
+    
 
     private PanelJuegosAdmin panelJuegosAdmin = new PanelJuegosAdmin();
     private PanelTiendaAdmin panelTiendaAdmin = new PanelTiendaAdmin();
@@ -24,7 +23,7 @@ public class FramePrincipal extends JPanel{
     private ArrayList<Panel> paneles;
 
     //Componentes swing
-    private javax.swing.JPanel Avatar;
+    private Avatar Avatar;
     private javax.swing.JPanel Background;
     private javax.swing.JPanel Banner;
     private javax.swing.JPanel Button1;
@@ -40,14 +39,19 @@ public class FramePrincipal extends JPanel{
     
 //
        
-    public FramePrincipal(Usuario usuarioActivo) {
+    public FramePrincipal(Usuario usuarioActivo, MainFrame mainFrame) {
 
         this.usuarioActivo = usuarioActivo;
+        this.mainFrame = mainFrame;
         paneles = new ArrayList<>();
 
-        //cargarPanelesUsuario();
-        cargarPanelesAdmin();
 
+        if(usuarioActivo.isAdmin()){
+            cargarPanelesAdmin();
+        }else{
+            cargarPanelesUsuario();
+        }
+        
         initComponents();
         this.botonSeleccionado = Button1;
         setBotonSeleccionado(Button1);
@@ -64,16 +68,13 @@ public class FramePrincipal extends JPanel{
         PanelPrincipal.repaint();
     }
 
-    //Getters y Setters
-    /*public int getBotonSeleccionado() {
-        return botonSeleccionado;
-    }*/
+    
 
     public void cargarPanelesUsuario(){
-        paneles.add(panelJuegos);
-        paneles.add(panelTienda);
-        paneles.add(panelPerfil);
-        paneles.add(panelRankings);
+        paneles.add(new PanelJuegos());
+        paneles.add(new PanelTienda());
+        paneles.add(new PanelPerfil(usuarioActivo, mainFrame));
+        paneles.add(new PanelRankings(usuarioActivo));
         
     }
 
@@ -82,7 +83,7 @@ public class FramePrincipal extends JPanel{
         paneles.add(panelJuegosAdmin);
         paneles.add(panelTiendaAdmin);
         paneles.add(panelPerfilAdmin);
-        paneles.add(panelRankings);
+        paneles.add(new PanelRankings(usuarioActivo));
 
     }
 
@@ -99,7 +100,7 @@ public class FramePrincipal extends JPanel{
 
         Background = new javax.swing.JPanel();
         PanelPrincipal = new javax.swing.JPanel();
-        Avatar = new javax.swing.JPanel();
+        Avatar = new Avatar(180);
         Button1 = new javax.swing.JPanel();
         button1Label = new javax.swing.JLabel();
         Button2 = new javax.swing.JPanel();
@@ -132,8 +133,7 @@ public class FramePrincipal extends JPanel{
             .addGap(0, 600, Short.MAX_VALUE)
         );
 
-        Avatar.setBackground(new java.awt.Color(255, 255, 255));
-        Avatar.setForeground(new java.awt.Color(255, 255, 255));
+        
 
         javax.swing.GroupLayout AvatarLayout = new javax.swing.GroupLayout(Avatar);
         Avatar.setLayout(AvatarLayout);

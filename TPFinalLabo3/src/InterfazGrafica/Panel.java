@@ -27,7 +27,9 @@ public class Panel extends JPanel{
 
     public void setBotonSeleccionado(JPanel botonSeleccionado) {
         
-        this.botonSeleccionado.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        if(this.botonSeleccionado != null){
+            this.botonSeleccionado.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        }
         this.botonSeleccionado = botonSeleccionado;
         this.botonSeleccionado.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
 

@@ -7,56 +7,85 @@ public class Usuario {
     private String nombre;
     private String contraseña;
     private boolean admin;
-    private HashMap<EnumJuegos,Long> puntuacion;
-  //  private Avatar avatar
+    private Long puntuacion;
+    private HashMap<EnumJuegos, Long> puntuacionMaxima;
+    // private Avatar avatar
     private boolean cuentaActiva;
-    
+
     public String getNombre() {
         return nombre;
     }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    
+
     public String getContraseña() {
         return contraseña;
     }
+
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
     }
+
     public boolean isAdmin() {
         return admin;
     }
+
+    public void setPuntuacion(Long puntuacion) {
+        this.puntuacion = puntuacion;
+    }
+
+    public HashMap<EnumJuegos, Long> getPuntuacionMaxima() {
+        return puntuacionMaxima;
+    }
+
+    public void setPuntuacionMaxima(HashMap<EnumJuegos, Long> puntuacionMaxima) {
+        this.puntuacionMaxima = puntuacionMaxima;
+    }
+
     public void setAdmin(boolean admin) {
         this.admin = admin;
     }
+
     public boolean isCuentaActiva() {
         return cuentaActiva;
     }
+
     public void setCuentaActiva(boolean cuentaActiva) {
         this.cuentaActiva = cuentaActiva;
     }
 
-    public Usuario(){
+    public Usuario() {
 
     }
 
-    public Usuario(String nombre, String contraseña, boolean admin,  boolean cuentaActiva) {
+    public Usuario(String nombre, String contraseña, boolean admin, boolean cuentaActiva) {
         this.nombre = nombre;
         this.contraseña = contraseña;
         this.admin = admin;
-        this.puntuacion = new HashMap<>();
+        this.puntuacionMaxima = new HashMap<>();
         this.cuentaActiva = cuentaActiva;
     }
-    
-    public void sumarPuntajeUsuario(EnumJuegos juego,long puntuacion){
-        this.puntuacion.put(juego,this.puntuacion.get(juego)+puntuacion);
+
+    public void sumarPuntajeUsuario(long puntuacion) {
+        this.puntuacion += puntuacion;
     }
 
-    @Override
-    public String toString() {
-        return "Usuario [nombre=" + nombre + ", contraseña=" + contraseña + ", admin=" + admin + ", puntuacion="
-                + puntuacion + ", cuentaActiva=" + cuentaActiva + "]";
+    public void cargarPuntacionMaxima(EnumJuegos juego, Long puntuacionGanada) {
+
+        if (puntuacionMaxima.containsKey(juego)) {
+            if (puntuacionGanada > puntuacionMaxima.get(juego)) {
+                puntuacionMaxima.put(juego, puntuacionGanada);
+            }
+        } else {
+            puntuacionMaxima.put(juego, puntuacionGanada);
+        }
+
     }
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -68,6 +97,7 @@ public class Usuario {
         result = prime * result + (cuentaActiva ? 1231 : 1237);
         return result;
     }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -97,6 +127,10 @@ public class Usuario {
         if (cuentaActiva != other.cuentaActiva)
             return false;
         return true;
+    }
+
+    public Long getPuntuacion() {
+        return puntuacion;
     }
 
 }

@@ -5,6 +5,17 @@
 package InterfazGrafica;
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.TreeSet;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import Juegos.EnumJuegos;
+import Rankings.GestorRankings;
+import Rankings.Ranking;
+import Usuarios.Usuario;
 
 
 
@@ -14,17 +25,128 @@ import java.awt.*;
  */
 public class PanelRankings extends Panel {
 
-        public PanelRankings() {
+        //Atributos
+        private GestorRankings gestorRankings = new GestorRankings();
+        private Usuario usuarioActivo;
+
+        //Componentes swing
+        private javax.swing.JPanel background;
+        private javax.swing.JPanel blackjackButton;
+        private javax.swing.JPanel buscaminasButton;
+        private javax.swing.JPanel dinosaurioButton;
+        private javax.swing.JLabel jLabel1;
+        private javax.swing.JLabel jLabel2;
+        private javax.swing.JLabel jLabel3;
+        private javax.swing.JLabel jLabel4;
+        private javax.swing.JLabel jLabel5;
+        private javax.swing.JLabel jLabel6;
+        private javax.swing.JPanel pacmanButton;
+        private javax.swing.JPanel panelPuntuaciones;
+        private javax.swing.JLabel puntuacion1;
+        private javax.swing.JLabel puntuacion2;
+        private javax.swing.JLabel puntuacion3;
+        private javax.swing.JLabel puntuacion4;
+        private javax.swing.JLabel puntuacion5;
+        private javax.swing.JLabel puntuacionPersonal;
+        private javax.swing.JPanel snakeButton;
+        private javax.swing.JPanel spaceButton;
+        private java.awt.Label textoPuntuacionGlobal;
+        private javax.swing.JLabel textoPuntuacionPersonal;
+
+        //Constructor
+        public PanelRankings(Usuario usuarioActivo) {
+            this.usuarioActivo = usuarioActivo;
             initComponents();
+            this.botonSeleccionado = snakeButton;
+            setBotonSeleccionado(snakeButton);
+            cargarRankings(EnumJuegos.Snake);
         }
+
+        //Metodos
+        public void cargarRankings(EnumJuegos enumJuegos){
+            Iterator<Ranking> it;
+
+            switch (enumJuegos) {
+                case EnumJuegos.Snake:
+                     gestorRankings.snakeFromJson();
+                     it = gestorRankings.getRankingSnake().iterator();
+                    mostrarPuntuacion(it, enumJuegos);
+                    break;
+                case EnumJuegos.Buscaminas:
+                    gestorRankings.buscaminasFromJson();
+                    it = gestorRankings.getRankingBuscaminas().iterator();
+                   mostrarPuntuacion(it, enumJuegos);
+                   break;
+                case EnumJuegos.Galaga:
+                     gestorRankings.galagaFromJson();
+                     it = gestorRankings.getRankingGalaga().iterator();
+                    mostrarPuntuacion(it, enumJuegos);
+                    break;
+                case EnumJuegos.Dinosaurio:
+                     gestorRankings.dinosaurioFromJson();
+                     it = gestorRankings.getRankingDinosaurio().iterator();
+                    mostrarPuntuacion(it, enumJuegos);
+                    break;
+                case EnumJuegos.Pacman:
+                     gestorRankings.pacmanFromJson();
+                     it = gestorRankings.getRankingPacman().iterator();
+                    mostrarPuntuacion(it, enumJuegos);
+                    break;
+                case EnumJuegos.Blackjack:
+                     gestorRankings.blackjackFromJson();
+                     it = gestorRankings.getRankingBlackjack().iterator();
+                    mostrarPuntuacion(it, enumJuegos);
+                    break;
+            }            
+
+            
+            
+            
+            
+
+            
+
+            
+        }
+
+        public ArrayList<JLabel> iteradorLabelRankings(){
+            ArrayList<JLabel> labelRankings = new ArrayList<>();
+            labelRankings.add(puntuacion1);
+            labelRankings.add(puntuacion2);
+            labelRankings.add(puntuacion3);
+            labelRankings.add(puntuacion4);
+            labelRankings.add(puntuacion5);
+
+            return labelRankings;
+        }
+
+        public void mostrarPuntuacion(Iterator<Ranking> it, EnumJuegos juego){
+
+            ArrayList<JLabel> puntuaciones = iteradorLabelRankings();
+            int i = 0;
+            while (i < puntuaciones.size() - 1 && it.hasNext()) {
+                Ranking aux = it.next();
+
+                puntuaciones.get(i).setText(String.format("%s: %d", aux.getUsuario(), aux.getPuntuacion()));
+                i++;
+            }
+
+            if(i < puntuaciones.size() - 1){
+                while (i < puntuaciones.size()) {
+                    puntuaciones.get(i).setText("--------------");
+                    i++;
+                }
+            }
+
+            if(usuarioActivo.getPuntuacionMaxima().containsKey(juego)){
+                puntuacionPersonal.setText(String.valueOf(usuarioActivo.getPuntuacionMaxima().get(juego)));
+            }else{
+                puntuacionPersonal.setText("--------------");
+            }
+        }
+
     
-        /**
-         * This method is called from within the constructor to initialize the form.
-         * WARNING: Do NOT modify this code. The content of this method is always
-         * regenerated by the Form Editor.
-         */
-        
-        // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+                          
         private void initComponents() {
     
             background = new javax.swing.JPanel();
@@ -54,9 +176,6 @@ public class PanelRankings extends Panel {
     
             panelPuntuaciones.setBackground(new java.awt.Color(255, 255, 255));
             panelPuntuaciones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-
-            this.botonSeleccionado = snakeButton;
-            setBotonSeleccionado(snakeButton);
     
             puntuacion1.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
             puntuacion1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -402,6 +521,7 @@ public class PanelRankings extends Panel {
         private void snakeButtonMouseClicked(java.awt.event.MouseEvent evt) {                                         
             if(botonSeleccionado != snakeButton){
                 setBotonSeleccionado(snakeButton);
+                cargarRankings(EnumJuegos.Snake);
             }
         }                                        
     
@@ -418,6 +538,7 @@ public class PanelRankings extends Panel {
         private void blackjackButtonMouseClicked(java.awt.event.MouseEvent evt) {                                             
             if(botonSeleccionado != blackjackButton){
                 setBotonSeleccionado(blackjackButton);
+                cargarRankings(EnumJuegos.Blackjack);
             }
         }                                            
     
@@ -434,6 +555,7 @@ public class PanelRankings extends Panel {
         private void buscaminasButtonMouseClicked(java.awt.event.MouseEvent evt) {                                              
             if(botonSeleccionado != buscaminasButton){
                 setBotonSeleccionado(buscaminasButton);
+                cargarRankings(EnumJuegos.Buscaminas);
             }
         }                                             
     
@@ -450,6 +572,7 @@ public class PanelRankings extends Panel {
         private void dinosaurioButtonMouseClicked(java.awt.event.MouseEvent evt) {                                              
             if(botonSeleccionado != dinosaurioButton){
                 setBotonSeleccionado(dinosaurioButton);
+                cargarRankings(EnumJuegos.Dinosaurio);
             }
         }                                             
     
@@ -466,6 +589,7 @@ public class PanelRankings extends Panel {
         private void pacmanButtonMouseClicked(java.awt.event.MouseEvent evt) {                                          
             if(botonSeleccionado != pacmanButton){
                 setBotonSeleccionado(pacmanButton);
+                cargarRankings(EnumJuegos.Pacman);
             }
         }                                         
     
@@ -482,6 +606,7 @@ public class PanelRankings extends Panel {
         private void spaceButtonMouseClicked(java.awt.event.MouseEvent evt) {                                         
             if(botonSeleccionado != spaceButton){
                 setBotonSeleccionado(spaceButton);
+                cargarRankings(EnumJuegos.Galaga);
             }
         }                                        
     
@@ -496,28 +621,7 @@ public class PanelRankings extends Panel {
         }                                       
     
     
-        // Variables declaration - do not modify                     
-        private javax.swing.JPanel background;
-        private javax.swing.JPanel blackjackButton;
-        private javax.swing.JPanel buscaminasButton;
-        private javax.swing.JPanel dinosaurioButton;
-        private javax.swing.JLabel jLabel1;
-        private javax.swing.JLabel jLabel2;
-        private javax.swing.JLabel jLabel3;
-        private javax.swing.JLabel jLabel4;
-        private javax.swing.JLabel jLabel5;
-        private javax.swing.JLabel jLabel6;
-        private javax.swing.JPanel pacmanButton;
-        private javax.swing.JPanel panelPuntuaciones;
-        private javax.swing.JLabel puntuacion1;
-        private javax.swing.JLabel puntuacion2;
-        private javax.swing.JLabel puntuacion3;
-        private javax.swing.JLabel puntuacion4;
-        private javax.swing.JLabel puntuacion5;
-        private javax.swing.JLabel puntuacionPersonal;
-        private javax.swing.JPanel snakeButton;
-        private javax.swing.JPanel spaceButton;
-        private java.awt.Label textoPuntuacionGlobal;
-        private javax.swing.JLabel textoPuntuacionPersonal;
-        // End of variables declaration                   
+                  
+        
+                 
     }

@@ -75,10 +75,13 @@ public class Ranking implements Comparable<Ranking>, Serializable{
         }
         @Override
         public int compareTo(Ranking o) {
-            if (this.puntuacion.compareTo(o.getPuntuacion()) != 0) {
-                return this.puntuacion.compareTo(o.puntuacion); // Orden descendente por puntuación
+            // Comparar puntuaciones de manera descendente
+            int puntuacionComparison = o.getPuntuacion().compareTo(this.puntuacion);
+            if (puntuacionComparison != 0) {
+                return puntuacionComparison;
             } else {
-                return this.usuario.compareTo(o.getUsuario()); // Orden ascendente por usuario
+                // Comparar usuarios de manera ascendente si las puntuaciones son iguales
+                return this.usuario.compareTo(o.getUsuario());
             }
         }
     }

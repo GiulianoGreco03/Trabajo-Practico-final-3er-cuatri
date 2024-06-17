@@ -1,7 +1,7 @@
 package Juegos;
 public enum EnumJuegos {
     Snake(0),
-    Packman(1),
+    Pacman(1),
     Galaga(2),
     Dinosaurio(3),
     Blackjack(4),

@@ -5,37 +5,39 @@ import javax.swing.*;
 import Usuarios.Usuario;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame {
 
     private Usuario usuarioActivo;
     private CardLayout cardLayout;
     private JPanel mainPanel;
-    private PanelLogin loginPanel;
-    private FramePrincipal systemPanel;
+    private PanelLogin panelLogin;
+    private FramePrincipal panelPrincipal;
 
     public MainFrame() {
         cardLayout = new CardLayout();
         mainPanel = new JPanel(cardLayout);
 
-        loginPanel = new PanelLogin(this);
-        systemPanel = new FramePrincipal(usuarioActivo);
-
-        mainPanel.add(loginPanel, "login");
-        mainPanel.add(systemPanel, "system");
+        showPanelLogin();
 
         add(mainPanel);
 
-        setTitle("Login System");
+        setTitle("UTN GameHub");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
     }
 
-    public void showSystemPanel() {
-        cardLayout.show(mainPanel, "system");
+    public void showPanelPrincipal() {
+        panelPrincipal = new FramePrincipal(usuarioActivo, this);
+        mainPanel.add(panelPrincipal, "UTN GameHub");
+        cardLayout.show(mainPanel, "UTN GameHub");
+    }
+
+    public void showPanelLogin(){
+        panelLogin = new PanelLogin(this);
+        mainPanel.add(panelLogin, "Inicio de sesión");
+        cardLayout.show(mainPanel, "Inicio de sesión");
     }
 
 

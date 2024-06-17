@@ -1,0 +1,20 @@
+{
+  "Giuli" : {
+    "nombre" : "Giuli",
+    "contraseña" : "1234",
+    "admin" : false,
+    "puntuacion" : null,
+    "puntuacionMaxima" : {
+      "Snake" : 2000
+    },
+    "cuentaActiva" : true
+  },
+  "Tata" : {
+    "nombre" : "Tata",
+    "contraseña" : "1234",
+    "admin" : false,
+    "puntuacion" : null,
+    "puntuacionMaxima" : { },
+    "cuentaActiva" : true
+  }
+}
