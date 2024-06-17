@@ -7,11 +7,8 @@ package InterfazGrafica;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.TreeSet;
-
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-
+import Interfaces.IterableElementosSwing;
 import Juegos.EnumJuegos;
 import Rankings.GestorRankings;
 import Rankings.Ranking;
@@ -23,7 +20,7 @@ import Usuarios.Usuario;
  *
  * @author Usuario
  */
-public class PanelRankings extends Panel {
+public class PanelRankings extends Panel implements IterableElementosSwing{
 
         //Atributos
         private GestorRankings gestorRankings = new GestorRankings();
@@ -97,19 +94,11 @@ public class PanelRankings extends Panel {
                      it = gestorRankings.getRankingBlackjack().iterator();
                     mostrarPuntuacion(it, enumJuegos);
                     break;
-            }            
-
-            
-            
-            
-            
-
-            
-
+            }           
             
         }
 
-        public ArrayList<JLabel> iteradorLabelRankings(){
+        public ArrayList<JLabel> iteradorElementosSwing(){
             ArrayList<JLabel> labelRankings = new ArrayList<>();
             labelRankings.add(puntuacion1);
             labelRankings.add(puntuacion2);
@@ -122,7 +111,7 @@ public class PanelRankings extends Panel {
 
         public void mostrarPuntuacion(Iterator<Ranking> it, EnumJuegos juego){
 
-            ArrayList<JLabel> puntuaciones = iteradorLabelRankings();
+            ArrayList<JLabel> puntuaciones = iteradorElementosSwing();
             int i = 0;
             while (i < puntuaciones.size() - 1 && it.hasNext()) {
                 Ranking aux = it.next();

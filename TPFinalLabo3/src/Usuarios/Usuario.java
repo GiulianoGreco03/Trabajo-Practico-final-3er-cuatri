@@ -2,6 +2,12 @@ package Usuarios;
 
 import Juegos.*;
 import java.util.HashMap;
+import java.util.LinkedList;
+
+import Avatares.Avatar;
+import Avatares.Cosmetico;
+import Avatares.EnumCosmeticos;
+import Excepciones.UsuarioYaPoseeCosmetico;
 
 public class Usuario {
     private String nombre;
@@ -9,18 +15,30 @@ public class Usuario {
     private boolean admin;
     private Long puntuacion;
     private HashMap<EnumJuegos, Long> puntuacionMaxima;
-    // private Avatar avatar
     private boolean cuentaActiva;
 
-    public String getNombre() {
-        return nombre;
+    public Usuario() {
+
     }
 
-    public void setNombre(String nombre) {
+    public Usuario(String nombre, String contraseña, boolean admin, boolean cuentaActiva) {
         this.nombre = nombre;
+        this.contraseña = contraseña;
+        this.admin = admin;
+        this.puntuacionMaxima = new HashMap<>();
+        this.cuentaActiva = cuentaActiva;
     }
 
-    
+    // Parametos avatar
+
+    private LinkedList<String> sombreros;
+    private int sombreroActivo;
+    private LinkedList<String> lentes;
+    private int lenteActivo;
+    private LinkedList<String> traje;
+    private int trajeActivo;
+
+    // getters y setters
 
     public String getContraseña() {
         return contraseña;
@@ -58,18 +76,63 @@ public class Usuario {
         this.cuentaActiva = cuentaActiva;
     }
 
-    public Usuario() {
-
+    public String getNombre() {
+        return nombre;
     }
 
-    public Usuario(String nombre, String contraseña, boolean admin, boolean cuentaActiva) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
-        this.contraseña = contraseña;
-        this.admin = admin;
-        this.puntuacionMaxima = new HashMap<>();
-        this.cuentaActiva = cuentaActiva;
     }
 
+    public LinkedList<String> getSombreros() {
+        return sombreros;
+    }
+
+    public void setSombreros(LinkedList<String> sombreros) {
+        this.sombreros = sombreros;
+    }
+
+    public int getSombreroActivo() {
+        return sombreroActivo;
+    }
+
+    public void setSombreroActivo(int sombreroActivo) {
+        this.sombreroActivo = sombreroActivo;
+    }
+
+    public LinkedList<String> getLentes() {
+        return lentes;
+    }
+
+    public void setLentes(LinkedList<String> lentes) {
+        this.lentes = lentes;
+    }
+
+    public int getLenteActivo() {
+        return lenteActivo;
+    }
+
+    public void setLenteActivo(int lenteActivo) {
+        this.lenteActivo = lenteActivo;
+    }
+
+    public LinkedList<String> getTraje() {
+        return traje;
+    }
+
+    public void setTraje(LinkedList<String> traje) {
+        this.traje = traje;
+    }
+
+    public int getTrajeActivo() {
+        return trajeActivo;
+    }
+
+    public void setTrajeActivo(int trajeActivo) {
+        this.trajeActivo = trajeActivo;
+    }
+
+    // Metodos
     public void sumarPuntajeUsuario(long puntuacion) {
         this.puntuacion += puntuacion;
     }
@@ -83,6 +146,66 @@ public class Usuario {
         } else {
             puntuacionMaxima.put(juego, puntuacionGanada);
         }
+
+    }
+
+    public void cargarAvatarDefault() {
+        sombreros = new LinkedList<>();
+        lentes = new LinkedList<>();
+        traje = new LinkedList<>();
+        sombreros.add("");
+        sombreroActivo = 0;
+        lentes.add("");
+        lenteActivo = 0;
+        traje.add("");
+        trajeActivo = 0;
+    }
+
+    public boolean agregarCosmetico(Cosmetico cosmetico) {
+        boolean flag = false;
+        switch (cosmetico.getTipo()) {
+            case EnumCosmeticos.GORRO:
+                try {
+                    if (!sombreros.contains(cosmetico.getPathSprite())) {
+                        sombreros.add(cosmetico.getPathSprite());
+                        flag = true;
+                    } else
+                        throw new UsuarioYaPoseeCosmetico();
+                } catch (UsuarioYaPoseeCosmetico e) {
+                    System.out.println(e.getMessage());
+                    flag = false;
+                }
+                break;
+
+            case EnumCosmeticos.LENTE:
+                try {
+                    if (!lentes.contains(cosmetico.getPathSprite())) {
+                        lentes.add(cosmetico.getPathSprite());
+                        flag = true;
+                    } else
+                        throw new UsuarioYaPoseeCosmetico();
+                } catch (UsuarioYaPoseeCosmetico e) {
+                    System.out.println(e.getMessage());
+                    flag = false;
+                }
+                break;
+
+            case EnumCosmeticos.TRAJE:
+                try {
+                    if (!traje.contains(cosmetico.getPathSprite())) {
+                        traje.add(cosmetico.getPathSprite());
+                        flag = true;
+                    } else
+                        throw new UsuarioYaPoseeCosmetico();
+                } catch (UsuarioYaPoseeCosmetico e) {
+                    System.out.println(e.getMessage());
+                    flag = false;
+                }
+                break;
+
+        }
+
+        return flag;
 
     }
 

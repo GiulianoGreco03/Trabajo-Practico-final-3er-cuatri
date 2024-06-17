@@ -10,6 +10,7 @@ public class Panel extends JPanel{
 
     //Atributos
     protected JPanel botonSeleccionado;
+    protected JLabel iconSeleccionado;
 
     //Constructor
     public Panel(){
@@ -32,6 +33,16 @@ public class Panel extends JPanel{
         }
         this.botonSeleccionado = botonSeleccionado;
         this.botonSeleccionado.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
+
+    }
+
+    public void setIconSeleccionado(JLabel iconSeleccionado) {
+        
+        if(this.iconSeleccionado != null){
+            this.iconSeleccionado.setBorder(null);
+        }
+        this.iconSeleccionado = iconSeleccionado;
+        this.iconSeleccionado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 0), 2, true));
 
     }
 

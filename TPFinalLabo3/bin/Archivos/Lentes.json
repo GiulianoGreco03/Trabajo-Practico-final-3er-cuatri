@@ -1,0 +1,37 @@
+[ {
+    "nombreCosmetico" : "Lentes Bigote",
+    "pathSprite" : "src\\Avatares\\Sprites\\LentesBigote.png",
+    "precio" : 100,
+    "habilitado" : true,
+    "tipo" : "LENTE"
+  }, {
+    "nombreCosmetico" : "Lentes Rojos",
+    "pathSprite" : "src\\Avatares\\Sprites\\LentesRojos.png",
+    "precio" : 25,
+    "habilitado" : true,
+    "tipo" : "LENTE"
+  }, {
+    "nombreCosmetico" : "Lentes Fiesta",
+    "pathSprite" : "src\\Avatares\\Sprites\\LentesFiesta.png",
+    "precio" : 75,
+    "habilitado" : true,
+    "tipo" : "LENTE"
+  }, {
+    "nombreCosmetico" : "Lentes Chad",
+    "pathSprite" : "src\\Avatares\\Sprites\\LentesChad.png",
+    "precio" : 200,
+    "habilitado" : true,
+    "tipo" : "LENTE"
+  }, {
+    "nombreCosmetico" : "Lentes Hipster",
+    "pathSprite" : "src\\Avatares\\Sprites\\LentesHipster.png",
+    "precio" : 100,
+    "habilitado" : true,
+    "tipo" : "LENTE"
+  }, {
+    "nombreCosmetico" : "Lentes TopGun",
+    "pathSprite" : "src\\Avatares\\Sprites\\LentesTopGun.png",
+    "precio" : 150,
+    "habilitado" : true,
+    "tipo" : "LENTE"
+  }]

@@ -23,7 +23,7 @@ public class FramePrincipal extends JPanel{
     private ArrayList<Panel> paneles;
 
     //Componentes swing
-    private Avatar Avatar;
+    private Avatar avatar;
     private javax.swing.JPanel Background;
     private javax.swing.JPanel Banner;
     private javax.swing.JPanel Button1;
@@ -60,7 +60,7 @@ public class FramePrincipal extends JPanel{
     
 
     //Metodos
-    private <T extends JPanel> void cambiarPanelPrincipal(T panelACambiar){
+    public <T extends JPanel> void cambiarPanelPrincipal(T panelACambiar){
         PanelPrincipal.removeAll();                                       
         PanelPrincipal.add(panelACambiar);
         panelACambiar.requestFocus();
@@ -68,11 +68,17 @@ public class FramePrincipal extends JPanel{
         PanelPrincipal.repaint();
     }
 
+    public PanelJuegos volverAtras(){
+        PanelJuegos panelNuevo = new PanelJuegos(this);
+        paneles.set(0, panelNuevo);
+        return panelNuevo;
+    }
+
     
 
     public void cargarPanelesUsuario(){
-        paneles.add(new PanelJuegos());
-        paneles.add(new PanelTienda());
+        paneles.add(new PanelJuegos(this));
+        paneles.add(new PanelTienda(this, usuarioActivo));
         paneles.add(new PanelPerfil(usuarioActivo, mainFrame));
         paneles.add(new PanelRankings(usuarioActivo));
         
@@ -95,12 +101,24 @@ public class FramePrincipal extends JPanel{
         this.botonSeleccionado.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
 
     }
+
+
+    public void refrescarAvatar(int sombreroActivo, int lenteActivo, int trajeActivo){
+        avatar.setSombreroActivo(sombreroActivo);
+        avatar.setLenteActivo(lenteActivo);
+        avatar.setTrajeActivo(trajeActivo);
+        avatar.repaint();
+    }
+
+    public Avatar getAvatar() {
+        return avatar;
+    }
     
     private void initComponents() {
 
         Background = new javax.swing.JPanel();
         PanelPrincipal = new javax.swing.JPanel();
-        Avatar = new Avatar(180);
+        avatar = new Avatar(180, usuarioActivo.getSombreros(), usuarioActivo.getSombreroActivo(), usuarioActivo.getLentes(), usuarioActivo.getLenteActivo(), usuarioActivo.getTraje(), usuarioActivo.getTrajeActivo());
         Button1 = new javax.swing.JPanel();
         button1Label = new javax.swing.JLabel();
         Button2 = new javax.swing.JPanel();
@@ -135,8 +153,8 @@ public class FramePrincipal extends JPanel{
 
         
 
-        javax.swing.GroupLayout AvatarLayout = new javax.swing.GroupLayout(Avatar);
-        Avatar.setLayout(AvatarLayout);
+        javax.swing.GroupLayout AvatarLayout = new javax.swing.GroupLayout(avatar);
+        avatar.setLayout(AvatarLayout);
         AvatarLayout.setHorizontalGroup(
             AvatarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 180, Short.MAX_VALUE)
@@ -323,7 +341,7 @@ public class FramePrincipal extends JPanel{
                     .addComponent(Banner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Avatar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(avatar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Button1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Button2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Button3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -338,7 +356,7 @@ public class FramePrincipal extends JPanel{
                 .addComponent(PanelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(BackgroundLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(Avatar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(avatar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(Button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)

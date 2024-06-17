@@ -1,0 +1,50 @@
+[ {
+  "nombreCosmetico" : "Sombrero Verde",
+  "pathSprite" : "src\\Avatares\\Sprites\\SombreroVerde.png",
+  "precio" : 150,
+  "habilitado" : true,
+  "tipo" : "GORRO"
+}, {
+  "nombreCosmetico" : "Sombrero Rojo",
+  "pathSprite" : "src\\Avatares\\Sprites\\SombreroRojo.png",
+  "precio" : 100,
+  "habilitado" : true,
+  "tipo" : "GORRO"
+}, {
+  "nombreCosmetico" : "Gorra Negra",
+  "pathSprite" : "src\\Avatares\\Sprites\\GorraNegra.png",
+  "precio" : 100,
+  "habilitado" : true,
+  "tipo" : "GORRO"
+}, {
+  "nombreCosmetico" : "Sombrero Negro Alto",
+  "pathSprite" : "src\\Avatares\\Sprites\\SombreroNegroAlto.png",
+  "precio" : 175,
+  "habilitado" : true,
+  "tipo" : "GORRO"
+}, {
+  "nombreCosmetico" : "Sombrero Policia",
+  "pathSprite" : "src\\Avatares\\Sprites\\SombreroPolicia.png",
+  "precio" : 60,
+  "habilitado" : true,
+  "tipo" : "GORRO"
+}, {
+  "nombreCosmetico" : "Sombrero Pescador",
+  "pathSprite" : "src\\Avatares\\Sprites\\SombreroPescador.png",
+  "precio" : 200,
+  "habilitado" : true,
+  "tipo" : "GORRO"
+}, {
+  "nombreCosmetico" : "Sombrero Damisela",
+  "pathSprite" : "src\\Avatares\\Sprites\\SombreroDamisela.png",
+  "precio" : 100,
+  "habilitado" : true,
+  "tipo" : "GORRO"
+}, {
+  "nombreCosmetico" : "Sombrero Chino",
+  "pathSprite" : "src\\Avatares\\Sprites\\SombreroChino.png",
+  "precio" : 50,
+  "habilitado" : true,
+  "tipo" : "GORRO"
+}
+]

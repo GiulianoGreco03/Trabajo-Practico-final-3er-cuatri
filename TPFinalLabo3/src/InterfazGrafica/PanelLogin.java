@@ -405,6 +405,7 @@ public class PanelLogin extends Panel {
                     if (!listadoUsuarios.usuarioRegistrado(nombre)) {
                         if(contraseña.compareTo(contraseñaConfirmar) == 0){
                             Usuario aux = listadoUsuarios.crearUsuario(nombre, contraseña);
+                            aux.cargarAvatarDefault();
                             listadoUsuarios.cargarUsuarioJson(aux);
                             mainFrame.setUsuarioActivo(aux);
                             mainFrame.showPanelPrincipal();

@@ -1,0 +1,21 @@
+[ {
+  "usuario" : "Giuli",
+  "puntuacion" : 2800,
+  "juego" : "Dinosaurio",
+  "type" : "Rankings.Ranking"
+}, {
+  "usuario" : "Giuli",
+  "puntuacion" : 2500,
+  "juego" : "Dinosaurio",
+  "type" : "Rankings.Ranking"
+}, {
+  "usuario" : "Giuli",
+  "puntuacion" : 200,
+  "juego" : "Dinosaurio",
+  "type" : "Rankings.Ranking"
+}, {
+  "usuario" : "Tata",
+  "puntuacion" : 200,
+  "juego" : "Dinosaurio",
+  "type" : "Rankings.Ranking"
+} ]

@@ -3,12 +3,19 @@ package InterfazGrafica;
 
 import java.awt.*;
 
+import javax.swing.ImageIcon;
+
 import Juegos.*;
+import Juegos.CarpetaDinosaurio.ChromeDinosaurio;
+import Juegos.CarpetaFlappy.FlappyBird;
 
 public class PanelJuegos extends Panel {
 
+        private FramePrincipal framePrincipal;
 
-        public PanelJuegos() {
+
+        public PanelJuegos(FramePrincipal framePrincipal) {
+            this.framePrincipal = framePrincipal;
             initComponents();
         }
                              
@@ -61,6 +68,7 @@ public class PanelJuegos extends Panel {
             juego1.setPreferredSize(new java.awt.Dimension(150, 150));
     
             icon1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            icon1.setIcon(new ImageIcon("src\\Juegos\\Iconos\\snake_icon.png"));
             icon1.addMouseListener(new java.awt.event.MouseAdapter() {
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
                     icon1MouseClicked(evt);
@@ -89,6 +97,7 @@ public class PanelJuegos extends Panel {
             juego2.setPreferredSize(new java.awt.Dimension(150, 150));
     
             icon2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            icon2.setIcon(new ImageIcon("src\\Juegos\\Iconos\\buscamina_icon.png"));
             icon2.addMouseListener(new java.awt.event.MouseAdapter() {
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
                     icon2MouseClicked(evt);
@@ -117,6 +126,7 @@ public class PanelJuegos extends Panel {
             juego3.setPreferredSize(new java.awt.Dimension(150, 150));
     
             icon3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            icon3.setIcon(new ImageIcon("src\\Juegos\\Iconos\\space_invaders_icon.png"));
             icon3.addMouseListener(new java.awt.event.MouseAdapter() {
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
                     icon3MouseClicked(evt);
@@ -145,6 +155,7 @@ public class PanelJuegos extends Panel {
             juego4.setPreferredSize(new java.awt.Dimension(150, 150));
     
             icon4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            icon4.setIcon(new ImageIcon("src\\Juegos\\Iconos\\Flappy_Bird_icon.png"));
             icon4.addMouseListener(new java.awt.event.MouseAdapter() {
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
                     icon4MouseClicked(evt);
@@ -173,6 +184,7 @@ public class PanelJuegos extends Panel {
             juego5.setPreferredSize(new java.awt.Dimension(150, 150));
     
             icon5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            icon5.setIcon(new ImageIcon("src\\Juegos\\Iconos\\Dinosaurio_juego_icon.png"));
             icon5.addMouseListener(new java.awt.event.MouseAdapter() {
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
                     icon5MouseClicked(evt);
@@ -201,6 +213,7 @@ public class PanelJuegos extends Panel {
             juego6.setPreferredSize(new java.awt.Dimension(150, 150));
     
             icon6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            icon6.setIcon(new ImageIcon("src\\Juegos\\Iconos\\blackjack_icon.png"));
             icon6.addMouseListener(new java.awt.event.MouseAdapter() {
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
                     icon6MouseClicked(evt);
@@ -230,7 +243,7 @@ public class PanelJuegos extends Panel {
             nombre1Label1.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
             nombre1Label1.setForeground(new java.awt.Color(255, 255, 255));
             nombre1Label1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            nombre1Label1.setText("Juego 1");
+            nombre1Label1.setText("Snake");
             nombre1.add(nombre1Label1, java.awt.BorderLayout.CENTER);
     
             nombre2.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
@@ -239,7 +252,7 @@ public class PanelJuegos extends Panel {
             nombre1Label.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
             nombre1Label.setForeground(new java.awt.Color(255, 255, 255));
             nombre1Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            nombre1Label.setText("Juego 2");
+            nombre1Label.setText("Buscaminas");
             nombre2.add(nombre1Label, java.awt.BorderLayout.CENTER);
     
             nombre3.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
@@ -248,7 +261,7 @@ public class PanelJuegos extends Panel {
             nombre1Label3.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
             nombre1Label3.setForeground(new java.awt.Color(255, 255, 255));
             nombre1Label3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            nombre1Label3.setText("Juego 3");
+            nombre1Label3.setText("Space Invaders");
             nombre3.add(nombre1Label3, java.awt.BorderLayout.CENTER);
     
             nombre4.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
@@ -257,7 +270,7 @@ public class PanelJuegos extends Panel {
             nombre1Label4.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
             nombre1Label4.setForeground(new java.awt.Color(255, 255, 255));
             nombre1Label4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            nombre1Label4.setText("Juego 4");
+            nombre1Label4.setText("Flappy bird");
             nombre4.add(nombre1Label4, java.awt.BorderLayout.CENTER);
     
             nombre5.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
@@ -266,7 +279,7 @@ public class PanelJuegos extends Panel {
             nombre1Label5.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
             nombre1Label5.setForeground(new java.awt.Color(255, 255, 255));
             nombre1Label5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            nombre1Label5.setText("Juego 5");
+            nombre1Label5.setText("Dinosaurio");
             nombre5.add(nombre1Label5, java.awt.BorderLayout.CENTER);
     
             nombre6.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
@@ -275,7 +288,7 @@ public class PanelJuegos extends Panel {
             nombre1Label2.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
             nombre1Label2.setForeground(new java.awt.Color(255, 255, 255));
             nombre1Label2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            nombre1Label2.setText("Juego 6");
+            nombre1Label2.setText("Blackjack");
             nombre6.add(nombre1Label2, java.awt.BorderLayout.CENTER);
     
             javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
@@ -354,7 +367,7 @@ public class PanelJuegos extends Panel {
         }// </editor-fold>                        
     
         private void icon1MouseClicked(java.awt.event.MouseEvent evt) {                                   
-            refrescarPanel(this, new Snake(600, 600));
+            refrescarPanel(this, new ContenedorJuego(this, framePrincipal, new Snake()));
         }                                  
     
         private void icon2MouseClicked(java.awt.event.MouseEvent evt) {                                   
@@ -366,11 +379,11 @@ public class PanelJuegos extends Panel {
         }                                  
     
         private void icon4MouseClicked(java.awt.event.MouseEvent evt) {                                   
-            
+            refrescarPanel(this, new ContenedorJuego(this, framePrincipal, new FlappyBird()));
         }                                  
     
         private void icon5MouseClicked(java.awt.event.MouseEvent evt) {                                   
-            
+            refrescarPanel(this, new ContenedorJuego(this, framePrincipal, new ChromeDinosaurio()));
         }                                  
     
         private void icon6MouseClicked(java.awt.event.MouseEvent evt) {                                   

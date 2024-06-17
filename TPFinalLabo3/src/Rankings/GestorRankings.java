@@ -32,17 +32,14 @@ public class GestorRankings{
 
     public void snakeFromJson(){
         
-       try {
+       
         
         if(new File("src\\Archivos\\RankingSnake.json").exists()){
             json = new ClaseJsonGenerica<>();
             rankingSnake = json.LeerValoresTreeSet("src\\Archivos\\RankingSnake.json", new Ranking());
-        }else{
-            throw new IOException();
         }
-       } catch (IOException e) {
-         System.out.println("Hola" +e.getMessage());
-       } 
+        
+       
         
     }
 
@@ -126,18 +123,12 @@ public class GestorRankings{
     }
 
     public void buscaminasFromJson(){
-        
-        try {
+    
          
          if(new File("src\\Archivos\\RankingBuscaminas.json").exists()){
              json = new ClaseJsonGenerica<>();
              rankingBuscaminas = json.LeerValoresTreeSet("src\\Archivos\\RankingBuscaminas.json", new Ranking());
-         }else{
-             throw new IOException();
          }
-        } catch (IOException e) {
-          System.out.println(e.getMessage());
-        } 
          
      }
  
@@ -148,17 +139,12 @@ public class GestorRankings{
 
      public void dinosaurioFromJson(){
         
-        try {
+        
          
          if(new File("src\\Archivos\\RankingDinosaurio.json").exists()){
              json = new ClaseJsonGenerica<>();
              rankingDinosaurio = json.LeerValoresTreeSet("src\\Archivos\\RankingDinosaurio.json", new Ranking());
-         }else{
-             throw new IOException();
          }
-        } catch (IOException e) {
-          System.out.println(e.getMessage());
-        } 
          
      }
  
@@ -169,17 +155,12 @@ public class GestorRankings{
 
      public void blackjackFromJson(){
         
-        try {
+       
          
          if(new File("src\\Archivos\\RankingBlackjack.json").exists()){
              json = new ClaseJsonGenerica<>();
              rankingBlackjack = json.LeerValoresTreeSet("src\\Archivos\\RankingBlackjack.json", new Ranking());
-         }else{
-             throw new IOException();
          }
-        } catch (IOException e) {
-          System.out.println(e.getMessage());
-        } 
          
      }
  
@@ -190,17 +171,11 @@ public class GestorRankings{
 
      public void pacmanFromJson(){
         
-        try {
          
          if(new File("src\\Archivos\\RankingPacman.json").exists()){
              json = new ClaseJsonGenerica<>();
              rankingPacman = json.LeerValoresTreeSet("src\\Archivos\\RankingPacman.json", new Ranking());
-         }else{
-             throw new IOException();
          }
-        } catch (IOException e) {
-          System.out.println(e.getMessage());
-        } 
          
      }
  
@@ -211,17 +186,11 @@ public class GestorRankings{
 
      public void galagaFromJson(){
         
-        try {
-         
+        
          if(new File("src\\Archivos\\RankingGalaga.json").exists()){
              json = new ClaseJsonGenerica<>();
              rankingGalaga = json.LeerValoresTreeSet("src\\Archivos\\RankingGalaga.json", new Ranking());
-         }else{
-             throw new IOException();
          }
-        } catch (IOException e) {
-          System.out.println(e.getMessage());
-        } 
          
      }
  

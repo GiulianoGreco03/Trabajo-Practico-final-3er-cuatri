@@ -9,8 +9,8 @@ public enum PaletaDeColores {
 
     
     public int R;
-    int G;
-    int B;
+    public int G;
+    public int B;
 
     private PaletaDeColores(int R, int G, int B){
         this.R = R;

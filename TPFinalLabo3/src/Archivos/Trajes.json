@@ -1,0 +1,49 @@
+[ {
+    "nombreCosmetico" : "Casaca Juventud",
+    "pathSprite" : "src\\Avatares\\Sprites\\CasacaJuventud.png",
+    "precio" : 100,
+    "habilitado" : true,
+    "tipo" : "TRAJE"
+  }, {
+    "nombreCosmetico" : "Casaca Newells",
+    "pathSprite" : "src\\Avatares\\Sprites\\CasacaNewells.png",
+    "precio" : 150,
+    "habilitado" : true,
+    "tipo" : "TRAJE"
+  }, {
+    "nombreCosmetico" : "Casaca Peñarol",
+    "pathSprite" : "src\\Avatares\\Sprites\\CasacaPeñarol.png",
+    "precio" : 75,
+    "habilitado" : true,
+    "tipo" : "TRAJE"
+  }, {
+    "nombreCosmetico" : "Casaca Atenas",
+    "pathSprite" : "src\\Avatares\\Sprites\\CasacaAtenas.png",
+    "precio" : 50,
+    "habilitado" : true,
+    "tipo" : "TRAJE"
+  }, {
+    "nombreCosmetico" : "Casaca Banfield",
+    "pathSprite" : "src\\Avatares\\Sprites\\CasacaBanfield.png",
+    "precio" : 75,
+    "habilitado" : true,
+    "tipo" : "TRAJE"
+  }, {
+    "nombreCosmetico" : "Casaca Qatar",
+    "pathSprite" : "src\\Avatares\\Sprites\\CasacaQatar.png",
+    "precio" : 25,
+    "habilitado" : true,
+    "tipo" : "TRAJE"
+  }, {
+    "nombreCosmetico" : "Casaca Estudiantes",
+    "pathSprite" : "src\\Avatares\\Sprites\\CasacaEstudiantes.png",
+    "precio" : 100,
+    "habilitado" : true,
+    "tipo" : "TRAJE"
+  }, {
+    "nombreCosmetico" : "Casaca God",
+    "pathSprite" : "src\\Avatares\\Sprites\\CasacaGod.png",
+    "precio" : 200,
+    "habilitado" : true,
+    "tipo" : "TRAJE"
+  }]

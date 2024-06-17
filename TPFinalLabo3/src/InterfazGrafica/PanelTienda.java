@@ -2,14 +2,33 @@
 package InterfazGrafica;
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 import Avatares.Avatar;
+import Avatares.Cosmetico;
+import Avatares.EnumCosmeticos;
+import Avatares.GestorCosmeticos;
+import Interfaces.IterableElementosSwing;
+import Usuarios.GestorUsuarios;
+import Usuarios.Usuario;
 
 
 
 
-public class PanelTienda extends Panel {
+public class PanelTienda extends Panel implements IterableElementosSwing{
 
+
+    private GestorCosmeticos gestorCosmeticos;
+    private GestorUsuarios gestorUsuarios;
+    private FramePrincipal framePrincipal;
+    private Cosmetico cosmeticoSeleccionado;
+    private Integer index;
+    private Usuario usuarioActivo;
 
     //Componentes Swing
     private javax.swing.JPanel Cosmetico1;
@@ -28,7 +47,6 @@ public class PanelTienda extends Panel {
     private java.awt.Label Precio6;
     private java.awt.Label Precio7;
     private java.awt.Label Precio8;
-   // private javax.swing.JPanel avatar;
     private javax.swing.JPanel backgorund1;
     private javax.swing.JPanel cambiarGorro;
     private javax.swing.JPanel cambiarLentes;
@@ -62,10 +80,16 @@ public class PanelTienda extends Panel {
 
     //Constructores
 
-    public PanelTienda() {
+    public PanelTienda(FramePrincipal framePrincipal, Usuario usuario) {
+        this.framePrincipal = framePrincipal;
+        this.usuarioActivo = usuario;
         initComponents();
+        gestorCosmeticos = new GestorCosmeticos();
+        gestorUsuarios = new GestorUsuarios();
         this.botonSeleccionado = null;
         setBotonSeleccionado(gorroButton);
+        mostrarCosmeticos(gestorCosmeticos.listaHabilitada(EnumCosmeticos.GORRO));
+        puntos.setText(String.valueOf(usuarioActivo.getPuntuacion()));
     }
                       
     private void initComponents() {
@@ -111,7 +135,7 @@ public class PanelTienda extends Panel {
         jLabel3 = new javax.swing.JLabel();
         cambiarTraje = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        avatar = new Avatar(400);
+        avatar = new Avatar(400, usuarioActivo.getSombreros(), usuarioActivo.getSombreroActivo(), usuarioActivo.getLentes(), usuarioActivo.getLenteActivo(), usuarioActivo.getTraje(), usuarioActivo.getTrajeActivo());
         guardarButton = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -221,6 +245,8 @@ public class PanelTienda extends Panel {
         Cosmetico1.setMinimumSize(new java.awt.Dimension(150, 100));
         Cosmetico1.setPreferredSize(new java.awt.Dimension(120, 120));
 
+        icon1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        icon1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 icon1MouseClicked(evt);
@@ -244,6 +270,8 @@ public class PanelTienda extends Panel {
         Cosmetico2.setMinimumSize(new java.awt.Dimension(150, 100));
         Cosmetico2.setPreferredSize(new java.awt.Dimension(120, 120));
 
+        icon2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        icon2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 icon2MouseClicked(evt);
@@ -267,6 +295,8 @@ public class PanelTienda extends Panel {
         Cosmetico3.setMinimumSize(new java.awt.Dimension(150, 100));
         Cosmetico3.setPreferredSize(new java.awt.Dimension(120, 120));
 
+        icon3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        icon3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 icon3MouseClicked(evt);
@@ -290,6 +320,8 @@ public class PanelTienda extends Panel {
         Cosmetico4.setMinimumSize(new java.awt.Dimension(150, 100));
         Cosmetico4.setPreferredSize(new java.awt.Dimension(120, 120));
 
+        icon4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        icon4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 icon4MouseClicked(evt);
@@ -313,6 +345,8 @@ public class PanelTienda extends Panel {
         Cosmetico5.setMinimumSize(new java.awt.Dimension(150, 100));
         Cosmetico5.setPreferredSize(new java.awt.Dimension(120, 120));
 
+        icon5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        icon5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 icon5MouseClicked(evt);
@@ -336,6 +370,8 @@ public class PanelTienda extends Panel {
         Cosmetico6.setMinimumSize(new java.awt.Dimension(150, 100));
         Cosmetico6.setPreferredSize(new java.awt.Dimension(120, 120));
 
+        icon6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        icon6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 icon6MouseClicked(evt);
@@ -359,6 +395,8 @@ public class PanelTienda extends Panel {
         Cosmetico7.setMinimumSize(new java.awt.Dimension(150, 100));
         Cosmetico7.setPreferredSize(new java.awt.Dimension(120, 120));
 
+        icon7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        icon7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 icon7MouseClicked(evt);
@@ -382,6 +420,8 @@ public class PanelTienda extends Panel {
         Cosmetico8.setMinimumSize(new java.awt.Dimension(150, 100));
         Cosmetico8.setPreferredSize(new java.awt.Dimension(120, 120));
 
+        icon8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        icon8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 icon8MouseClicked(evt);
@@ -773,6 +813,7 @@ public class PanelTienda extends Panel {
     private void gorroButtonMouseClicked(java.awt.event.MouseEvent evt) {                                         
         if(botonSeleccionado != gorroButton){
             setBotonSeleccionado(gorroButton);
+            mostrarCosmeticos(gestorCosmeticos.listaHabilitada(EnumCosmeticos.GORRO));
         }
     }                                        
 
@@ -789,6 +830,7 @@ public class PanelTienda extends Panel {
     private void lentesButton9MouseClicked(java.awt.event.MouseEvent evt) {                                           
         if(botonSeleccionado != lentesButton9){
             setBotonSeleccionado(lentesButton9);
+            mostrarCosmeticos(gestorCosmeticos.listaHabilitada(EnumCosmeticos.LENTE));
         }
     }                                          
 
@@ -805,6 +847,7 @@ public class PanelTienda extends Panel {
     private void trajeButton10MouseClicked(java.awt.event.MouseEvent evt) {                                           
         if(botonSeleccionado != trajeButton10){
             setBotonSeleccionado(trajeButton10);
+            mostrarCosmeticos(gestorCosmeticos.listaHabilitada(EnumCosmeticos.TRAJE));
         }
     }                                          
 
@@ -818,8 +861,15 @@ public class PanelTienda extends Panel {
         }
     }                                         
 
-    private void guardarButtonMouseClicked(java.awt.event.MouseEvent evt) {                                           
-        // TODO add your handling code here:
+    private void guardarButtonMouseClicked(java.awt.event.MouseEvent evt) {   
+        int sombreroActivo = avatar.getSombreroActivo();
+        int lenteActivo = avatar.getLenteActivo();
+        int trajeActivo = avatar.getTrajeActivo();                                   
+        usuarioActivo.setSombreroActivo(sombreroActivo);
+        usuarioActivo.setLenteActivo(lenteActivo);
+        usuarioActivo.setTrajeActivo(trajeActivo);
+        framePrincipal.refrescarAvatar(sombreroActivo, lenteActivo, trajeActivo );
+        gestorUsuarios.cargarUsuarioJson(usuarioActivo);
     }                                          
 
     private void cambiarGorroMouseEntered(java.awt.event.MouseEvent evt) {                                          
@@ -847,7 +897,7 @@ public class PanelTienda extends Panel {
     }                                         
 
     private void cambiarLentesMouseClicked(java.awt.event.MouseEvent evt) {                                           
-        // TODO add your handling code here:
+        avatar.cambiarLentes();
     }                                          
 
     private void cambiarTrajeMouseEntered(java.awt.event.MouseEvent evt) {                                          
@@ -861,40 +911,197 @@ public class PanelTienda extends Panel {
     }                                        
 
     private void cambiarTrajeMouseClicked(java.awt.event.MouseEvent evt) {                                          
-        // TODO add your handling code here:
+        avatar.cambiarTraje();
     }                                          
 
-    private void icon1MouseClicked(java.awt.event.MouseEvent evt) {                                   
-        // TODO add your handling code here:
-    }                                  
+    private void icon1MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_icon1MouseClicked
+        setIconSeleccionado(icon1);
+        cosmeticoSeleccionado = null;
+        index = 0;
+        LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
+        if (1 <= aux.size()) {
+            cosmeticoSeleccionado = aux.get(index);
+                boolean flag = usuarioActivo.agregarCosmetico(cosmeticoSeleccionado);
+                if(flag){
+                    gestorUsuarios.cargarUsuarioJson(usuarioActivo);
+                } else {
+                    Precio1.setText("Ya lo tienes");
+                }
+            
+        }
+    }// GEN-LAST:event_icon1MouseClicked
 
-    private void icon2MouseClicked(java.awt.event.MouseEvent evt) {                                   
-        // TODO add your handling code here:
-    }                                  
+    private void icon2MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_icon2MouseClicked
+        setIconSeleccionado(icon2);
+        cosmeticoSeleccionado = null;
+        index = 1;
+        LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
+        if (2 <= aux.size()) {
+            cosmeticoSeleccionado = aux.get(index);
+                boolean flag = usuarioActivo.agregarCosmetico(cosmeticoSeleccionado);
+                if(flag){
+                    gestorUsuarios.cargarUsuarioJson(usuarioActivo);
+                } else {
+                    Precio2.setText("Ya lo tienes");
+                }
+        }
+    }// GEN-LAST:event_icon2MouseClicked
 
-    private void icon3MouseClicked(java.awt.event.MouseEvent evt) {                                   
-        // TODO add your handling code here:
-    }                                  
+    private void icon3MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_icon3MouseClicked
+        setIconSeleccionado(icon3);
+        cosmeticoSeleccionado = null;
+        index = 2;
+        LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
+        if (3 <= aux.size()) {
+            cosmeticoSeleccionado = aux.get(index);
+            boolean flag = usuarioActivo.agregarCosmetico(cosmeticoSeleccionado);
+            if(flag){
+                gestorUsuarios.cargarUsuarioJson(usuarioActivo);
+            } else {
+                Precio3.setText("Ya lo tienes");
+            }
+        }
+    }// GEN-LAST:event_icon3MouseClicked
 
-    private void icon4MouseClicked(java.awt.event.MouseEvent evt) {                                   
-        // TODO add your handling code here:
-    }                                  
+    private void icon4MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_icon4MouseClicked
+        setIconSeleccionado(icon4);
+        cosmeticoSeleccionado = null;
+        index = 3;
+        LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
+        if (4 <= aux.size()) {
+            cosmeticoSeleccionado = aux.get(index);
+                boolean flag = usuarioActivo.agregarCosmetico(cosmeticoSeleccionado);
+                if(flag){
+                    gestorUsuarios.cargarUsuarioJson(usuarioActivo);
+                } else {
+                    Precio4.setText("Ya lo tienes");
+                }
+        }
+    }// GEN-LAST:event_icon4MouseClicked
 
-    private void icon5MouseClicked(java.awt.event.MouseEvent evt) {                                   
-        // TODO add your handling code here:
-    }                                  
+    private void icon5MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_icon5MouseClicked
+        setIconSeleccionado(icon5);
+        cosmeticoSeleccionado = null;
+        index = 4;
+        LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
+        if (5 <= aux.size()) {
+            cosmeticoSeleccionado = aux.get(index);
+                boolean flag = usuarioActivo.agregarCosmetico(cosmeticoSeleccionado);
+                if(flag){
+                    gestorUsuarios.cargarUsuarioJson(usuarioActivo);
+                } else {
+                    Precio5.setText("Ya lo tienes");
+                }
+        }
+    }// GEN-LAST:event_icon5MouseClicked
 
-    private void icon6MouseClicked(java.awt.event.MouseEvent evt) {                                   
-        // TODO add your handling code here:
-    }                                  
+    private void icon6MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_icon6MouseClicked
+        setIconSeleccionado(icon6);
+        cosmeticoSeleccionado = null;
+        index = 5;
+        LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
+        if (6 <= aux.size()) {
+            cosmeticoSeleccionado = aux.get(index);
+                boolean flag = usuarioActivo.agregarCosmetico(cosmeticoSeleccionado);
+                if(flag){
+                    gestorUsuarios.cargarUsuarioJson(usuarioActivo);
+                } else {
+                    Precio6.setText("Ya lo tienes");
+                }
+        }
+    }// GEN-LAST:event_icon6MouseClicked
 
-    private void icon7MouseClicked(java.awt.event.MouseEvent evt) {                                   
-        // TODO add your handling code here:
-    }                                  
+    private void icon7MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_icon7MouseClicked
+        setIconSeleccionado(icon7);
+        cosmeticoSeleccionado = null;
+        index = 6;
+        LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
+        if (7 <= aux.size()) {
+            cosmeticoSeleccionado = aux.get(index);
+                boolean flag = usuarioActivo.agregarCosmetico(cosmeticoSeleccionado);
+                if(flag){
+                    gestorUsuarios.cargarUsuarioJson(usuarioActivo);
+                } else {
+                    Precio7.setText("Ya lo tienes");
+                }
+        }
+    }// GEN-LAST:event_icon7MouseClicked
 
-    private void icon8MouseClicked(java.awt.event.MouseEvent evt) {                                   
-        // TODO add your handling code here:
-    }                                  
+    private void icon8MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_icon8MouseClicked
+        setIconSeleccionado(icon8);
+        cosmeticoSeleccionado = null;
+        index = 7;
+        LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
+        if (8 <= aux.size()) {
+            cosmeticoSeleccionado = aux.get(index);
+                boolean flag = usuarioActivo.agregarCosmetico(cosmeticoSeleccionado);
+                if(flag){
+                    gestorUsuarios.cargarUsuarioJson(usuarioActivo);
+                } else {
+                    Precio8.setText("Ya lo tienes");
+                }
+        }
+
+        }
+
+    @Override
+    public ArrayList<JLabel> iteradorElementosSwing() {
+        ArrayList<JLabel> icons = new ArrayList<>();
+        icons.add(icon1);
+        icons.add(icon2);
+        icons.add(icon3);
+        icons.add(icon4);
+        icons.add(icon5);
+        icons.add(icon6);
+        icons.add(icon7);
+        icons.add(icon8);
+
+        return icons;
+    }  
+
+    public ArrayList<Label> iteradorPrecios(){
+        ArrayList<Label> precios  = new ArrayList<>();
+        precios.add(Precio1);
+        precios.add(Precio2);
+        precios.add(Precio3);
+        precios.add(Precio4);
+        precios.add(Precio5);
+        precios.add(Precio6);
+        precios.add(Precio7);
+        precios.add(Precio8);
+
+        return precios;
+    }
+    
+    public void mostrarCosmeticos(LinkedList<Cosmetico> cosmeticos){
+        ArrayList<JLabel> icons = iteradorElementosSwing();
+        ArrayList<Label> precios = iteradorPrecios();
+        int i = 0, j = 0;
+
+        while(i < icons.size() && j < cosmeticos.size()){
+            icons.get(i).setIcon(new ImageIcon(cosmeticos.get(j).getPathSprite()));
+            precios.get(i).setText(String.valueOf(cosmeticos.get(j).getPrecio()));
+            i++;
+            j++;
+        }
+
+        while(i < icons.size()){
+
+            icons.get(i).setIcon(new ImageIcon("src\\Avatares\\Sprites\\ArticuloNoDisponible.png"));
+            precios.get(i).setText("---");
+            i++;
+        }
+    }
+
+    public LinkedList<Cosmetico> selecionarCosmetico(JPanel botonSeleccionado) {
+        if (botonSeleccionado == gorroButton) {
+            return gestorCosmeticos.listaHabilitada(EnumCosmeticos.GORRO);
+        } else if (botonSeleccionado == lentesButton9) {
+            return gestorCosmeticos.listaHabilitada(EnumCosmeticos.LENTE);
+        } else {
+            return gestorCosmeticos.listaHabilitada(EnumCosmeticos.TRAJE);
+        }
+    }
 
                 
                    

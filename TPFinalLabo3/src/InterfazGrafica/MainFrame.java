@@ -25,7 +25,7 @@ public class MainFrame extends JFrame {
         setTitle("UTN GameHub");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     public void showPanelPrincipal() {
