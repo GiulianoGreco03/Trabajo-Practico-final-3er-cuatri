@@ -4,21 +4,26 @@
  */
 package Juegos.Buscaminas_Juego;
 
-//import Juegos.Buscaminas_Juego.Casilla;
-//import Juegos.Buscaminas_Juego.Tablero;
+import Juegos.Buscaminas_Juego.Casilla;
+import Juegos.Buscaminas_Juego.Tablero;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.List;
 import java.util.function.Consumer;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
-
+/**
+ *
+ * @author agust
+ */
 public class FrameBuscaminas extends javax.swing.JFrame {
     int numFilas =  8;
     int numColumna = 8 ;
     int numMinas = 20 ;
-    int puntaje = 5 ;
+    int puntaje = 3 ;
     
     JButton[][] botonesTablero ;
     
@@ -60,8 +65,8 @@ public class FrameBuscaminas extends javax.swing.JFrame {
                     botonesTablero[casillaConMina.getPosFila()][casillaConMina.getPosColumna()].setText("*") ;
 //                    JOptionPane.showMessageDialog(rootPane,"Fin Partida");
                 }
+                JOptionPane.showMessageDialog(rootPane,"Fin Partida");
                 juegoNuevo() ;
-                JOptionPane.showMessageDialog(rootPane,"Fin Partida") ;
             }
         });
         tablero.setEventoPartidaGanada(new Consumer<List<Casilla>>() {
@@ -71,7 +76,7 @@ public class FrameBuscaminas extends javax.swing.JFrame {
                     botonesTablero[casillaConMina.getPosFila()][casillaConMina.getPosColumna()].setText(":)") ;
 //                    JOptionPane.showMessageDialog(rootPane,"Ganaste!!");
                 }
-                puntaje+=puntaje ;
+                puntaje += puntaje ;
                 JOptionPane.showMessageDialog(rootPane,"Ganaste!! Puntaje: " +puntaje);
                 juegoNuevo() ;
             }
@@ -101,25 +106,47 @@ public class FrameBuscaminas extends javax.swing.JFrame {
                 if ( i==0 &&j==0) {
                     botonesTablero[i][j].setBounds(posXReferencia, 
                             posYReferencia, anchoControl, altoControl );
-                } else if ( i==0 && j!=0 ) {
+                }else if ( i==0 && j!=0 ) {
                     botonesTablero[i][j].setBounds(botonesTablero[i][j-1].getX()+
                             botonesTablero[i][j-1].getWidth(), 
                             posYReferencia, anchoControl, altoControl );
-                } else {
-                    botonesTablero[i][j].setBounds(
+                } else { botonesTablero[i][j].setBounds(
                             botonesTablero[i-1][j].getX(), 
                             botonesTablero[i-1][j].getY()+botonesTablero[i-1][j].getHeight(), 
                             anchoControl, altoControl);
                 }
-                botonesTablero[i][j].addActionListener(new ActionListener() {
-                    @Override 
-                    public void actionPerformed ( ActionEvent e) {
+                
+                botonesTablero[i][j].addActionListener( new ActionListener() {
+                    @Override
+                    public void actionPerformed ( ActionEvent e ) {
                         buttonClick(e) ;
                     }
-                });
+                }) ;
+                
+                botonesTablero[i][j].addMouseListener(new MouseAdapter() {
+                    @Override 
+                    public void mousePressed ( MouseEvent e) {
+                      JButton tab = (JButton) e.getSource();
+
+                        //click izquierdo
+                        if (e.getButton() == MouseEvent.BUTTON1) {
+                              buttonClickExtra(e) ;
+                        }
+                        //click derecho
+                        else if (e.getButton() == MouseEvent.BUTTON3) {
+                            if (tab.getText() == "") {
+                                tab.setText("🚩");
+                            }
+                            else if (tab.getText() == "🚩" && tab.isEnabled() ) {
+                                tab.setText("");
+                            }
+                        }
+                    }
+                }) ;
+
                 getContentPane().add(botonesTablero[i][j]) ;
-            } 
-        }
+            }
+        }    
     }
     
     private void buttonClick(ActionEvent e) {
@@ -130,15 +157,30 @@ public class FrameBuscaminas extends javax.swing.JFrame {
         //JOptionPane.showMessageDialog(rootPane, posFila+","+posColumna);
         tablero.seleccionarCasilla(posFila, posColumna);
     }
+    
+    private void buttonClickExtra(MouseEvent e) {
+        JButton btn = (JButton)e.getSource() ;
+        String[] cordenada = btn.getName().split(",") ;
+        int posFila = Integer.parseInt(cordenada[0]) ;
+        int posColumna = Integer.parseInt(cordenada[1]) ;
+        //JOptionPane.showMessageDialog(rootPane, posFila+","+posColumna);
+        tablero.seleccionarCasilla(posFila, posColumna);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
      * regenerated by the Form Editor.
      */
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
+        jMenu3 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -147,7 +189,15 @@ public class FrameBuscaminas extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
 
+        jMenu3.setText("jMenu3");
+
+        jMenu4.setText("jMenu4");
+
+        jMenu5.setText("jMenu5");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("jLabel1");
 
         jMenu1.setText("Juego");
 
@@ -195,37 +245,42 @@ public class FrameBuscaminas extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(445, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel3)
+                .addGap(0, 477, Short.MAX_VALUE))
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {                                           
         juegoNuevo() ;
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }                                          
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {                                           
         this.numFilas = 8 ;
         this.numColumna = 9 ;
         juegoNuevo() ;
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }                                          
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {                                           
         this.numFilas = 12 ;
         this.numColumna = 13 ;
         juegoNuevo() ;
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }                                          
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {                                           
         this.numFilas = 14 ;
         this.numColumna = 15 ;
         juegoNuevo() ;
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }                                          
 
     /**
      * @param args the command line arguments
@@ -262,13 +317,18 @@ public class FrameBuscaminas extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
