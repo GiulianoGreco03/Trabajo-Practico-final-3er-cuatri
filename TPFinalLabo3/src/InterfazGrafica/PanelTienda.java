@@ -1103,6 +1103,11 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         }
     }
 
+    public void comprar(int index){
+        Long precioArticulo;
+        Long puntajeUsuario = usuarioActivo.getPuntuacion();
+    }
+
                 
                    
 }

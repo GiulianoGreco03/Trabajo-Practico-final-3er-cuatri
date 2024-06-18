@@ -9,7 +9,9 @@ import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.*;
 
-public class Snake extends JPanel implements ActionListener {
+import Usuarios.Usuario;
+
+public class Snake extends Juego implements ActionListener {
     private final int alturaV = 500;
     private final int anchoV = 500;
     private final int tileSize = 25;
@@ -33,7 +35,8 @@ public class Snake extends JPanel implements ActionListener {
         }
     }
 
-    public Snake() {
+    public Snake(Usuario usuario) {
+        super(usuario);
         this.setPreferredSize(new Dimension(alturaV, anchoV));
         this.setBackground(Color.black);
         this.setFocusable(true);
@@ -213,6 +216,12 @@ public class Snake extends JPanel implements ActionListener {
         score = 0;
         gameloop.start();
         repaint();
+    }
+
+    @Override
+    public Long calcularPuntuacion() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcularPuntuacion'");
     }
 
 }

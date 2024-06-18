@@ -28,7 +28,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
 
         //Componentes swing
         private javax.swing.JPanel background;
-        private javax.swing.JPanel blackjackButton;
+        private javax.swing.JPanel TetrisButton;
         private javax.swing.JPanel buscaminasButton;
         private javax.swing.JPanel dinosaurioButton;
         private javax.swing.JLabel jLabel1;
@@ -89,9 +89,9 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
                      it = gestorRankings.getRankingflappy().iterator();
                     mostrarPuntuacion(it, enumJuegos);
                     break;
-                case EnumJuegos.Blackjack:
-                     gestorRankings.blackjackFromJson();
-                     it = gestorRankings.getRankingBlackjack().iterator();
+                case EnumJuegos.Tetris:
+                     gestorRankings.TetrisFromJson();
+                     it = gestorRankings.getRankingTetris().iterator();
                     mostrarPuntuacion(it, enumJuegos);
                     break;
             }           
@@ -150,7 +150,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
             textoPuntuacionGlobal = new java.awt.Label();
             snakeButton = new javax.swing.JPanel();
             jLabel1 = new javax.swing.JLabel();
-            blackjackButton = new javax.swing.JPanel();
+            TetrisButton = new javax.swing.JPanel();
             jLabel2 = new javax.swing.JLabel();
             buscaminasButton = new javax.swing.JPanel();
             jLabel3 = new javax.swing.JLabel();
@@ -299,34 +299,34 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
                 .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
             );
     
-            blackjackButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
-            blackjackButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-            blackjackButton.setMinimumSize(new java.awt.Dimension(160, 40));
-            blackjackButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            TetrisButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+            TetrisButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            TetrisButton.setMinimumSize(new java.awt.Dimension(160, 40));
+            TetrisButton.addMouseListener(new java.awt.event.MouseAdapter() {
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    blackjackButtonMouseClicked(evt);
+                    TetrisButtonMouseClicked(evt);
                 }
                 public void mouseEntered(java.awt.event.MouseEvent evt) {
-                    blackjackButtonMouseEntered(evt);
+                    TetrisButtonMouseEntered(evt);
                 }
                 public void mouseExited(java.awt.event.MouseEvent evt) {
-                    blackjackButtonMouseExited(evt);
+                    TetrisButtonMouseExited(evt);
                 }
             });
     
             jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
             jLabel2.setForeground(new java.awt.Color(255, 255, 255));
             jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            jLabel2.setText("BlackJack");
+            jLabel2.setText("Tetris");
     
-            javax.swing.GroupLayout blackjackButtonLayout = new javax.swing.GroupLayout(blackjackButton);
-            blackjackButton.setLayout(blackjackButtonLayout);
-            blackjackButtonLayout.setHorizontalGroup(
-                blackjackButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            javax.swing.GroupLayout TetrisButtonLayout = new javax.swing.GroupLayout(TetrisButton);
+            TetrisButton.setLayout(TetrisButtonLayout);
+            TetrisButtonLayout.setHorizontalGroup(
+                TetrisButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
             );
-            blackjackButtonLayout.setVerticalGroup(
-                blackjackButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            TetrisButtonLayout.setVerticalGroup(
+                TetrisButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
             );
     
@@ -463,7 +463,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
                     .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(snakeButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(blackjackButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(TetrisButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(buscaminasButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(dinosaurioButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(pacmanButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -480,7 +480,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
                             .addGap(60, 60, 60)
                             .addComponent(snakeButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(40, 40, 40)
-                            .addComponent(blackjackButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TetrisButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(40, 40, 40)
                             .addComponent(buscaminasButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(40, 40, 40)
@@ -524,20 +524,20 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
             }
         }                                       
     
-        private void blackjackButtonMouseClicked(java.awt.event.MouseEvent evt) {                                             
-            if(botonSeleccionado != blackjackButton){
-                setBotonSeleccionado(blackjackButton);
-                cargarRankings(EnumJuegos.Blackjack);
+        private void TetrisButtonMouseClicked(java.awt.event.MouseEvent evt) {                                             
+            if(botonSeleccionado != TetrisButton){
+                setBotonSeleccionado(TetrisButton);
+                cargarRankings(EnumJuegos.Tetris);
             }
         }                                            
     
-        private void blackjackButtonMouseEntered(java.awt.event.MouseEvent evt) {                                             
-            blackjackButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
+        private void TetrisButtonMouseEntered(java.awt.event.MouseEvent evt) {                                             
+            TetrisButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
         }                                            
     
-        private void blackjackButtonMouseExited(java.awt.event.MouseEvent evt) {                                            
-            if(botonSeleccionado != blackjackButton){
-                blackjackButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        private void TetrisButtonMouseExited(java.awt.event.MouseEvent evt) {                                            
+            if(botonSeleccionado != TetrisButton){
+                TetrisButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
             }
         }                                           
     

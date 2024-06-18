@@ -2,17 +2,19 @@ package Juegos;
 
 import javax.swing.JPanel;
 
+import Usuarios.Usuario;
+
 public abstract class Juego extends JPanel{
 
-    private String nombreJuego;
+    protected Usuario usuario;
+    protected boolean gameOver;
 
-    public Juego(){
+    public Juego(Usuario usuario){
         
     }
 
     //Metodos
 
-    public abstract void gameover();
     public abstract void restart();
     public abstract Long calcularPuntuacion();
 

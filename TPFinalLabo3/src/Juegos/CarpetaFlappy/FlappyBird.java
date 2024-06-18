@@ -6,7 +6,10 @@ import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.*;
 
-public class FlappyBird extends JPanel implements ActionListener {
+import Juegos.Juego;
+import Usuarios.Usuario;
+
+public class FlappyBird extends Juego implements ActionListener {
     int anchoTablero = 500;
     int altoTablero = 500;
 
@@ -67,7 +70,8 @@ public class FlappyBird extends JPanel implements ActionListener {
     boolean gameOver = false;
     double score = 0;
 
-    public FlappyBird() {
+    public FlappyBird(Usuario usuario) {
+        super(usuario);
         setPreferredSize(new Dimension(anchoTablero, altoTablero));
         setFocusable(true);
 
@@ -203,6 +207,18 @@ public class FlappyBird extends JPanel implements ActionListener {
             colocarPipesTimer.stop();
             gameLoop.stop();
         }
+    }
+
+    @Override
+    public void restart() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'restart'");
+    }
+
+    @Override
+    public Long calcularPuntuacion() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcularPuntuacion'");
     }
 
 /*package Juegos.CarpetaFlappy;

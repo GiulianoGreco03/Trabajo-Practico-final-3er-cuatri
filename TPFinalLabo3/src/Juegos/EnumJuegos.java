@@ -4,7 +4,7 @@ public enum EnumJuegos {
     Flappy(1),
     Galaga(2),
     Dinosaurio(3),
-    Blackjack(4),
+    Tetris(4),
     Buscaminas(5);
 
     private int valor;

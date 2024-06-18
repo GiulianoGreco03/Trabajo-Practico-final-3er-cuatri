@@ -16,7 +16,7 @@ public class GestorRankings{
     private TreeSet<Ranking> rankingSnake;
     private TreeSet<Ranking> rankingBuscaminas;
     private TreeSet<Ranking> rankingDinosaurio;
-    private TreeSet<Ranking> rankingBlackjack;
+    private TreeSet<Ranking> rankingTetris;
     private TreeSet<Ranking> rankingflappy;
     private TreeSet<Ranking> rankingGalaga;
     private ClaseJsonGenerica<Ranking> json;
@@ -27,7 +27,7 @@ public class GestorRankings{
         rankingGalaga = new TreeSet<>();
         rankingflappy = new TreeSet<>();
         rankingSnake = new TreeSet<>();
-        rankingBlackjack = new TreeSet<>();
+        rankingTetris = new TreeSet<>();
     }
 
     public void snakeFromJson(){
@@ -61,10 +61,10 @@ public class GestorRankings{
                 agregarRankingGalaga(ranking);
                 galagaToJson();
                 break;
-            case EnumJuegos.Blackjack:
-                blackjackFromJson();
-                agregarRankingBlackjack(ranking);
-                blackjackToJson();
+            case EnumJuegos.Tetris:
+                TetrisFromJson();
+                agregarRankingTetris(ranking);
+                TetrisToJson();
                 break;
             case EnumJuegos.Dinosaurio:
                 dinosaurioFromJson();
@@ -97,9 +97,9 @@ public class GestorRankings{
                 agregarRankingGalaga(ranking);
                 
                 break;
-            case EnumJuegos.Blackjack:
+            case EnumJuegos.Tetris:
                 
-                agregarRankingBlackjack(ranking);
+                agregarRankingTetris(ranking);
                 
                 break;
             case EnumJuegos.Dinosaurio:
@@ -153,20 +153,20 @@ public class GestorRankings{
         json.CargarValores(rankingDinosaurio, "src\\Archivos\\RankingDinosaurio.json");
      }
 
-     public void blackjackFromJson(){
+     public void TetrisFromJson(){
         
        
          
-         if(new File("src\\Archivos\\RankingBlackjack.json").exists()){
+         if(new File("src\\Archivos\\RankingTetris.json").exists()){
              json = new ClaseJsonGenerica<>();
-             rankingBlackjack = json.LeerValoresTreeSet("src\\Archivos\\RankingBlackjack.json", new Ranking());
+             rankingTetris = json.LeerValoresTreeSet("src\\Archivos\\RankingTetris.json", new Ranking());
          }
          
      }
  
-     public void blackjackToJson(){
+     public void TetrisToJson(){
         json = new ClaseJsonGenerica<>();
-        json.CargarValores(rankingBlackjack, "src\\Archivos\\RankingBlackjack.json");
+        json.CargarValores(rankingTetris, "src\\Archivos\\RankingTetris.json");
      }
 
      public void flappyFromJson(){
@@ -219,11 +219,11 @@ public class GestorRankings{
     public void setRankingDinosaurio(TreeSet<Ranking> rankingDinosaurio) {
         this.rankingDinosaurio = rankingDinosaurio;
     }
-    public TreeSet<Ranking> getRankingBlackjack() {
-        return rankingBlackjack;
+    public TreeSet<Ranking> getRankingTetris() {
+        return rankingTetris;
     }
-    public void setRankingBlackjack(TreeSet<Ranking> rankingBlackjack) {
-        this.rankingBlackjack = rankingBlackjack;
+    public void setRankingTetris(TreeSet<Ranking> rankingTetris) {
+        this.rankingTetris = rankingTetris;
     }
     public TreeSet<Ranking> getRankingflappy() {
         return rankingflappy;
@@ -253,12 +253,12 @@ public class GestorRankings{
     public void agregarRankingflappy(Ranking ranking){
         rankingflappy.add(ranking);
     }
-    public void agregarRankingBlackjack(Ranking ranking){
-        rankingBlackjack.add(ranking);
+    public void agregarRankingTetris(Ranking ranking){
+        rankingTetris.add(ranking);
     }
 
-    public void mostrarRankingBlackjack(){
-        Iterator<Ranking> it = rankingBlackjack.iterator();
+    public void mostrarRankingTetris(){
+        Iterator<Ranking> it = rankingTetris.iterator();
 
         while (it.hasNext()) { 
             Ranking objeto = it.next();
@@ -308,9 +308,9 @@ public class GestorRankings{
     }
     
 
-    public Ranking buscarRankingBlackjackPorUsuario(String nombre){
+    public Ranking buscarRankingTetrisPorUsuario(String nombre){
         try {
-            Iterator<Ranking> it = rankingBlackjack.iterator();
+            Iterator<Ranking> it = rankingTetris.iterator();
             while (it.hasNext()) {
                 Ranking objeto = it.next();
 
@@ -404,8 +404,8 @@ public class GestorRankings{
         }
         return null;
     }
-    public void limpiarRankingBlackjack(){
-        rankingBlackjack.clear();
+    public void limpiarRankingTetris(){
+        rankingTetris.clear();
     }
     public void limpiarRankingBuscaminas(){
         rankingBuscaminas.clear();

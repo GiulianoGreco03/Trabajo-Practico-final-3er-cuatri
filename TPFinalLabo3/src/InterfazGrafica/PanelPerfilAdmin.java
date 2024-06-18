@@ -411,7 +411,6 @@ public class PanelPerfilAdmin extends Panel {
             while (k < j && ite.hasNext()) {
                 ite.next();
                 k++;
-                System.out.println(k);
             }
         }
 

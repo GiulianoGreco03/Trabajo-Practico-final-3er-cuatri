@@ -5,7 +5,10 @@ import java.awt.event.*;
 import java.util.ArrayList;
 import javax.swing.*;
 
-public class ChromeDinosaurio extends JPanel implements ActionListener {
+import Juegos.Juego;
+import Usuarios.Usuario;
+
+public class ChromeDinosaurio extends Juego implements ActionListener {
     int anchoTablero = 500;
     int altoTablero = 500;
 
@@ -62,7 +65,8 @@ public class ChromeDinosaurio extends JPanel implements ActionListener {
     Timer gameLoop;
     Timer colocarCactusTimer;
 
-    public ChromeDinosaurio() {
+    public ChromeDinosaurio(Usuario usuario) {
+        super(usuario);
         setPreferredSize(new Dimension(anchoTablero, altoTablero));
         setBackground(Color.LIGHT_GRAY);
         setFocusable(true);
@@ -218,12 +222,9 @@ public class ChromeDinosaurio extends JPanel implements ActionListener {
         }
     }
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Chrome Dinosaurio");
-        ChromeDinosaurio gamePanel = new ChromeDinosaurio();
-        frame.add(gamePanel);
-        frame.pack();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
+    @Override
+    public Long calcularPuntuacion() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcularPuntuacion'");
     }
 }

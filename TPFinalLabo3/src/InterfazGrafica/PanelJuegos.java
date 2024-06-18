@@ -6,17 +6,21 @@ import java.awt.*;
 import javax.swing.ImageIcon;
 
 import Juegos.*;
-import Juegos.Buscaminas_Juego.FrameBuscaminas;
-import Juegos.CarpetaBlackjack.BlackJack;
 import Juegos.CarpetaDinosaurio.ChromeDinosaurio;
 import Juegos.CarpetaFlappy.FlappyBird;
+import Juegos.CarpetaSpaceInvaders.SpaceInvaders;
+import Juegos.Tetris.Tetri;
+import Usuarios.Usuario;
+
 
 public class PanelJuegos extends Panel {
 
         private FramePrincipal framePrincipal;
+        private Usuario usuarioActivo;
 
 
-        public PanelJuegos(FramePrincipal framePrincipal) {
+        public PanelJuegos(FramePrincipal framePrincipal, Usuario usuarioActivo) {
+            this.usuarioActivo = usuarioActivo;
             this.framePrincipal = framePrincipal;
             initComponents();
         }
@@ -215,7 +219,7 @@ public class PanelJuegos extends Panel {
             juego6.setPreferredSize(new java.awt.Dimension(150, 150));
     
             icon6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-            icon6.setIcon(new ImageIcon("src\\Juegos\\Iconos\\blackjack_icon.png"));
+            icon6.setIcon(new ImageIcon("src\\Juegos\\Iconos\\Tetris_icon.png"));
             icon6.addMouseListener(new java.awt.event.MouseAdapter() {
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
                     icon6MouseClicked(evt);
@@ -290,7 +294,7 @@ public class PanelJuegos extends Panel {
             nombre1Label2.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
             nombre1Label2.setForeground(new java.awt.Color(255, 255, 255));
             nombre1Label2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            nombre1Label2.setText("Blackjack");
+            nombre1Label2.setText("Tetris");
             nombre6.add(nombre1Label2, java.awt.BorderLayout.CENTER);
     
             javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
@@ -369,7 +373,7 @@ public class PanelJuegos extends Panel {
         }// </editor-fold>                        
     
         private void icon1MouseClicked(java.awt.event.MouseEvent evt) {                                   
-            refrescarPanel(this, new ContenedorJuego(this, framePrincipal, new Snake()));
+            refrescarPanel(this, new ContenedorJuego(this, framePrincipal, new Snake(usuarioActivo)));
         }                                  
     
         private void icon2MouseClicked(java.awt.event.MouseEvent evt) {                                   
@@ -377,19 +381,19 @@ public class PanelJuegos extends Panel {
         }                                  
     
         private void icon3MouseClicked(java.awt.event.MouseEvent evt) {                                   
-            
+            refrescarPanel(this, new ContenedorJuego(null, framePrincipal, new SpaceInvaders(usuarioActivo)));
         }                                  
     
         private void icon4MouseClicked(java.awt.event.MouseEvent evt) {                                   
-            refrescarPanel(this, new ContenedorJuego(this, framePrincipal, new FlappyBird()));
+            refrescarPanel(this, new ContenedorJuego(this, framePrincipal, new FlappyBird(usuarioActivo)));
         }                                  
     
         private void icon5MouseClicked(java.awt.event.MouseEvent evt) {                                   
-            refrescarPanel(this, new ContenedorJuego(this, framePrincipal, new ChromeDinosaurio()));
+            refrescarPanel(this, new ContenedorJuego(this, framePrincipal, new ChromeDinosaurio(usuarioActivo)));
         }                                  
     
         private void icon6MouseClicked(java.awt.event.MouseEvent evt) {                                   
-            refrescarPanel(this, new ContenedorJuego(this, framePrincipal, new BlackJack()));
+           refrescarPanel(this, new ContenedorJuego(this, framePrincipal, new Tetri()));
         }                                  
     
     

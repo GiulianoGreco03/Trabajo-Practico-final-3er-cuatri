@@ -208,7 +208,7 @@ public class PanelJuegosAdmin extends Panel {
         juego6.setPreferredSize(new java.awt.Dimension(150, 150));
 
         icon6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        icon6.setIcon(new ImageIcon("src\\Juegos\\Iconos\\blackjack_icon.png"));
+        icon6.setIcon(new ImageIcon("src\\Juegos\\Iconos\\Tetris_icon.png"));
         icon6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 icon6MouseClicked(evt);
@@ -476,7 +476,7 @@ public class PanelJuegosAdmin extends Panel {
 
     private void icon6MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_icon6MouseClicked
         setIconSeleccionado(icon6);
-        setJuegoSeleccionado(EnumJuegos.Blackjack);
+        setJuegoSeleccionado(EnumJuegos.Tetris);
     }
 
     private void limpiarHistorialButtonMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_limpiarHistorialButtonMouseEntered
@@ -519,9 +519,9 @@ public class PanelJuegosAdmin extends Panel {
             gestorRankings.limpiarRankingDinosaurio();
             gestorRankings.dinosaurioToJson();
                 break;
-            case EnumJuegos.Blackjack:
-            gestorRankings.limpiarRankingBlackjack();
-            gestorRankings.blackjackToJson();
+            case EnumJuegos.Tetris:
+            gestorRankings.limpiarRankingTetris();
+            gestorRankings.TetrisToJson();
                 break;
         }
 

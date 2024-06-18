@@ -8,7 +8,6 @@ import Avatares.GestorCosmeticos;
 import InterfazGrafica.*;
 import Juegos.ContenedorJuego;
 import Juegos.EnumJuegos;
-import Juegos.CarpetaBlackjack.BlackJack;
 import Juegos.CarpetaDinosaurio.ChromeDinosaurio;
 import Plataformas.*;
 import Rankings.GestorRankings;
@@ -23,7 +22,6 @@ public class App {
         //GestorCosmeticos gestorCosmeticos = new GestorCosmeticos();
 
         //System.out.println(gestorCosmeticos.getGorros());
-
 
         Plataforma plataforma = new Plataforma();
 

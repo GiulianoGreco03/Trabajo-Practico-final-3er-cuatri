@@ -64,7 +64,7 @@ public class FramePrincipal extends JPanel{
     }
 
     public PanelJuegos volverAtras(){
-        PanelJuegos panelNuevo = new PanelJuegos(this);
+        PanelJuegos panelNuevo = new PanelJuegos(this, usuarioActivo);
         paneles.set(0, panelNuevo);
         return panelNuevo;
     }
@@ -72,7 +72,7 @@ public class FramePrincipal extends JPanel{
     
 
     public void cargarPanelesUsuario(){
-        paneles.add(new PanelJuegos(this));
+        paneles.add(new PanelJuegos(this, usuarioActivo));
         paneles.add(new PanelTienda(this, usuarioActivo));
         paneles.add(new PanelPerfil(usuarioActivo, mainFrame));
         paneles.add(new PanelRankings(usuarioActivo));

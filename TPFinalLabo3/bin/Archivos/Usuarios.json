@@ -77,11 +77,11 @@
     "puntuacionMaxima" : { },
     "cuentaActiva" : true,
     "sombreros" : [ "", "src\\Avatares\\Sprites\\SombreroRojo.png", "src\\Avatares\\Sprites\\SombreroVerde.png", "src\\Avatares\\Sprites\\SombreroChino.png", "src\\Avatares\\Sprites\\SombreroBlancoAlto.png", "src\\Avatares\\Sprites\\SombreroGraduadoRojo.png", "src\\Avatares\\Sprites\\SombreroPolicia.png", "src\\Avatares\\Sprites\\SombreroPescador.png", "src\\Avatares\\Sprites\\SombreroDamisela.png", "src\\Avatares\\Sprites\\GorraNegra.png", "src\\Avatares\\Sprites\\SombreroNegroAlto.png" ],
-    "sombreroActivo" : 10,
-    "lentes" : [ "", "src\\Avatares\\Sprites\\LentesBigote.png", "src\\Avatares\\Sprites\\LentesTopGun.png", "src\\Avatares\\Sprites\\LentesChad.png" ],
-    "lenteActivo" : 3,
+    "sombreroActivo" : 6,
+    "lentes" : [ "", "src\\Avatares\\Sprites\\LentesBigote.png", "src\\Avatares\\Sprites\\LentesTopGun.png", "src\\Avatares\\Sprites\\LentesChad.png", "src\\Avatares\\Sprites\\Lentes2.png" ],
+    "lenteActivo" : 4,
     "traje" : [ "", "src\\Avatares\\Sprites\\CasacaJuventud.png", "src\\Avatares\\Sprites\\CasacaNewells.png" ],
-    "trajeActivo" : 1
+    "trajeActivo" : 2
   },
   "Agus" : {
     "nombre" : "Agus",
