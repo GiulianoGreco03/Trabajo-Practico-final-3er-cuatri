@@ -402,7 +402,10 @@ public class FramePrincipal extends JPanel{
     }                                   
 
     private void Button2MouseClicked(java.awt.event.MouseEvent evt) { 
-        if(botonSeleccionado != Button2) {                                      
+        if(botonSeleccionado != Button2) { 
+            if(!usuarioActivo.isAdmin()){
+               ((PanelTienda)paneles.get(1)).actualizarPuntaje();
+            }                                     
             cambiarPanelPrincipal(paneles.get(1));
             setBotonSeleccionado(Button2);
         }

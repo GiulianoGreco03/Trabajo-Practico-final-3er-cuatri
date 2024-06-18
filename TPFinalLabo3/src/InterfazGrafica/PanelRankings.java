@@ -37,7 +37,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
         private javax.swing.JLabel jLabel4;
         private javax.swing.JLabel jLabel5;
         private javax.swing.JLabel jLabel6;
-        private javax.swing.JPanel pacmanButton;
+        private javax.swing.JPanel flappyButton;
         private javax.swing.JPanel panelPuntuaciones;
         private javax.swing.JLabel puntuacion1;
         private javax.swing.JLabel puntuacion2;
@@ -156,7 +156,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
             jLabel3 = new javax.swing.JLabel();
             dinosaurioButton = new javax.swing.JPanel();
             jLabel4 = new javax.swing.JLabel();
-            pacmanButton = new javax.swing.JPanel();
+            flappyButton = new javax.swing.JPanel();
             jLabel5 = new javax.swing.JLabel();
             spaceButton = new javax.swing.JPanel();
             jLabel6 = new javax.swing.JLabel();
@@ -392,34 +392,34 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
                 .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
             );
     
-            pacmanButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
-            pacmanButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-            pacmanButton.setMinimumSize(new java.awt.Dimension(160, 40));
-            pacmanButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            flappyButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+            flappyButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            flappyButton.setMinimumSize(new java.awt.Dimension(160, 40));
+            flappyButton.addMouseListener(new java.awt.event.MouseAdapter() {
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    pacmanButtonMouseClicked(evt);
+                    flappyButtonMouseClicked(evt);
                 }
                 public void mouseEntered(java.awt.event.MouseEvent evt) {
-                    pacmanButtonMouseEntered(evt);
+                    flappyButtonMouseEntered(evt);
                 }
                 public void mouseExited(java.awt.event.MouseEvent evt) {
-                    pacmanButtonMouseExited(evt);
+                    flappyButtonMouseExited(evt);
                 }
             });
     
             jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
             jLabel5.setForeground(new java.awt.Color(255, 255, 255));
             jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            jLabel5.setText("Pac-Man");
+            jLabel5.setText("Flappy bird");
     
-            javax.swing.GroupLayout pacmanButtonLayout = new javax.swing.GroupLayout(pacmanButton);
-            pacmanButton.setLayout(pacmanButtonLayout);
-            pacmanButtonLayout.setHorizontalGroup(
-                pacmanButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            javax.swing.GroupLayout flappyButtonLayout = new javax.swing.GroupLayout(flappyButton);
+            flappyButton.setLayout(flappyButtonLayout);
+            flappyButtonLayout.setHorizontalGroup(
+                flappyButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
             );
-            pacmanButtonLayout.setVerticalGroup(
-                pacmanButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            flappyButtonLayout.setVerticalGroup(
+                flappyButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
             );
     
@@ -466,7 +466,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
                             .addComponent(TetrisButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(buscaminasButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(dinosaurioButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(pacmanButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(flappyButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(spaceButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(18, 18, 18)
                     .addComponent(panelPuntuaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -486,7 +486,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
                             .addGap(40, 40, 40)
                             .addComponent(dinosaurioButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(40, 40, 40)
-                            .addComponent(pacmanButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(flappyButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(40, 40, 40)
                             .addComponent(spaceButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(backgroundLayout.createSequentialGroup()
@@ -575,20 +575,20 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
             }
         }                                            
     
-        private void pacmanButtonMouseClicked(java.awt.event.MouseEvent evt) {                                          
-            if(botonSeleccionado != pacmanButton){
-                setBotonSeleccionado(pacmanButton);
+        private void flappyButtonMouseClicked(java.awt.event.MouseEvent evt) {                                          
+            if(botonSeleccionado != flappyButton){
+                setBotonSeleccionado(flappyButton);
                 cargarRankings(EnumJuegos.Flappy);
             }
         }                                         
     
-        private void pacmanButtonMouseEntered(java.awt.event.MouseEvent evt) {                                          
-            pacmanButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
+        private void flappyButtonMouseEntered(java.awt.event.MouseEvent evt) {                                          
+            flappyButton.setBackground(new Color(PaletaDeColores.BotonPresionado.R, PaletaDeColores.BotonPresionado.G, PaletaDeColores.BotonPresionado.B));
         }                                         
     
-        private void pacmanButtonMouseExited(java.awt.event.MouseEvent evt) {                                         
-            if(botonSeleccionado != pacmanButton){
-                pacmanButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        private void flappyButtonMouseExited(java.awt.event.MouseEvent evt) {                                         
+            if(botonSeleccionado != flappyButton){
+                flappyButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
             }
         }                                        
     

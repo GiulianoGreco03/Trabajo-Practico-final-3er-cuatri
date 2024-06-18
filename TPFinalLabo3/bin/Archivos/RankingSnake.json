@@ -1,0 +1,36 @@
+[ {
+  "usuario" : "Giuli",
+  "puntuacion" : 150,
+  "juego" : "Snake",
+  "type" : "Rankings.Ranking"
+}, {
+  "usuario" : "Giuli",
+  "puntuacion" : 30,
+  "juego" : "Snake",
+  "type" : "Rankings.Ranking"
+}, {
+  "usuario" : "Lupo",
+  "puntuacion" : 30,
+  "juego" : "Snake",
+  "type" : "Rankings.Ranking"
+}, {
+  "usuario" : "Giuli",
+  "puntuacion" : 20,
+  "juego" : "Snake",
+  "type" : "Rankings.Ranking"
+}, {
+  "usuario" : "Juan",
+  "puntuacion" : 20,
+  "juego" : "Snake",
+  "type" : "Rankings.Ranking"
+}, {
+  "usuario" : "Lupo",
+  "puntuacion" : 20,
+  "juego" : "Snake",
+  "type" : "Rankings.Ranking"
+}, {
+  "usuario" : "Giuli",
+  "puntuacion" : 0,
+  "juego" : "Snake",
+  "type" : "Rankings.Ranking"
+} ]

@@ -3,4 +3,19 @@
   "puntuacion" : 2000,
   "juego" : "Tetris",
   "type" : "Rankings.Ranking"
+}, {
+  "usuario" : "Giuli",
+  "puntuacion" : 40,
+  "juego" : "Tetris",
+  "type" : "Rankings.Ranking"
+}, {
+  "usuario" : "Giuli",
+  "puntuacion" : 6,
+  "juego" : "Tetris",
+  "type" : "Rankings.Ranking"
+}, {
+  "usuario" : "Giuli",
+  "puntuacion" : 0,
+  "juego" : "Tetris",
+  "type" : "Rankings.Ranking"
 } ]

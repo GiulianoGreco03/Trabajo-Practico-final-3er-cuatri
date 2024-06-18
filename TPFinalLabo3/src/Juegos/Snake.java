@@ -118,12 +118,14 @@ public class Snake extends Juego implements ActionListener {
         if (snakeHead.x > 19 || snakeHead.x < 0 || snakeHead.y > 19 || snakeHead.y < 0) {
             alive = false;
             gameloop.stop();
+            rankingYPuntaje(calcularPuntuacion(), EnumJuegos.Snake, usuario);
         }
 
         for (int i = 1; i < snakeBody.size(); i++) {
             if (snakeBody.get(i).x == snakeHead.x && snakeBody.get(i).y == snakeHead.y) {
                 alive = false;
                 gameloop.stop();
+                rankingYPuntaje(calcularPuntuacion(), EnumJuegos.Snake, usuario);
             }
         }
     }
@@ -220,8 +222,7 @@ public class Snake extends Juego implements ActionListener {
 
     @Override
     public Long calcularPuntuacion() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calcularPuntuacion'");
+        return Long.valueOf(score) * 10;
     }
 
 }

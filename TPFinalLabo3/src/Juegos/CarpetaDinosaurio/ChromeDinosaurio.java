@@ -5,6 +5,7 @@ import java.awt.event.*;
 import java.util.ArrayList;
 import javax.swing.*;
 
+import Juegos.EnumJuegos;
 import Juegos.Juego;
 import Usuarios.Usuario;
 
@@ -219,12 +220,12 @@ public class ChromeDinosaurio extends Juego implements ActionListener {
         if (gameOver) {
             colocarCactusTimer.stop();
             gameLoop.stop();
+            rankingYPuntaje(calcularPuntuacion(), EnumJuegos.Dinosaurio, usuario);
         }
     }
 
     @Override
     public Long calcularPuntuacion() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calcularPuntuacion'");
+        return Long.valueOf(score)/5;
     }
 }

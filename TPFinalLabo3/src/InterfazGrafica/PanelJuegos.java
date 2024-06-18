@@ -6,6 +6,7 @@ import java.awt.*;
 import javax.swing.ImageIcon;
 
 import Juegos.*;
+import Juegos.CarpetaBuscaminas.Buscamina;
 import Juegos.CarpetaDinosaurio.ChromeDinosaurio;
 import Juegos.CarpetaFlappy.FlappyBird;
 import Juegos.CarpetaSpaceInvaders.SpaceInvaders;
@@ -377,7 +378,7 @@ public class PanelJuegos extends Panel {
         }                                  
     
         private void icon2MouseClicked(java.awt.event.MouseEvent evt) {                                   
-            //refrescarPanel(this, new ContenedorJuego(null, framePrincipal, new FrameBuscaminas()));
+            refrescarPanel(this, new ContenedorJuego(null, framePrincipal, new Buscamina(usuarioActivo)));
         }                                  
     
         private void icon3MouseClicked(java.awt.event.MouseEvent evt) {                                   
@@ -393,7 +394,7 @@ public class PanelJuegos extends Panel {
         }                                  
     
         private void icon6MouseClicked(java.awt.event.MouseEvent evt) {                                   
-           refrescarPanel(this, new ContenedorJuego(this, framePrincipal, new Tetri()));
+           refrescarPanel(this, new ContenedorJuego(this, framePrincipal, new Tetri(usuarioActivo)));
         }                                  
     
     

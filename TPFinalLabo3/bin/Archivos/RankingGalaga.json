@@ -1,0 +1,11 @@
+[ {
+  "usuario" : "Giuli",
+  "puntuacion" : 475,
+  "juego" : "Galaga",
+  "type" : "Rankings.Ranking"
+}, {
+  "usuario" : "Giuli",
+  "puntuacion" : 450,
+  "juego" : "Galaga",
+  "type" : "Rankings.Ranking"
+} ]

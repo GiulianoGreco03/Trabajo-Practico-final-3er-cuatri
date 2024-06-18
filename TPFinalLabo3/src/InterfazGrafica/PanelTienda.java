@@ -921,12 +921,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
         if (1 <= aux.size()) {
             cosmeticoSeleccionado = aux.get(index);
-                boolean flag = usuarioActivo.agregarCosmetico(cosmeticoSeleccionado);
-                if(flag){
-                    gestorUsuarios.cargarUsuarioJson(usuarioActivo);
-                } else {
-                    Precio1.setText("Ya lo tienes");
-                }
+            comprar(cosmeticoSeleccionado, index);
             
         }
     }// GEN-LAST:event_icon1MouseClicked
@@ -938,12 +933,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
         if (2 <= aux.size()) {
             cosmeticoSeleccionado = aux.get(index);
-                boolean flag = usuarioActivo.agregarCosmetico(cosmeticoSeleccionado);
-                if(flag){
-                    gestorUsuarios.cargarUsuarioJson(usuarioActivo);
-                } else {
-                    Precio2.setText("Ya lo tienes");
-                }
+            comprar(cosmeticoSeleccionado, index);
         }
     }// GEN-LAST:event_icon2MouseClicked
 
@@ -954,12 +944,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
         if (3 <= aux.size()) {
             cosmeticoSeleccionado = aux.get(index);
-            boolean flag = usuarioActivo.agregarCosmetico(cosmeticoSeleccionado);
-            if(flag){
-                gestorUsuarios.cargarUsuarioJson(usuarioActivo);
-            } else {
-                Precio3.setText("Ya lo tienes");
-            }
+            comprar(cosmeticoSeleccionado, index);
         }
     }// GEN-LAST:event_icon3MouseClicked
 
@@ -970,12 +955,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
         if (4 <= aux.size()) {
             cosmeticoSeleccionado = aux.get(index);
-                boolean flag = usuarioActivo.agregarCosmetico(cosmeticoSeleccionado);
-                if(flag){
-                    gestorUsuarios.cargarUsuarioJson(usuarioActivo);
-                } else {
-                    Precio4.setText("Ya lo tienes");
-                }
+            comprar(cosmeticoSeleccionado, index);
         }
     }// GEN-LAST:event_icon4MouseClicked
 
@@ -986,12 +966,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
         if (5 <= aux.size()) {
             cosmeticoSeleccionado = aux.get(index);
-                boolean flag = usuarioActivo.agregarCosmetico(cosmeticoSeleccionado);
-                if(flag){
-                    gestorUsuarios.cargarUsuarioJson(usuarioActivo);
-                } else {
-                    Precio5.setText("Ya lo tienes");
-                }
+            comprar(cosmeticoSeleccionado, index);
         }
     }// GEN-LAST:event_icon5MouseClicked
 
@@ -1003,11 +978,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         if (6 <= aux.size()) {
             cosmeticoSeleccionado = aux.get(index);
                 boolean flag = usuarioActivo.agregarCosmetico(cosmeticoSeleccionado);
-                if(flag){
-                    gestorUsuarios.cargarUsuarioJson(usuarioActivo);
-                } else {
-                    Precio6.setText("Ya lo tienes");
-                }
+                comprar(cosmeticoSeleccionado, index);
         }
     }// GEN-LAST:event_icon6MouseClicked
 
@@ -1018,12 +989,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
         if (7 <= aux.size()) {
             cosmeticoSeleccionado = aux.get(index);
-                boolean flag = usuarioActivo.agregarCosmetico(cosmeticoSeleccionado);
-                if(flag){
-                    gestorUsuarios.cargarUsuarioJson(usuarioActivo);
-                } else {
-                    Precio7.setText("Ya lo tienes");
-                }
+            comprar(cosmeticoSeleccionado, index);
         }
     }// GEN-LAST:event_icon7MouseClicked
 
@@ -1034,12 +1000,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
         if (8 <= aux.size()) {
             cosmeticoSeleccionado = aux.get(index);
-                boolean flag = usuarioActivo.agregarCosmetico(cosmeticoSeleccionado);
-                if(flag){
-                    gestorUsuarios.cargarUsuarioJson(usuarioActivo);
-                } else {
-                    Precio8.setText("Ya lo tienes");
-                }
+            comprar(cosmeticoSeleccionado, index);
         }
 
         }
@@ -1066,8 +1027,8 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         precios.add(Precio3);
         precios.add(Precio4);
         precios.add(Precio5);
-        precios.add(Precio6);
         precios.add(Precio7);
+        precios.add(Precio6);
         precios.add(Precio8);
 
         return precios;
@@ -1103,11 +1064,28 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         }
     }
 
-    public void comprar(int index){
-        Long precioArticulo;
+    public void comprar(Cosmetico cosmetico, int index){
+        ArrayList<Label> precios = iteradorPrecios();
+        Long precio = cosmetico.getPrecio();
         Long puntajeUsuario = usuarioActivo.getPuntuacion();
-    }
+        boolean flag = false;
 
-                
+        if(puntajeUsuario >= precio){
+                flag = usuarioActivo.agregarCosmetico(cosmetico);
+                if(flag){
+                    usuarioActivo.disminuirPuntos(precio);
+                    gestorUsuarios.cargarUsuarioJson(usuarioActivo);
+                    puntos.setText(String.valueOf(usuarioActivo.getPuntuacion()));
+                } else
+                precios.get(index).setText("Ya lo tienes");
+        
+        } else {
+            precios.get(index).setText("No alcanza");
+        }
+    }    
+    
+    public void actualizarPuntaje(){
+        puntos.setText(String.valueOf(usuarioActivo.getPuntuacion()));
+    }
                    
 }

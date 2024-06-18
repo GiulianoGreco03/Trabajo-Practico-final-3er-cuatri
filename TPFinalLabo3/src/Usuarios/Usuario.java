@@ -26,6 +26,8 @@ public class Usuario {
         this.contraseña = contraseña;
         this.admin = admin;
         this.puntuacionMaxima = new HashMap<>();
+        cargarPuntuacionMaximaDefault();
+        this.puntuacion = 0l;
         this.cuentaActiva = cuentaActiva;
     }
 
@@ -149,6 +151,10 @@ public class Usuario {
 
     }
 
+    public void disminuirPuntos(Long puntos){
+        puntuacion -= puntos;
+    }
+
     public void cargarAvatarDefault() {
         sombreros = new LinkedList<>();
         lentes = new LinkedList<>();
@@ -159,6 +165,15 @@ public class Usuario {
         lenteActivo = 0;
         traje.add("");
         trajeActivo = 0;
+    }
+
+    public void cargarPuntuacionMaximaDefault(){
+        puntuacionMaxima.put(EnumJuegos.Snake, 0l);
+        puntuacionMaxima.put(EnumJuegos.Buscaminas, 0l);
+        puntuacionMaxima.put(EnumJuegos.Galaga, 0l);
+        puntuacionMaxima.put(EnumJuegos.Dinosaurio, 0l);
+        puntuacionMaxima.put(EnumJuegos.Tetris, 0l);
+        puntuacionMaxima.put(EnumJuegos.Flappy, 0l);
     }
 
     public boolean agregarCosmetico(Cosmetico cosmetico) {

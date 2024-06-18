@@ -6,6 +6,7 @@ import java.util.Random;
 
 import javax.swing.*;
 
+import Juegos.EnumJuegos;
 import Juegos.Juego;
 import Usuarios.Usuario;
 
@@ -357,6 +358,7 @@ public class SpaceInvaders extends Juego implements ActionListener{
         if (vidas == 0 || checkAliens()) {
             gameOver = true;
             timer.stop();
+            rankingYPuntaje(calcularPuntuacion(), EnumJuegos.Galaga, usuario);
         }
     }
 
@@ -435,8 +437,7 @@ public class SpaceInvaders extends Juego implements ActionListener{
 
     @Override
     public Long calcularPuntuacion() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calcularPuntuacion'");
+        return puntuacion;
     }
 
     

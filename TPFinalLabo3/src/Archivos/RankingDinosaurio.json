@@ -1,1 +1,6 @@
-[ ]
+[ {
+  "usuario" : "Giuli",
+  "puntuacion" : 44,
+  "juego" : "Dinosaurio",
+  "type" : "Rankings.Ranking"
+} ]

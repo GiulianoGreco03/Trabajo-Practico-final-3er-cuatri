@@ -14,7 +14,11 @@ import javax.swing.JPanel;
 import javax.swing.KeyStroke;
 import javax.swing.Timer;
 
-public class Tetri extends JPanel {
+import Juegos.EnumJuegos;
+import Juegos.Juego;
+import Usuarios.Usuario;
+
+public class Tetri extends Juego {
     private final Point[][][] Tetraminos = {
         // I-Piece
         {
@@ -79,7 +83,8 @@ public class Tetri extends JPanel {
     private long score;
     private Color[][] well;
 
-    public Tetri() {
+    public Tetri(Usuario usuario) {
+        super(usuario);
         init();
         configureKeyBindings();
         Timer timer = new Timer(700, new ActionListener() {
@@ -149,7 +154,7 @@ public class Tetri extends JPanel {
         } else {
             fixToWell();
             if (isGameOver()) {
-                gameOver();
+                restart();
                 return;
             }
         }
@@ -281,7 +286,8 @@ public class Tetri extends JPanel {
         return false;
     }
 
-    private void gameOver() {
+    public void restart() {
+            rankingYPuntaje(calcularPuntuacion(), EnumJuegos.Tetris, usuario);
             resetBoard();
             newPiece();
             score = 0;
@@ -294,6 +300,11 @@ public class Tetri extends JPanel {
                 well[i][j] = Color.BLACK;
             }
         }
+    }
+
+    @Override
+    public Long calcularPuntuacion() {
+        return (Long)score;
     }
 }
 
