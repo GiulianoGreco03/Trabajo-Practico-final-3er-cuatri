@@ -17,7 +17,7 @@ public class GestorRankings{
     private TreeSet<Ranking> rankingBuscaminas;
     private TreeSet<Ranking> rankingDinosaurio;
     private TreeSet<Ranking> rankingBlackjack;
-    private TreeSet<Ranking> rankingPacman;
+    private TreeSet<Ranking> rankingflappy;
     private TreeSet<Ranking> rankingGalaga;
     private ClaseJsonGenerica<Ranking> json;
 
@@ -25,7 +25,7 @@ public class GestorRankings{
         rankingBuscaminas = new TreeSet<>();
         rankingDinosaurio = new TreeSet<>();
         rankingGalaga = new TreeSet<>();
-        rankingPacman = new TreeSet<>();
+        rankingflappy = new TreeSet<>();
         rankingSnake = new TreeSet<>();
         rankingBlackjack = new TreeSet<>();
     }
@@ -71,10 +71,10 @@ public class GestorRankings{
                 agregarRankingDinosaurio(ranking);
                 dinosaurioToJson();
                 break;
-            case EnumJuegos.Pacman:
-                pacmanFromJson();
-                agregarRankingPacman(ranking);
-                pacmanToJson();
+            case EnumJuegos.Flappy:
+                flappyFromJson();
+                agregarRankingflappy(ranking);
+                flappyToJson();
                 break;
         }
     }
@@ -107,9 +107,9 @@ public class GestorRankings{
                 agregarRankingDinosaurio(ranking);
                 
                 break;
-            case EnumJuegos.Pacman:
+            case EnumJuegos.Flappy:
                 
-                agregarRankingPacman(ranking);
+                agregarRankingflappy(ranking);
                 
                 break;
         }
@@ -169,19 +169,19 @@ public class GestorRankings{
         json.CargarValores(rankingBlackjack, "src\\Archivos\\RankingBlackjack.json");
      }
 
-     public void pacmanFromJson(){
+     public void flappyFromJson(){
         
          
-         if(new File("src\\Archivos\\RankingPacman.json").exists()){
+         if(new File("src\\Archivos\\Rankingflappy.json").exists()){
              json = new ClaseJsonGenerica<>();
-             rankingPacman = json.LeerValoresTreeSet("src\\Archivos\\RankingPacman.json", new Ranking());
+             rankingflappy = json.LeerValoresTreeSet("src\\Archivos\\Rankingflappy.json", new Ranking());
          }
          
      }
  
-     public void pacmanToJson(){
+     public void flappyToJson(){
         json = new ClaseJsonGenerica<>();
-        json.CargarValores(rankingPacman, "src\\Archivos\\RankingPacman.json");
+        json.CargarValores(rankingflappy, "src\\Archivos\\Rankingflappy.json");
      }
 
      public void galagaFromJson(){
@@ -225,11 +225,11 @@ public class GestorRankings{
     public void setRankingBlackjack(TreeSet<Ranking> rankingBlackjack) {
         this.rankingBlackjack = rankingBlackjack;
     }
-    public TreeSet<Ranking> getRankingPacman() {
-        return rankingPacman;
+    public TreeSet<Ranking> getRankingflappy() {
+        return rankingflappy;
     }
     public void setRankingPacman(TreeSet<Ranking> rankingPacman) {
-        this.rankingPacman = rankingPacman;
+        this.rankingflappy = rankingPacman;
     }
     public TreeSet<Ranking> getRankingGalaga() {
         return rankingGalaga;
@@ -250,8 +250,8 @@ public class GestorRankings{
     public void agregarRankingGalaga(Ranking ranking){
         rankingGalaga.add(ranking);
     }
-    public void agregarRankingPacman(Ranking ranking){
-        rankingPacman.add(ranking);
+    public void agregarRankingflappy(Ranking ranking){
+        rankingflappy.add(ranking);
     }
     public void agregarRankingBlackjack(Ranking ranking){
         rankingBlackjack.add(ranking);
@@ -290,8 +290,8 @@ public class GestorRankings{
             System.out.println(objeto.toString() + "\n");
         }
     }
-    public void mostrarRankingPacman(){
-        Iterator<Ranking> it = rankingPacman.iterator();
+    public void mostrarRankingflappy(){
+        Iterator<Ranking> it = rankingflappy.iterator();
 
         while (it.hasNext()) { 
             Ranking objeto = it.next();
@@ -372,9 +372,9 @@ public class GestorRankings{
         }
         return null;
     }
-    public Ranking buscarRankingPacmanPorUsuario(String nombre){
+    public Ranking buscarRankingflappyPorUsuario(String nombre){
         try {
-            Iterator<Ranking> it = rankingPacman.iterator();
+            Iterator<Ranking> it = rankingflappy.iterator();
             while (it.hasNext()) {
                 Ranking objeto = it.next();
 
@@ -416,8 +416,8 @@ public class GestorRankings{
     public void limpiarRankingGalaga(){
         rankingGalaga.clear();
     }
-    public void limpiarRankingPacman(){
-        rankingPacman.clear();
+    public void limpiarRankingflappy(){
+        rankingflappy.clear();
     }
     public void limpiarRankingSnake(){
         rankingSnake.clear();

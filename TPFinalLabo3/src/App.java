@@ -1,12 +1,14 @@
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 import Avatares.EnumCosmeticos;
 import Avatares.GestorCosmeticos;
 import InterfazGrafica.*;
 import Juegos.ContenedorJuego;
 import Juegos.EnumJuegos;
+import Juegos.CarpetaBlackjack.BlackJack;
 import Juegos.CarpetaDinosaurio.ChromeDinosaurio;
 import Plataformas.*;
 import Rankings.GestorRankings;
@@ -29,22 +31,17 @@ public class App {
         //gestor.cargarRankingJson(new Ranking("fede", 1000l, EnumJuegos.Snake));
         //gestor.cargarRankingJson(new Ranking("Tata", 1000l, EnumJuegos.Snake));
         
-        int anchoTablero = 500;
-        int altoTablero = 500;
-
-        /*JFrame frame = new JFrame("Dinosaurio Chrome");
-        //frame.setVisible(true);
-        frame.setSize(anchoTablero, altoTablero);
-        frame.setLocationRelativeTo(null);
-        frame.setResizable(false);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        ChromeDinosaurio chromeDinosaurio = new ChromeDinosaurio();
-        ContenedorJuego cont = new ContenedorJuego(chromeDinosaurio);
-        frame.add(cont);
-        frame.pack();
-        //chromeDinosaurio.requestFocusInWindow();
-        frame.setVisible(true);*/
+       /*  JFrame frame = new JFrame("Black Jack");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+            JPanel panel = new BlackJack();
+            frame.add(panel);
+    
+            frame.pack();
+            frame.setLocationRelativeTo(null);
+            frame.setSize(500, 500);
+            frame.setVisible(true);*/
+    
     
         
     }

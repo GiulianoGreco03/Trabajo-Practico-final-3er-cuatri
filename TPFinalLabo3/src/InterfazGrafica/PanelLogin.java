@@ -450,7 +450,7 @@ public class PanelLogin extends Panel {
         String nombre = textFieldUsuarioInicio.getText();
         String contraseña = String.copyValueOf(textFieldContraseñaInicio.getPassword());
 
-         /*try {
+         try {
             if(!nombre.isBlank() && !contraseña.isBlank()){
                 try {
                     Usuario aux = (Usuario) listadoUsuarios.buscarUsuario(nombre);
@@ -476,10 +476,10 @@ public class PanelLogin extends Panel {
         } catch (CampoVacioException e) {
             errorUsuarioInicio.setText("Complete todos los campos");
             System.out.println(e.getMessage());
-        }*/
-        Usuario aux = (Usuario) listadoUsuarios.buscarUsuario("Giuli");
+        }
+        /*Usuario aux = (Usuario) listadoUsuarios.buscarUsuario("Tata");
         mainFrame.setUsuarioActivo(aux);
-        mainFrame.showPanelPrincipal();
+        mainFrame.showPanelPrincipal();*/
             
 
     }

@@ -84,9 +84,9 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
                      it = gestorRankings.getRankingDinosaurio().iterator();
                     mostrarPuntuacion(it, enumJuegos);
                     break;
-                case EnumJuegos.Pacman:
-                     gestorRankings.pacmanFromJson();
-                     it = gestorRankings.getRankingPacman().iterator();
+                case EnumJuegos.Flappy:
+                     gestorRankings.flappyFromJson();
+                     it = gestorRankings.getRankingflappy().iterator();
                     mostrarPuntuacion(it, enumJuegos);
                     break;
                 case EnumJuegos.Blackjack:
@@ -578,7 +578,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
         private void pacmanButtonMouseClicked(java.awt.event.MouseEvent evt) {                                          
             if(botonSeleccionado != pacmanButton){
                 setBotonSeleccionado(pacmanButton);
-                cargarRankings(EnumJuegos.Pacman);
+                cargarRankings(EnumJuegos.Flappy);
             }
         }                                         
     

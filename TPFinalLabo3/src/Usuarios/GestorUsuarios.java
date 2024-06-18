@@ -56,6 +56,25 @@ public class GestorUsuarios {
         return aux;
     }
 
+    public Usuario buscarUsuarioAdmin(String nombreUsuario) {
+        Usuario aux = null;
+        try {  
+
+            if (getHashMap().containsKey(nombreUsuario)) {
+                    aux = getHashMap().get(nombreUsuario);            
+
+            } else {
+                throw new UsuarioNoExisteException();
+            }
+
+        } catch (UsuarioNoExisteException e) {
+            System.out.println(e.getMessage());
+        } 
+
+        return aux;
+    }
+
+
     public boolean usuarioRegistrado(String nombre){
         boolean registrado;
         try {

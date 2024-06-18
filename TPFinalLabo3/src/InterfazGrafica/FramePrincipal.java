@@ -14,11 +14,6 @@ public class FramePrincipal extends JPanel{
     private JPanel botonSeleccionado;
     private Usuario usuarioActivo;
     private MainFrame mainFrame;
-    
-
-    private PanelJuegosAdmin panelJuegosAdmin = new PanelJuegosAdmin();
-    private PanelTiendaAdmin panelTiendaAdmin = new PanelTiendaAdmin();
-    private PanelPerfilAdmin panelPerfilAdmin = new PanelPerfilAdmin();
 
     private ArrayList<Panel> paneles;
 
@@ -86,9 +81,11 @@ public class FramePrincipal extends JPanel{
 
     public void cargarPanelesAdmin(){
 
-        paneles.add(panelJuegosAdmin);
-        paneles.add(panelTiendaAdmin);
-        paneles.add(panelPerfilAdmin);
+        paneles.add(new PanelJuegosAdmin());
+       
+        
+        paneles.add(new PanelTiendaAdmin());
+        paneles.add(new PanelPerfilAdmin(mainFrame));
         paneles.add(new PanelRankings(usuarioActivo));
 
     }
