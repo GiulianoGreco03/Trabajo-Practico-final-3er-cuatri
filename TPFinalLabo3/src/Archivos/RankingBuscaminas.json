@@ -1,0 +1,11 @@
+[ {
+  "usuario" : "Giuli",
+  "puntuacion" : 85,
+  "juego" : "Road",
+  "type" : "Rankings.Ranking"
+}, {
+  "usuario" : "Giuli",
+  "puntuacion" : 37,
+  "juego" : "Road",
+  "type" : "Rankings.Ranking"
+} ]

@@ -6,7 +6,6 @@ package InterfazGrafica;
 
 import java.awt.*;
 import Excepciones.*;
-import Juegos.EnumJuegos;
 import Usuarios.GestorUsuarios;
 import Usuarios.Usuario;
 
@@ -53,17 +52,17 @@ public class PanelLogin extends Panel {
         errorContraseñaRegistro = new javax.swing.JLabel();
         errorConfirmarContraseña = new javax.swing.JLabel();
 
-        jTabbedPane1.setBackground(new java.awt.Color(133, 36, 103));
-        jTabbedPane1.setForeground(new java.awt.Color(255, 255, 255));
+        jTabbedPane1.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        jTabbedPane1.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
         jTabbedPane1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTabbedPane1.setPreferredSize(new java.awt.Dimension(810, 700));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
 
-        banner.setBackground(new java.awt.Color(106, 25, 148));
+        banner.setBackground(new Color(PaletaDeColores.PanelPrincipal.R, PaletaDeColores.PanelPrincipal.G, PaletaDeColores.PanelPrincipal.B));
         banner.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        banner.setForeground(new java.awt.Color(255, 255, 255));
+        banner.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         banner.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         banner.setText("UTN GameHub");
         banner.setOpaque(true);
@@ -100,7 +99,7 @@ public class PanelLogin extends Panel {
         jSeparator3.setForeground(new java.awt.Color(73, 128, 153));
         jSeparator3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        iniciarSesionButton.setBackground(new java.awt.Color(133, 36, 103));
+        iniciarSesionButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         iniciarSesionButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         iniciarSesionButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -117,7 +116,7 @@ public class PanelLogin extends Panel {
         });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Iniciar sesión");
 
@@ -196,7 +195,7 @@ public class PanelLogin extends Panel {
 
         jTabbedPane1.addTab("                           Iniciar sesión                            ", jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
 
         jSeparator4.setBackground(new java.awt.Color(73, 128, 153));
         jSeparator4.setForeground(new java.awt.Color(73, 128, 153));
@@ -226,15 +225,15 @@ public class PanelLogin extends Panel {
             }
         });
 
-        banner1.setBackground(new java.awt.Color(106, 25, 148));
+        banner1.setBackground(new Color(PaletaDeColores.PanelPrincipal.R, PaletaDeColores.PanelPrincipal.G, PaletaDeColores.PanelPrincipal.B));
         banner1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        banner1.setForeground(new java.awt.Color(255, 255, 255));
+        banner1.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         banner1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         banner1.setText("UTN GameHub");
         banner1.setOpaque(true);
         banner1.setPreferredSize(new java.awt.Dimension(810, 150));
 
-        crearCuentaButton.setBackground(new java.awt.Color(133, 36, 103));
+        crearCuentaButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         crearCuentaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         crearCuentaButton.setPreferredSize(new java.awt.Dimension(200, 50));
         crearCuentaButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -252,7 +251,7 @@ public class PanelLogin extends Panel {
         });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Crear cuenta");
 
@@ -485,15 +484,15 @@ public class PanelLogin extends Panel {
     }
 
     private void textFieldContraseñaRegistroActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        
     }
 
     private void textFieldUsuarioRegistroActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        
     }
 
     private void textFieldConfirmarContraseñaRegistroActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        
     }
 
     private void textFieldUsuarioInicioActionPerformed(java.awt.event.ActionEvent evt) {

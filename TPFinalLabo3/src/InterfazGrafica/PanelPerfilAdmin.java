@@ -1,8 +1,7 @@
 
 package InterfazGrafica;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.KeyEvent;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -60,7 +59,7 @@ public class PanelPerfilAdmin extends Panel {
         cerrarSesionButton = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
 
-        background.setBackground(new java.awt.Color(255, 255, 255));
+        background.setBackground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         background.setPreferredSize(new java.awt.Dimension(600, 600));
 
 
@@ -69,65 +68,65 @@ public class PanelPerfilAdmin extends Panel {
         panelUsuario.setOpaque(false);
         panelUsuario.setPreferredSize(new java.awt.Dimension(450, 600));
 
-        Usuario1.setBackground(new java.awt.Color(133, 36, 103));
+        Usuario1.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Usuario1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Usuario1.setForeground(new java.awt.Color(255, 255, 255));
+        Usuario1.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         Usuario1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Usuario1.setText("");
         Usuario1.setOpaque(true);
         Usuario1.setPreferredSize(new java.awt.Dimension(270, 40));
 
-        Usuario2.setBackground(new java.awt.Color(133, 36, 103));
+        Usuario2.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Usuario2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Usuario2.setForeground(new java.awt.Color(255, 255, 255));
+        Usuario2.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         Usuario2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Usuario2.setText("");
         Usuario2.setOpaque(true);
         Usuario2.setPreferredSize(new java.awt.Dimension(270, 40));
 
-        Usuario3.setBackground(new java.awt.Color(133, 36, 103));
+        Usuario3.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Usuario3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Usuario3.setForeground(new java.awt.Color(255, 255, 255));
+        Usuario3.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         Usuario3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Usuario3.setText("");
         Usuario3.setOpaque(true);
         Usuario3.setPreferredSize(new java.awt.Dimension(270, 40));
 
-        Usuario4.setBackground(new java.awt.Color(133, 36, 103));
+        Usuario4.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Usuario4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Usuario4.setForeground(new java.awt.Color(255, 255, 255));
+        Usuario4.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         Usuario4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Usuario4.setText("");
         Usuario4.setOpaque(true);
         Usuario4.setPreferredSize(new java.awt.Dimension(270, 40));
 
-        Usuario5.setBackground(new java.awt.Color(133, 36, 103));
+        Usuario5.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Usuario5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Usuario5.setForeground(new java.awt.Color(255, 255, 255));
+        Usuario5.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         Usuario5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Usuario5.setText("");
         Usuario5.setOpaque(true);
         Usuario5.setPreferredSize(new java.awt.Dimension(270, 40));
 
-        Usuario6.setBackground(new java.awt.Color(133, 36, 103));
+        Usuario6.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Usuario6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Usuario6.setForeground(new java.awt.Color(255, 255, 255));
+        Usuario6.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         Usuario6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Usuario6.setText("");
         Usuario6.setOpaque(true);
         Usuario6.setPreferredSize(new java.awt.Dimension(270, 40));
 
-        Usuario7.setBackground(new java.awt.Color(133, 36, 103));
+        Usuario7.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Usuario7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Usuario7.setForeground(new java.awt.Color(255, 255, 255));
+        Usuario7.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         Usuario7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Usuario7.setText("");
         Usuario7.setOpaque(true);
         Usuario7.setPreferredSize(new java.awt.Dimension(270, 40));
 
-        Usuario8.setBackground(new java.awt.Color(133, 36, 103));
+        Usuario8.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         Usuario8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Usuario8.setForeground(new java.awt.Color(255, 255, 255));
+        Usuario8.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         Usuario8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Usuario8.setText("");
         Usuario8.setOpaque(true);
@@ -183,7 +182,7 @@ public class PanelPerfilAdmin extends Panel {
 
         seleccionarUsuario.setBackground(new java.awt.Color(73, 128, 153));
         seleccionarUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        seleccionarUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        seleccionarUsuario.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         seleccionarUsuario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         seleccionarUsuario.setText("Seleccione usuario");
         seleccionarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -198,14 +197,14 @@ public class PanelPerfilAdmin extends Panel {
             }
         });
 
-        usuarioSeleccionado.setBackground(new java.awt.Color(133, 36, 103));
+        usuarioSeleccionado.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         usuarioSeleccionado.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        usuarioSeleccionado.setForeground(new java.awt.Color(255, 255, 255));
+        usuarioSeleccionado.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         usuarioSeleccionado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         usuarioSeleccionado.setText("Usuario seleccionado");
         usuarioSeleccionado.setOpaque(true);
 
-        darDeBajaButton.setBackground(new java.awt.Color(133, 36, 103));
+        darDeBajaButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         darDeBajaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         darDeBajaButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -220,7 +219,7 @@ public class PanelPerfilAdmin extends Panel {
         });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Dar de baja usuario");
 
@@ -235,7 +234,7 @@ public class PanelPerfilAdmin extends Panel {
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        cerrarSesionButton.setBackground(new java.awt.Color(133, 36, 103));
+        cerrarSesionButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         cerrarSesionButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cerrarSesionButtonMouseClicked(evt);
@@ -249,7 +248,7 @@ public class PanelPerfilAdmin extends Panel {
         });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Cerrar sesión");
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -359,10 +358,12 @@ public class PanelPerfilAdmin extends Panel {
                 usuarioSeleccioando.setCuentaActiva(false);
                 gestorUsuarios.cargarUsuarioJson(usuarioSeleccioando);
                 usuarioSeleccioando = null;
+                jLabel1.setText("Confirmar Busqueda");
             } else {
                 usuarioSeleccioando.setCuentaActiva(true);
                 gestorUsuarios.cargarUsuarioJson(usuarioSeleccioando);
                 usuarioSeleccioando = null;
+                jLabel1.setText("Confirmar Busqueda");
             }
         }
     }                                            
@@ -419,7 +420,6 @@ public class PanelPerfilAdmin extends Panel {
             labels.get(i).setText(aux.getNombre());
             i++;
             j++;
-            System.out.println(i);
         }
 
         while(i < labels.size()){

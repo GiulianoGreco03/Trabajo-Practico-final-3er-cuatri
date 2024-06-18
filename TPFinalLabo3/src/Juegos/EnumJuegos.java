@@ -5,7 +5,7 @@ public enum EnumJuegos {
     Galaga(2),
     Dinosaurio(3),
     Tetris(4),
-    Buscaminas(5);
+    Road(5);
 
     private int valor;
 

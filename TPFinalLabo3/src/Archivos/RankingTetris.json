@@ -1,4 +1,9 @@
 [ {
+  "usuario" : "Giuli",
+  "puntuacion" : 2785,
+  "juego" : "Tetris",
+  "type" : "Rankings.Ranking"
+}, {
   "usuario" : "Agus",
   "puntuacion" : 2000,
   "juego" : "Tetris",

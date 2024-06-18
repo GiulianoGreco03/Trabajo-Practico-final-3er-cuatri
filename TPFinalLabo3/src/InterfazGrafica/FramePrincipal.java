@@ -177,7 +177,7 @@ public class FramePrincipal extends JPanel{
         });
 
         button1Label.setFont(new java.awt.Font("DejaVu Sans", 0, 24)); // NOI18N
-        button1Label.setForeground(new java.awt.Color(255, 255, 255));
+        button1Label.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         button1Label.setText("Juegos");
         button1Label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -213,7 +213,7 @@ public class FramePrincipal extends JPanel{
         });
 
         button2Label1.setFont(new java.awt.Font("DejaVu Sans", 0, 24)); // NOI18N
-        button2Label1.setForeground(new java.awt.Color(255, 255, 255));
+        button2Label1.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         button2Label1.setText("Tienda");
         button2Label1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -249,7 +249,7 @@ public class FramePrincipal extends JPanel{
         });
 
         button3Label.setFont(new java.awt.Font("DejaVu Sans", 0, 24)); // NOI18N
-        button3Label.setForeground(new java.awt.Color(255, 255, 255));
+        button3Label.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         button3Label.setText("Perfil");
 
         javax.swing.GroupLayout Button3Layout = new javax.swing.GroupLayout(Button3);
@@ -284,7 +284,7 @@ public class FramePrincipal extends JPanel{
         });
 
         button4Label.setFont(new java.awt.Font("DejaVu Sans", 0, 24)); // NOI18N
-        button4Label.setForeground(new java.awt.Color(255, 255, 255));
+        button4Label.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         button4Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         button4Label.setText("Rankings");
 
@@ -305,11 +305,11 @@ public class FramePrincipal extends JPanel{
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
-        Banner.setBackground(new java.awt.Color(106, 25, 148));
-        Banner.setForeground(new java.awt.Color(106, 25, 148));
+        Banner.setBackground(new Color(PaletaDeColores.PanelPrincipal.R, PaletaDeColores.PanelPrincipal.G, PaletaDeColores.PanelPrincipal.B));
+        Banner.setForeground(new Color(PaletaDeColores.PanelPrincipal.R, PaletaDeColores.PanelPrincipal.G, PaletaDeColores.PanelPrincipal.B));
 
         tituloLabel.setFont(new java.awt.Font("DejaVu Sans", 0, 48)); // NOI18N
-        tituloLabel.setForeground(new java.awt.Color(255, 255, 255));
+        tituloLabel.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         tituloLabel.setText("UTN GAMEHUB");
 
         javax.swing.GroupLayout BannerLayout = new javax.swing.GroupLayout(Banner);
@@ -437,7 +437,8 @@ public class FramePrincipal extends JPanel{
     }                                   
 
     private void Button4MouseClicked(java.awt.event.MouseEvent evt) { 
-        if(botonSeleccionado != Button4) {                                     
+        if(botonSeleccionado != Button4) {   
+            paneles.add(3, new PanelRankings(usuarioActivo));                              
             cambiarPanelPrincipal(paneles.get(3));
             setBotonSeleccionado(Button4);
         }

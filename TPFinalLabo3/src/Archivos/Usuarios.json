@@ -5,12 +5,12 @@
     "admin" : false,
     "puntuacion" : 50,
     "puntuacionMaxima" : {
-      "Snake" : 0,
-      "Buscaminas" : 0,
+      "Tetris" : 0,
       "Dinosaurio" : 0,
       "Flappy" : 0,
-      "Tetris" : 0,
-      "Galaga" : 0
+      "Galaga" : 0,
+      "Snake" : 0,
+      "Road" : 0
     },
     "cuentaActiva" : true,
     "sombreros" : [ "", "src\\Avatares\\Sprites\\SombreroNegroAlto.png", "src\\Avatares\\Sprites\\GorraNegra.png", "src\\Avatares\\Sprites\\SombreroDamisela.png", "src\\Avatares\\Sprites\\SombreroChino.png", "src\\Avatares\\Sprites\\SombreroRojo.png", "src\\Avatares\\Sprites\\SombreroVerde.png", "src\\Avatares\\Sprites\\SombreroPolicia.png", "src\\Avatares\\Sprites\\SombreroPescador.png" ],
@@ -26,14 +26,14 @@
     "admin" : false,
     "puntuacion" : null,
     "puntuacionMaxima" : {
-      "Snake" : 0,
-      "Buscaminas" : 0,
+      "Tetris" : 0,
       "Dinosaurio" : 0,
       "Flappy" : 0,
-      "Tetris" : 0,
-      "Galaga" : 0
+      "Galaga" : 0,
+      "Snake" : 0,
+      "Road" : 0
     },
-    "cuentaActiva" : false,
+    "cuentaActiva" : true,
     "sombreros" : [ "" ],
     "sombreroActivo" : 0,
     "lentes" : [ "" ],
@@ -45,14 +45,14 @@
     "nombre" : "Giuli",
     "contraseña" : "1234",
     "admin" : false,
-    "puntuacion" : 10775,
+    "puntuacion" : 13817,
     "puntuacionMaxima" : {
-      "Snake" : 20,
-      "Buscaminas" : 0,
-      "Dinosaurio" : 0,
+      "Tetris" : 2785,
+      "Dinosaurio" : 25,
       "Flappy" : 0,
-      "Tetris" : 0,
-      "Galaga" : 0
+      "Galaga" : 0,
+      "Snake" : 110,
+      "Road" : 85
     },
     "cuentaActiva" : true,
     "sombreros" : [ "", "src\\Avatares\\Sprites\\SombreroRojo.png", "src\\Avatares\\Sprites\\SombreroVerde.png", "src\\Avatares\\Sprites\\SombreroChino.png", "src\\Avatares\\Sprites\\SombreroBlancoAlto.png", "src\\Avatares\\Sprites\\SombreroGraduadoRojo.png", "src\\Avatares\\Sprites\\SombreroPolicia.png", "src\\Avatares\\Sprites\\SombreroPescador.png", "src\\Avatares\\Sprites\\SombreroDamisela.png", "src\\Avatares\\Sprites\\GorraNegra.png", "src\\Avatares\\Sprites\\SombreroNegroAlto.png" ],
@@ -68,12 +68,12 @@
     "admin" : false,
     "puntuacion" : 30,
     "puntuacionMaxima" : {
-      "Snake" : 0,
-      "Buscaminas" : 0,
+      "Tetris" : 0,
       "Dinosaurio" : 0,
       "Flappy" : 0,
-      "Tetris" : 0,
-      "Galaga" : 0
+      "Galaga" : 0,
+      "Snake" : 0,
+      "Road" : 0
     },
     "cuentaActiva" : true,
     "sombreros" : [ "" ],
@@ -89,12 +89,12 @@
     "admin" : false,
     "puntuacion" : 0,
     "puntuacionMaxima" : {
-      "Snake" : 0,
-      "Buscaminas" : 0,
+      "Tetris" : 0,
       "Dinosaurio" : 0,
       "Flappy" : 0,
-      "Tetris" : 0,
-      "Galaga" : 0
+      "Galaga" : 0,
+      "Snake" : 0,
+      "Road" : 0
     },
     "cuentaActiva" : true,
     "sombreros" : [ "" ],
@@ -110,12 +110,12 @@
     "admin" : false,
     "puntuacion" : 0,
     "puntuacionMaxima" : {
-      "Snake" : 0,
-      "Buscaminas" : 0,
+      "Tetris" : 0,
       "Dinosaurio" : 0,
       "Flappy" : 0,
-      "Tetris" : 0,
-      "Galaga" : 0
+      "Galaga" : 0,
+      "Snake" : 0,
+      "Road" : 0
     },
     "cuentaActiva" : true,
     "sombreros" : [ "" ],
@@ -131,12 +131,33 @@
     "admin" : false,
     "puntuacion" : 0,
     "puntuacionMaxima" : {
-      "Snake" : 0,
-      "Buscaminas" : 0,
+      "Tetris" : 0,
       "Dinosaurio" : 0,
       "Flappy" : 0,
+      "Galaga" : 0,
+      "Snake" : 0,
+      "Road" : 0
+    },
+    "cuentaActiva" : true,
+    "sombreros" : [ "" ],
+    "sombreroActivo" : 0,
+    "lentes" : [ "" ],
+    "lenteActivo" : 0,
+    "traje" : [ "" ],
+    "trajeActivo" : 0
+  },
+  "Federico" : {
+    "nombre" : "Federico",
+    "contraseña" : "1234",
+    "admin" : false,
+    "puntuacion" : 0,
+    "puntuacionMaxima" : {
       "Tetris" : 0,
-      "Galaga" : 0
+      "Dinosaurio" : 0,
+      "Flappy" : 0,
+      "Galaga" : 0,
+      "Snake" : 0,
+      "Road" : 0
     },
     "cuentaActiva" : true,
     "sombreros" : [ "" ],
@@ -152,12 +173,12 @@
     "admin" : false,
     "puntuacion" : 0,
     "puntuacionMaxima" : {
-      "Snake" : 0,
-      "Buscaminas" : 0,
+      "Tetris" : 0,
       "Dinosaurio" : 0,
       "Flappy" : 0,
-      "Tetris" : 0,
-      "Galaga" : 0
+      "Galaga" : 0,
+      "Snake" : 0,
+      "Road" : 0
     },
     "cuentaActiva" : true,
     "sombreros" : [ "" ],
@@ -173,12 +194,12 @@
     "admin" : false,
     "puntuacion" : 0,
     "puntuacionMaxima" : {
-      "Snake" : 0,
-      "Buscaminas" : 0,
+      "Tetris" : 0,
       "Dinosaurio" : 0,
       "Flappy" : 0,
-      "Tetris" : 0,
-      "Galaga" : 0
+      "Galaga" : 0,
+      "Snake" : 0,
+      "Road" : 0
     },
     "cuentaActiva" : true,
     "sombreros" : [ "" ],
@@ -194,12 +215,12 @@
     "admin" : false,
     "puntuacion" : 600,
     "puntuacionMaxima" : {
-      "Snake" : 0,
-      "Buscaminas" : 0,
+      "Tetris" : 0,
       "Dinosaurio" : 0,
       "Flappy" : 0,
-      "Tetris" : 0,
-      "Galaga" : 0
+      "Galaga" : 0,
+      "Snake" : 0,
+      "Road" : 0
     },
     "cuentaActiva" : true,
     "sombreros" : [ "", "src\\Avatares\\Sprites\\SombreroNegroAlto.png", "src\\Avatares\\Sprites\\SombreroVerde.png", "src\\Avatares\\Sprites\\SombreroChino.png", "src\\Avatares\\Sprites\\GorraNegra.png" ],
@@ -215,12 +236,12 @@
     "admin" : false,
     "puntuacion" : 20,
     "puntuacionMaxima" : {
-      "Snake" : 0,
-      "Buscaminas" : 0,
+      "Tetris" : 0,
       "Dinosaurio" : 0,
       "Flappy" : 0,
-      "Tetris" : 0,
-      "Galaga" : 0
+      "Galaga" : 0,
+      "Snake" : 0,
+      "Road" : 0
     },
     "cuentaActiva" : true,
     "sombreros" : [ "" ],
@@ -236,12 +257,12 @@
     "admin" : true,
     "puntuacion" : 0,
     "puntuacionMaxima" : {
-      "Snake" : 0,
-      "Buscaminas" : 0,
+      "Tetris" : 0,
       "Dinosaurio" : 0,
       "Flappy" : 0,
-      "Tetris" : 0,
-      "Galaga" : 0
+      "Galaga" : 0,
+      "Snake" : 0,
+      "Road" : 0
     },
     "cuentaActiva" : true,
     "sombreros" : [ "" ],
@@ -257,12 +278,12 @@
     "admin" : false,
     "puntuacion" : 0,
     "puntuacionMaxima" : {
-      "Snake" : 0,
-      "Buscaminas" : 0,
+      "Tetris" : 0,
       "Dinosaurio" : 0,
       "Flappy" : 0,
-      "Tetris" : 0,
-      "Galaga" : 0
+      "Galaga" : 0,
+      "Snake" : 0,
+      "Road" : 0
     },
     "cuentaActiva" : true,
     "sombreros" : [ "" ],

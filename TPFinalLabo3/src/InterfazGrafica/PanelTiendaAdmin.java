@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -73,9 +72,9 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
         confirmarCambioButton = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
 
-        backgorund1.setBackground(new java.awt.Color(255, 255, 255));
+        backgorund1.setBackground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
 
-        trajeButton10.setBackground(new java.awt.Color(133, 36, 103));
+        trajeButton10.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         trajeButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         trajeButton10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -92,7 +91,7 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
         });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Trajes");
 
@@ -105,7 +104,7 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
                 trajeButton10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE));
 
-        gorroButton.setBackground(new java.awt.Color(133, 36, 103));
+        gorroButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         gorroButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         gorroButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -122,7 +121,7 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
         });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Gorros");
 
@@ -136,7 +135,7 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE,
                                 javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
 
-        lentesButton9.setBackground(new java.awt.Color(133, 36, 103));
+        lentesButton9.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         lentesButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lentesButton9.setPreferredSize(new java.awt.Dimension(150, 40));
         lentesButton9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -154,7 +153,7 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
         });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Lentes");
 
@@ -360,7 +359,7 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
                 Cosmetico8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(icon8, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE));
 
-        habilitarDeshabilitarButton.setBackground(new java.awt.Color(133, 36, 103));
+        habilitarDeshabilitarButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         habilitarDeshabilitarButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 habilitarDeshabilitarButtonMouseClicked(evt);
@@ -376,9 +375,9 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
         });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Habilitar");
+        jLabel4.setText("Hab/deshab");
 
         javax.swing.GroupLayout habilitarDeshabilitarButtonLayout = new javax.swing.GroupLayout(
                 habilitarDeshabilitarButton);
@@ -399,7 +398,7 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
             }
         });
 
-        confirmarCambioButton.setBackground(new java.awt.Color(133, 36, 103));
+        confirmarCambioButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         confirmarCambioButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 confirmarCambioButtonMouseClicked(evt);
@@ -415,7 +414,7 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
         });
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Confirmar cambio");
 
@@ -654,6 +653,7 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
         LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
         if (1 <= aux.size()) {
             cosmeticoSeleccionado = aux.get(index);
+            cambiarTextoHab(cosmeticoSeleccionado);
         }
     }// GEN-LAST:event_icon1MouseClicked
 
@@ -664,6 +664,7 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
         LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
         if (2 <= aux.size()) {
             cosmeticoSeleccionado = aux.get(index);
+            cambiarTextoHab(cosmeticoSeleccionado);
         }
     }// GEN-LAST:event_icon2MouseClicked
 
@@ -674,6 +675,7 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
         LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
         if (3 <= aux.size()) {
             cosmeticoSeleccionado = aux.get(index);
+            cambiarTextoHab(cosmeticoSeleccionado);
         }
     }// GEN-LAST:event_icon3MouseClicked
 
@@ -684,6 +686,7 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
         LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
         if (4 <= aux.size()) {
             cosmeticoSeleccionado = aux.get(index);
+            cambiarTextoHab(cosmeticoSeleccionado);
         }
     }// GEN-LAST:event_icon4MouseClicked
 
@@ -694,6 +697,7 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
         LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
         if (5 <= aux.size()) {
             cosmeticoSeleccionado = aux.get(index);
+            cambiarTextoHab(cosmeticoSeleccionado);
         }
     }// GEN-LAST:event_icon5MouseClicked
 
@@ -704,6 +708,7 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
         LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
         if (6 <= aux.size()) {
             cosmeticoSeleccionado = aux.get(index);
+            cambiarTextoHab(cosmeticoSeleccionado);
         }
     }// GEN-LAST:event_icon6MouseClicked
 
@@ -714,6 +719,7 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
         LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
         if (7 <= aux.size()) {
             cosmeticoSeleccionado = aux.get(index);
+            cambiarTextoHab(cosmeticoSeleccionado);
         }
     }// GEN-LAST:event_icon7MouseClicked
 
@@ -724,11 +730,12 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
         LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
         if (8 <= aux.size()) {
             cosmeticoSeleccionado = aux.get(index);
+            cambiarTextoHab(cosmeticoSeleccionado);
         }
     }// GEN-LAST:event_icon8MouseClicked
 
     private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jTextField1MouseClicked
-        // TODO add your handling code here:
+       
     }// GEN-LAST:event_jTextField1MouseClicked
 
     private void habilitarDeshabilitarButtonMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_habilitarDeshabilitarButtonMouseEntered
@@ -757,6 +764,7 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
             } else {
                 gestorCosmeticos.trajesToJson();
             }
+            cambiarTextoHab(cosmeticoSeleccionado);
         }
     }// GEN-LAST:event_habilitarDeshabilitarButtonMouseClicked
 
@@ -790,6 +798,14 @@ public class PanelTiendaAdmin extends Panel implements IterableElementosSwing {
             }
         }
     }// GEN-LAST:event_confirmarCambioButtonMouseClicked
+
+    public void cambiarTextoHab(Cosmetico cosmetico){
+        if(cosmetico.isHabilitado()){
+            jLabel4.setText("Deshabilitar");
+        } else {
+            jLabel4.setText("Habilitar");
+        }
+    }
 
     @Override
     public ArrayList<JLabel> iteradorElementosSwing() {

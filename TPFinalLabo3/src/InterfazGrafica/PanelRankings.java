@@ -69,7 +69,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
                      it = gestorRankings.getRankingSnake().iterator();
                     mostrarPuntuacion(it, enumJuegos);
                     break;
-                case EnumJuegos.Buscaminas:
+                case EnumJuegos.Road:
                     gestorRankings.buscaminasFromJson();
                     it = gestorRankings.getRankingBuscaminas().iterator();
                    mostrarPuntuacion(it, enumJuegos);
@@ -161,14 +161,14 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
             spaceButton = new javax.swing.JPanel();
             jLabel6 = new javax.swing.JLabel();
     
-            background.setBackground(new java.awt.Color(255, 255, 255));
+            background.setBackground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
     
-            panelPuntuaciones.setBackground(new java.awt.Color(255, 255, 255));
+            panelPuntuaciones.setBackground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             panelPuntuaciones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
     
             puntuacion1.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
             puntuacion1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-            puntuacion1.setForeground(new java.awt.Color(255, 255, 255));
+            puntuacion1.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             puntuacion1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             puntuacion1.setText("JuanitoGamer: 20000");
             puntuacion1.setOpaque(true);
@@ -176,7 +176,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
     
             puntuacion2.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
             puntuacion2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-            puntuacion2.setForeground(new java.awt.Color(255, 255, 255));
+            puntuacion2.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             puntuacion2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             puntuacion2.setText("jLabel7");
             puntuacion2.setOpaque(true);
@@ -184,7 +184,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
     
             puntuacion3.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
             puntuacion3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-            puntuacion3.setForeground(new java.awt.Color(255, 255, 255));
+            puntuacion3.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             puntuacion3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             puntuacion3.setText("jLabel7");
             puntuacion3.setOpaque(true);
@@ -192,7 +192,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
     
             puntuacion4.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
             puntuacion4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-            puntuacion4.setForeground(new java.awt.Color(255, 255, 255));
+            puntuacion4.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             puntuacion4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             puntuacion4.setText("jLabel7");
             puntuacion4.setOpaque(true);
@@ -200,7 +200,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
     
             puntuacion5.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
             puntuacion5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-            puntuacion5.setForeground(new java.awt.Color(255, 255, 255));
+            puntuacion5.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             puntuacion5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             puntuacion5.setText("jLabel7");
             puntuacion5.setOpaque(true);
@@ -208,7 +208,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
     
             textoPuntuacionPersonal.setBackground(new java.awt.Color(73, 128, 153));
             textoPuntuacionPersonal.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-            textoPuntuacionPersonal.setForeground(new java.awt.Color(255, 255, 255));
+            textoPuntuacionPersonal.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             textoPuntuacionPersonal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             textoPuntuacionPersonal.setText("Record personal");
             textoPuntuacionPersonal.setOpaque(true);
@@ -216,7 +216,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
     
             puntuacionPersonal.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
             puntuacionPersonal.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-            puntuacionPersonal.setForeground(new java.awt.Color(255, 255, 255));
+            puntuacionPersonal.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             puntuacionPersonal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             puntuacionPersonal.setText("jLabel7");
             puntuacionPersonal.setOpaque(true);
@@ -225,7 +225,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
             textoPuntuacionGlobal.setAlignment(java.awt.Label.CENTER);
             textoPuntuacionGlobal.setBackground(new java.awt.Color(73, 128, 153));
             textoPuntuacionGlobal.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-            textoPuntuacionGlobal.setForeground(new java.awt.Color(255, 255, 255));
+            textoPuntuacionGlobal.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             textoPuntuacionGlobal.setPreferredSize(new java.awt.Dimension(340, 40));
             textoPuntuacionGlobal.setText("Puntuación Global");
     
@@ -284,7 +284,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
             });
     
             jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-            jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel1.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             jLabel1.setText("Snake");
     
@@ -315,7 +315,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
             });
     
             jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-            jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel2.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             jLabel2.setText("Tetris");
     
@@ -346,9 +346,9 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
             });
     
             jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-            jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel3.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            jLabel3.setText("Buscaminas");
+            jLabel3.setText("Road fighter");
     
             javax.swing.GroupLayout buscaminasButtonLayout = new javax.swing.GroupLayout(buscaminasButton);
             buscaminasButton.setLayout(buscaminasButtonLayout);
@@ -377,7 +377,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
             });
     
             jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-            jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel4.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             jLabel4.setText("Dinosaurio");
     
@@ -408,7 +408,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
             });
     
             jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-            jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel5.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             jLabel5.setText("Flappy bird");
     
@@ -439,7 +439,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
             });
     
             jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-            jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel6.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             jLabel6.setText("Space Invaders");
     
@@ -544,7 +544,7 @@ public class PanelRankings extends Panel implements IterableElementosSwing{
         private void buscaminasButtonMouseClicked(java.awt.event.MouseEvent evt) {                                              
             if(botonSeleccionado != buscaminasButton){
                 setBotonSeleccionado(buscaminasButton);
-                cargarRankings(EnumJuegos.Buscaminas);
+                cargarRankings(EnumJuegos.Road);
             }
         }                                             
     

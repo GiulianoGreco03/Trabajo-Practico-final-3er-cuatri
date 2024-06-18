@@ -60,7 +60,7 @@ public class PanelJuegosAdmin extends Panel {
         limpiarHistorialButton = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
 
-        background.setBackground(new java.awt.Color(255, 255, 255));
+        background.setBackground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         background.setPreferredSize(new java.awt.Dimension(600, 600));
 
         juego1.setBackground(new java.awt.Color(73, 128, 153));
@@ -97,7 +97,7 @@ public class PanelJuegosAdmin extends Panel {
         juego2.setPreferredSize(new java.awt.Dimension(150, 150));
 
         icon2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        icon2.setIcon(new ImageIcon("src\\Juegos\\Iconos\\buscamina_icon.png"));
+        icon2.setIcon(new ImageIcon("src\\Juegos\\Iconos\\Road_Fighter_icon.png"));
         icon2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 icon2MouseClicked(evt);
@@ -230,67 +230,67 @@ public class PanelJuegosAdmin extends Panel {
                                 .addComponent(icon6, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
                                 .addContainerGap()));
 
-        nombre1.setBackground(new java.awt.Color(133, 36, 103));
+        nombre1.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         nombre1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         nombre1.setLayout(new java.awt.BorderLayout());
 
         nombre1Label1.setFont(new java.awt.Font("DejaVu Sans", 0, 18)); // NOI18N
-        nombre1Label1.setForeground(new java.awt.Color(255, 255, 255));
+        nombre1Label1.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         nombre1Label1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nombre1Label1.setText("Juego 1");
         nombre1.add(nombre1Label1, java.awt.BorderLayout.CENTER);
 
-        nombre2.setBackground(new java.awt.Color(133, 36, 103));
+        nombre2.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         nombre2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         nombre2.setLayout(new java.awt.BorderLayout());
 
         nombre1Label.setFont(new java.awt.Font("DejaVu Sans", 0, 18)); // NOI18N
-        nombre1Label.setForeground(new java.awt.Color(255, 255, 255));
+        nombre1Label.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         nombre1Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nombre1Label.setText("Juego 2");
         nombre2.add(nombre1Label, java.awt.BorderLayout.CENTER);
 
-        nombre3.setBackground(new java.awt.Color(133, 36, 103));
+        nombre3.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         nombre3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         nombre3.setLayout(new java.awt.BorderLayout());
 
         nombre1Label3.setFont(new java.awt.Font("DejaVu Sans", 0, 18)); // NOI18N
-        nombre1Label3.setForeground(new java.awt.Color(255, 255, 255));
+        nombre1Label3.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         nombre1Label3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nombre1Label3.setText("Juego 3");
         nombre3.add(nombre1Label3, java.awt.BorderLayout.CENTER);
 
-        nombre4.setBackground(new java.awt.Color(133, 36, 103));
+        nombre4.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         nombre4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         nombre4.setLayout(new java.awt.BorderLayout());
 
         nombre1Label4.setFont(new java.awt.Font("DejaVu Sans", 0, 18)); // NOI18N
-        nombre1Label4.setForeground(new java.awt.Color(255, 255, 255));
+        nombre1Label4.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         nombre1Label4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nombre1Label4.setText("Juego 4");
         nombre4.add(nombre1Label4, java.awt.BorderLayout.CENTER);
 
-        nombre5.setBackground(new java.awt.Color(133, 36, 103));
+        nombre5.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         nombre5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         nombre5.setLayout(new java.awt.BorderLayout());
 
         nombre1Label5.setFont(new java.awt.Font("DejaVu Sans", 0, 18)); // NOI18N
-        nombre1Label5.setForeground(new java.awt.Color(255, 255, 255));
+        nombre1Label5.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         nombre1Label5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nombre1Label5.setText("Juego 5");
         nombre5.add(nombre1Label5, java.awt.BorderLayout.CENTER);
 
-        nombre6.setBackground(new java.awt.Color(133, 36, 103));
+        nombre6.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         nombre6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         nombre6.setLayout(new java.awt.BorderLayout());
 
         nombre1Label2.setFont(new java.awt.Font("DejaVu Sans", 0, 18)); // NOI18N
-        nombre1Label2.setForeground(new java.awt.Color(255, 255, 255));
+        nombre1Label2.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         nombre1Label2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nombre1Label2.setText("Juego 6");
         nombre6.add(nombre1Label2, java.awt.BorderLayout.CENTER);
 
-        limpiarHistorialButton.setBackground(new java.awt.Color(133, 36, 103));
+        limpiarHistorialButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         limpiarHistorialButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         limpiarHistorialButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -307,7 +307,7 @@ public class PanelJuegosAdmin extends Panel {
         });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Limpiar historial");
 
@@ -451,31 +451,37 @@ public class PanelJuegosAdmin extends Panel {
 
     private void icon1MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_icon1MouseClicked
         setIconSeleccionado(icon1);
+        jLabel2.setText("Limpiar historial");
         setJuegoSeleccionado(EnumJuegos.Snake);
     }// GEN-LAST:event_icon1MouseClicked
 
     private void icon2MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_icon2MouseClicked
         setIconSeleccionado(icon2);
-        setJuegoSeleccionado(EnumJuegos.Buscaminas);
+        jLabel2.setText("Limpiar historial");
+        setJuegoSeleccionado(EnumJuegos.Road);
     }// GEN-LAST:event_icon2MouseClicked
 
     private void icon3MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_icon3MouseClicked
         setIconSeleccionado(icon3);
+        jLabel2.setText("Limpiar historial");
         setJuegoSeleccionado(EnumJuegos.Galaga);
     }// GEN-LAST:event_icon3MouseClicked
 
     private void icon4MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_icon4MouseClicked
         setIconSeleccionado(icon4);
+        jLabel2.setText("Limpiar historial");
         setJuegoSeleccionado(EnumJuegos.Flappy);
     }// GEN-LAST:event_icon4MouseClicked
 
     private void icon5MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_icon5MouseClicked
         setIconSeleccionado(icon5);
+        jLabel2.setText("Limpiar historial");
         setJuegoSeleccionado(EnumJuegos.Dinosaurio);
     }
 
     private void icon6MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_icon6MouseClicked
         setIconSeleccionado(icon6);
+        jLabel2.setText("Limpiar historial");
         setJuegoSeleccionado(EnumJuegos.Tetris);
     }
 
@@ -491,8 +497,11 @@ public class PanelJuegosAdmin extends Panel {
         }
     }// GEN-LAST:event_limpiarHistorialButtonMouseExited
 
-    private void limpiarHistorialButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_limpiarHistorialButtonMouseClicked
-        limpiarHistorial(juegoSeleccionado);
+    private void limpiarHistorialButtonMouseClicked(java.awt.event.MouseEvent evt) {
+        if(juegoSeleccionado != null){
+                limpiarHistorial(juegoSeleccionado);
+                jLabel2.setText("Historial Borrado");    
+        }
     }
 
     public void limpiarHistorial(EnumJuegos e) {
@@ -503,7 +512,7 @@ public class PanelJuegosAdmin extends Panel {
                 gestorRankings.snakeToJson();
 
                 break;
-            case EnumJuegos.Buscaminas:
+            case EnumJuegos.Road:
                 gestorRankings.limpiarRankingBuscaminas();
                 gestorRankings.buscaminasToJson();
                 break;

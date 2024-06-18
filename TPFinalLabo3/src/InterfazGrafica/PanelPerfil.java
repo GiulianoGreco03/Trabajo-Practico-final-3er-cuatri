@@ -55,14 +55,14 @@ public class PanelPerfil extends Panel {
         darDeBajaButton = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
 
-        background.setBackground(new java.awt.Color(255, 255, 255));
+        background.setBackground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("Nombre de usuario");
 
         nombreUsuario.setBackground(new java.awt.Color(73, 128, 153));
         nombreUsuario.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        nombreUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        nombreUsuario.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         nombreUsuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nombreUsuario.setText(usuario.getNombre());
         nombreUsuario.setOpaque(true);
@@ -83,7 +83,7 @@ public class PanelPerfil extends Panel {
             }
         });
 
-        confirmarButton.setBackground(new java.awt.Color(133, 36, 103));
+        confirmarButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         confirmarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         confirmarButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -98,7 +98,7 @@ public class PanelPerfil extends Panel {
         });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Confirmar");
 
@@ -113,7 +113,7 @@ public class PanelPerfil extends Panel {
             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        cerrarSesionButton.setBackground(new java.awt.Color(133, 36, 103));
+        cerrarSesionButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         cerrarSesionButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cerrarSesionButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -128,7 +128,7 @@ public class PanelPerfil extends Panel {
         });
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Cerrar sesión");
 
@@ -143,7 +143,7 @@ public class PanelPerfil extends Panel {
             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        darDeBajaButton.setBackground(new java.awt.Color(133, 36, 103));
+        darDeBajaButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         darDeBajaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         darDeBajaButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -158,7 +158,7 @@ public class PanelPerfil extends Panel {
         });
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Dar de baja usuario");
 
@@ -234,7 +234,7 @@ public class PanelPerfil extends Panel {
     }//GEN-LAST:event_textFieldCambiarContraseñaMouseClicked
 
     private void textFieldCambiarContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldCambiarContraseñaActionPerformed
-        // TODO add your handling code here:
+        
     }
 
     private void confirmarButtonMouseEntered(java.awt.event.MouseEvent evt) {

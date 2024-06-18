@@ -2,10 +2,7 @@ package Rankings;
 
 import Excepciones.*;
 import Juegos.EnumJuegos;
-import Usuarios.Usuario;
-
 import java.io.File;
-import java.io.IOException;
 import java.util.Iterator;
 import java.util.TreeSet;
 
@@ -51,7 +48,7 @@ public class GestorRankings{
                 snakeToJson();
                 
                 break;
-            case EnumJuegos.Buscaminas:
+            case EnumJuegos.Road:
                 buscaminasFromJson();
                 agregarRankingBuscaminas(ranking);
                 buscaminasToJson();
@@ -87,7 +84,7 @@ public class GestorRankings{
             
                 
                 break;
-            case EnumJuegos.Buscaminas:
+            case EnumJuegos.Road:
                 
                 agregarRankingBuscaminas(ranking);
                

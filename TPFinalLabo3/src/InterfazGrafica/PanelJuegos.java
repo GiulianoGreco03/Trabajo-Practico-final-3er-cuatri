@@ -6,9 +6,10 @@ import java.awt.*;
 import javax.swing.ImageIcon;
 
 import Juegos.*;
-import Juegos.CarpetaBuscaminas.Buscamina;
 import Juegos.CarpetaDinosaurio.ChromeDinosaurio;
 import Juegos.CarpetaFlappy.FlappyBird;
+import Juegos.CarpetaRoad.RoadFighter;
+import Juegos.CarpetaSnake.Snake;
 import Juegos.CarpetaSpaceInvaders.SpaceInvaders;
 import Juegos.Tetris.Tetri;
 import Usuarios.Usuario;
@@ -104,7 +105,7 @@ public class PanelJuegos extends Panel {
             juego2.setPreferredSize(new java.awt.Dimension(150, 150));
     
             icon2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-            icon2.setIcon(new ImageIcon("src\\Juegos\\Iconos\\buscamina_icon.png"));
+            icon2.setIcon(new ImageIcon("src\\Juegos\\Iconos\\Road_Fighter_icon.png"));
             icon2.addMouseListener(new java.awt.event.MouseAdapter() {
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
                     icon2MouseClicked(evt);
@@ -248,7 +249,7 @@ public class PanelJuegos extends Panel {
             nombre1.setLayout(new java.awt.BorderLayout());
     
             nombre1Label1.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
-            nombre1Label1.setForeground(new java.awt.Color(255, 255, 255));
+            nombre1Label1.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             nombre1Label1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             nombre1Label1.setText("Snake");
             nombre1.add(nombre1Label1, java.awt.BorderLayout.CENTER);
@@ -257,16 +258,16 @@ public class PanelJuegos extends Panel {
             nombre2.setLayout(new java.awt.BorderLayout());
     
             nombre1Label.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
-            nombre1Label.setForeground(new java.awt.Color(255, 255, 255));
+            nombre1Label.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             nombre1Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            nombre1Label.setText("Buscaminas");
+            nombre1Label.setText("Road Fighter");
             nombre2.add(nombre1Label, java.awt.BorderLayout.CENTER);
     
             nombre3.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
             nombre3.setLayout(new java.awt.BorderLayout());
     
             nombre1Label3.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
-            nombre1Label3.setForeground(new java.awt.Color(255, 255, 255));
+            nombre1Label3.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             nombre1Label3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             nombre1Label3.setText("Space Invaders");
             nombre3.add(nombre1Label3, java.awt.BorderLayout.CENTER);
@@ -275,7 +276,7 @@ public class PanelJuegos extends Panel {
             nombre4.setLayout(new java.awt.BorderLayout());
     
             nombre1Label4.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
-            nombre1Label4.setForeground(new java.awt.Color(255, 255, 255));
+            nombre1Label4.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             nombre1Label4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             nombre1Label4.setText("Flappy bird");
             nombre4.add(nombre1Label4, java.awt.BorderLayout.CENTER);
@@ -284,7 +285,7 @@ public class PanelJuegos extends Panel {
             nombre5.setLayout(new java.awt.BorderLayout());
     
             nombre1Label5.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
-            nombre1Label5.setForeground(new java.awt.Color(255, 255, 255));
+            nombre1Label5.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             nombre1Label5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             nombre1Label5.setText("Dinosaurio");
             nombre5.add(nombre1Label5, java.awt.BorderLayout.CENTER);
@@ -293,7 +294,7 @@ public class PanelJuegos extends Panel {
             nombre6.setLayout(new java.awt.BorderLayout());
     
             nombre1Label2.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
-            nombre1Label2.setForeground(new java.awt.Color(255, 255, 255));
+            nombre1Label2.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
             nombre1Label2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             nombre1Label2.setText("Tetris");
             nombre6.add(nombre1Label2, java.awt.BorderLayout.CENTER);
@@ -378,7 +379,7 @@ public class PanelJuegos extends Panel {
         }                                  
     
         private void icon2MouseClicked(java.awt.event.MouseEvent evt) {                                   
-            refrescarPanel(this, new ContenedorJuego(null, framePrincipal, new Buscamina(usuarioActivo)));
+            refrescarPanel(this, new ContenedorJuego(null, framePrincipal, new RoadFighter(usuarioActivo)));
         }                                  
     
         private void icon3MouseClicked(java.awt.event.MouseEvent evt) {                                   

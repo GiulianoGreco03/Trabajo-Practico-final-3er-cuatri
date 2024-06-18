@@ -3,8 +3,6 @@ package Usuarios;
 import Juegos.*;
 import java.util.HashMap;
 import java.util.LinkedList;
-
-import Avatares.Avatar;
 import Avatares.Cosmetico;
 import Avatares.EnumCosmeticos;
 import Excepciones.UsuarioYaPoseeCosmetico;
@@ -169,7 +167,7 @@ public class Usuario {
 
     public void cargarPuntuacionMaximaDefault(){
         puntuacionMaxima.put(EnumJuegos.Snake, 0l);
-        puntuacionMaxima.put(EnumJuegos.Buscaminas, 0l);
+        puntuacionMaxima.put(EnumJuegos.Road, 0l);
         puntuacionMaxima.put(EnumJuegos.Galaga, 0l);
         puntuacionMaxima.put(EnumJuegos.Dinosaurio, 0l);
         puntuacionMaxima.put(EnumJuegos.Tetris, 0l);

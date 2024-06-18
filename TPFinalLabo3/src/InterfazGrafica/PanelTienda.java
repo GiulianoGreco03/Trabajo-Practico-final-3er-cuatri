@@ -139,18 +139,18 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         guardarButton = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(106, 25, 148));
-        setForeground(new java.awt.Color(106, 25, 148));
+        setBackground(new Color(PaletaDeColores.PanelPrincipal.R, PaletaDeColores.PanelPrincipal.G, PaletaDeColores.PanelPrincipal.B));
+        setForeground(new Color(PaletaDeColores.PanelPrincipal.R, PaletaDeColores.PanelPrincipal.G, PaletaDeColores.PanelPrincipal.B));
 
-        jTabbedPane1.setBackground(new java.awt.Color(106, 25, 148));
-        jTabbedPane1.setForeground(new java.awt.Color(255, 255, 255));
+        jTabbedPane1.setBackground(new Color(PaletaDeColores.PanelPrincipal.R, PaletaDeColores.PanelPrincipal.G, PaletaDeColores.PanelPrincipal.B));
+        jTabbedPane1.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jTabbedPane1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jTabbedPane1.setOpaque(true);
         jTabbedPane1.setPreferredSize(new java.awt.Dimension(600, 600));
 
-        backgorund1.setBackground(new java.awt.Color(255, 255, 255));
+        backgorund1.setBackground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
 
-        trajeButton10.setBackground(new java.awt.Color(133, 36, 103));
+        trajeButton10.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         trajeButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         trajeButton10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -165,7 +165,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         });
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Trajes");
 
@@ -180,7 +180,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        gorroButton.setBackground(new java.awt.Color(133, 36, 103));
+        gorroButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         gorroButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         gorroButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -195,7 +195,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         });
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Gorros");
 
@@ -210,7 +210,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        lentesButton9.setBackground(new java.awt.Color(133, 36, 103));
+        lentesButton9.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         lentesButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lentesButton9.setPreferredSize(new java.awt.Dimension(150, 40));
         lentesButton9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -226,7 +226,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         });
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Lentes");
 
@@ -442,56 +442,56 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         );
 
         Precio1.setAlignment(java.awt.Label.CENTER);
-        Precio1.setBackground(new java.awt.Color(133, 36, 103));
-        Precio1.setForeground(new java.awt.Color(255, 255, 255));
+        Precio1.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        Precio1.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         Precio1.setText("label1");
 
         Precio2.setAlignment(java.awt.Label.CENTER);
-        Precio2.setBackground(new java.awt.Color(133, 36, 103));
-        Precio2.setForeground(new java.awt.Color(255, 255, 255));
+        Precio2.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        Precio2.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         Precio2.setText("label1");
 
         Precio3.setAlignment(java.awt.Label.CENTER);
-        Precio3.setBackground(new java.awt.Color(133, 36, 103));
-        Precio3.setForeground(new java.awt.Color(255, 255, 255));
+        Precio3.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        Precio3.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         Precio3.setText("label1");
 
         Precio4.setAlignment(java.awt.Label.CENTER);
-        Precio4.setBackground(new java.awt.Color(133, 36, 103));
-        Precio4.setForeground(new java.awt.Color(255, 255, 255));
+        Precio4.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        Precio4.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         Precio4.setText("label1");
 
         Precio5.setAlignment(java.awt.Label.CENTER);
-        Precio5.setBackground(new java.awt.Color(133, 36, 103));
-        Precio5.setForeground(new java.awt.Color(255, 255, 255));
+        Precio5.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        Precio5.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         Precio5.setText("label1");
 
         Precio6.setAlignment(java.awt.Label.CENTER);
-        Precio6.setBackground(new java.awt.Color(133, 36, 103));
-        Precio6.setForeground(new java.awt.Color(255, 255, 255));
+        Precio6.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        Precio6.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         Precio6.setText("label1");
 
         Precio7.setAlignment(java.awt.Label.CENTER);
-        Precio7.setBackground(new java.awt.Color(133, 36, 103));
-        Precio7.setForeground(new java.awt.Color(255, 255, 255));
+        Precio7.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        Precio7.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         Precio7.setText("label1");
 
         Precio8.setAlignment(java.awt.Label.CENTER);
-        Precio8.setBackground(new java.awt.Color(133, 36, 103));
-        Precio8.setForeground(new java.awt.Color(255, 255, 255));
+        Precio8.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
+        Precio8.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         Precio8.setText("label1");
 
         puntos.setBackground(new java.awt.Color(73, 128, 153));
         puntos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        puntos.setForeground(new java.awt.Color(255, 255, 255));
+        puntos.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         puntos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         puntos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         puntos.setOpaque(true);
         puntos.setPreferredSize(new java.awt.Dimension(100, 40));
 
-        jLabel8.setBackground(new java.awt.Color(133, 36, 103));
+        jLabel8.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Puntuación");
         jLabel8.setOpaque(true);
@@ -608,10 +608,10 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
 
         jTabbedPane1.addTab("Tienda", backgorund1);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jPanel2.setPreferredSize(new java.awt.Dimension(600, 600));
 
-        cambiarGorro.setBackground(new java.awt.Color(133, 36, 103));
+        cambiarGorro.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         cambiarGorro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cambiarGorro.setPreferredSize(new java.awt.Dimension(150, 40));
         cambiarGorro.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -627,7 +627,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Cambiar gorro");
 
@@ -642,7 +642,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        cambiarLentes.setBackground(new java.awt.Color(133, 36, 103));
+        cambiarLentes.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         cambiarLentes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cambiarLentes.setPreferredSize(new java.awt.Dimension(150, 40));
         cambiarLentes.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -658,7 +658,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Cambiar lentes");
 
@@ -673,7 +673,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        cambiarTraje.setBackground(new java.awt.Color(133, 36, 103));
+        cambiarTraje.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         cambiarTraje.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cambiarTraje.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -688,7 +688,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Cambiar traje");
 
@@ -718,7 +718,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
             .addGap(0, 400, Short.MAX_VALUE)
         );
 
-        guardarButton.setBackground(new java.awt.Color(133, 36, 103));
+        guardarButton.setBackground(new Color(PaletaDeColores.Botones.R, PaletaDeColores.Botones.G, PaletaDeColores.Botones.B));
         guardarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         guardarButton.setPreferredSize(new java.awt.Dimension(150, 40));
         guardarButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -734,7 +734,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new Color(PaletaDeColores.ColorLetras.R, PaletaDeColores.ColorLetras.G, PaletaDeColores.ColorLetras.B));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Guardar");
 
@@ -813,6 +813,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
     private void gorroButtonMouseClicked(java.awt.event.MouseEvent evt) {                                         
         if(botonSeleccionado != gorroButton){
             setBotonSeleccionado(gorroButton);
+            cosmeticoSeleccionado = null;
             mostrarCosmeticos(gestorCosmeticos.listaHabilitada(EnumCosmeticos.GORRO));
         }
     }                                        
@@ -830,6 +831,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
     private void lentesButton9MouseClicked(java.awt.event.MouseEvent evt) {                                           
         if(botonSeleccionado != lentesButton9){
             setBotonSeleccionado(lentesButton9);
+            cosmeticoSeleccionado = null;
             mostrarCosmeticos(gestorCosmeticos.listaHabilitada(EnumCosmeticos.LENTE));
         }
     }                                          
@@ -977,8 +979,7 @@ public class PanelTienda extends Panel implements IterableElementosSwing{
         LinkedList<Cosmetico> aux = selecionarCosmetico(botonSeleccionado);
         if (6 <= aux.size()) {
             cosmeticoSeleccionado = aux.get(index);
-                boolean flag = usuarioActivo.agregarCosmetico(cosmeticoSeleccionado);
-                comprar(cosmeticoSeleccionado, index);
+            comprar(cosmeticoSeleccionado, index);
         }
     }// GEN-LAST:event_icon6MouseClicked
 
